@@ -1,28 +1,59 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useEffect } from "react";
 
-export default function Home() {
+export const getStaticProps = async () => {
+  const data = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+  return {
+      props: {
+          posts: data
+      }
+  }
+}
+
+type Posts = {
+  posts: Blog[]
+}
+
+
+export default function Home({posts} : Posts) {
+
   return (
-    <main className="flex flex-col items-center justify-between">
+    <div>
       <Head>
         <title>Portfolio</title>
       </Head>
-
-      <h1 className="text-3xl">
-        Portfolio
-      </h1>
-      <h2 className="text-xl">
-        A collection of my work
-      </h2>
-      <div className="flex flex-col items-center justify-center">
-        <Link href="/projects" className="btn btn-primary">
+      <main className="flex flex-col gap-4 items-center justify-between p-20">
+        <h1 className="text-3xl">
+          Portfolio
+        </h1>
+        <h2 className="text-xl">
+          A collection of my work.
+        </h2>
+        <div className="flex flex-col items-center justify-center">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia sunt corporis, sapiente debitis odio qui, tenetur velit pariatur inventore odit itaque eius assumenda rerum libero maiores est. Rem, numquam?</p>
+        </div>
+        <h2 className="text-xl">
           Projects
-        </Link>
-        <Link href="/blogs" className="btn btn-primary">
+        </h2>
+        <h2 className="text-xl">
           Blogs
-        </Link>
-      </div>
-    
-    </main>
+        </h2>
+        <div className="grid grid-cols-4">
+          {posts.slice(0,4).map((post) => (
+            <div key={post.id} className="flex flex-col h-64 justify-start gap-4">
+              <h2 className="text-xl truncate text-center">{post.title}</h2>
+              <p className="line-clamp-4 break-words">
+                {post.body}
+              </p>
+              <Link href={`/blogs/${post.id}`}>
+                <button>More</button>
+              </Link>
+              
+            </div>
+          ))}
+        </div>
+      </main>
+    </div>
   )
 }
