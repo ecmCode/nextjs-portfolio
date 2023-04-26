@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Head from "next/head";
 import Link from "next/link";
 
 export const getStaticProps = async () => {
@@ -18,6 +19,9 @@ type Posts = {
 const Blogs = ({posts}: Posts) => {
     return (
         <div className="p-10">
+            <Head>
+                <title>Blogs</title>
+            </Head>
             <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 {posts.map(blog => (
                         <li key={blog.id} className="bg-slate-500/50 m-4 p-4 flex flex-col justify-between gap-4">
