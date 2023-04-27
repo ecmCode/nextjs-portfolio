@@ -9,7 +9,6 @@ const Projects = () => {
             </Head>
             <h1>Projects</h1>
             <p>This is the Projects page</p>
-            <hr />
             <Link href="/">Go back to the homepage</Link>
         </div>
     );
