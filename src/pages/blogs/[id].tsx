@@ -1,4 +1,3 @@
-import { getURL } from "next/dist/shared/lib/utils";
 import Head from "next/head";
 import Link from "next/link";
 
