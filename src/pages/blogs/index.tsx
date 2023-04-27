@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -10,11 +9,6 @@ export const getStaticProps = async () => {
         }
     }
 }
-
-type Posts = {
-    posts: Blog[]
-}
-
 
 const Blogs = ({posts}: Posts) => {
     return (
