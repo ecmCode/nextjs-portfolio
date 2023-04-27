@@ -1,12 +1,9 @@
 type Blog = {
-    userId: number,
+    userId?: number,
     id: number,
     title: string,
     body:string
-}
 
-type Post = {
-  post: Blog
 }
 
 type Posts = {
