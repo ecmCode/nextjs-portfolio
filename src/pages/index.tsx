@@ -22,7 +22,7 @@ export default function Home({posts} : Posts) {
         <HomeWelcome />
         <h2>Projects</h2>
         <h2>Blogs</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {posts && posts.map((post) => (
             <HomeBlogs 
               key={post.id} 
