@@ -1,5 +1,5 @@
 import Link from "next/link";
-import projects from "../projects/projects"
+import projects from "../projects/components/projects"
 
 const HomeProjects = () => {
     return (
