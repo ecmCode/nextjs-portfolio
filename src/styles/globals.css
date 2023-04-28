@@ -37,3 +37,7 @@ h2{
 h3{
   @apply text-xl
 }
+
+button,a{
+  @apply hover:brightness-150
+}

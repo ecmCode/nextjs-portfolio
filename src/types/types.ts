@@ -10,3 +10,10 @@ type Posts = {
   posts: Blog[]
 }
 
+type Project = {
+  name: string;
+  desc: string;
+  imageURL: string;
+  codeURL: string;
+  demoURL: string;
+}
