@@ -7,9 +7,11 @@ const Projects = () => {
             <Head>
                 <title>Projects</title>
             </Head>
-            <h1>Projects</h1>
-            <p>This is the Projects page</p>
-            <Link href="/">Go back to the homepage</Link>
+            <main className="flex flex-col gap-10 items-center justify-between p-20">
+                <h1>Projects</h1>
+                <p>This is the Projects page</p>
+                <Link href="/">Home</Link>
+            </main>
         </div>
     );
 }
