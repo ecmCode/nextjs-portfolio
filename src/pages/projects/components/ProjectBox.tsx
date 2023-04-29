@@ -10,10 +10,10 @@ const ProjectBox = ({name, desc, imageURL, codeURL, demoURL}: Project) => {
                 {desc}
             </p>
             <div className="flex justify-around w-full">
-                <Link href={demoURL} target="_blank">
+                <Link href={demoURL || '/'} target="_blank">
                     <button>Demo</button>
                 </Link>
-                <Link href={codeURL} target="_blank">
+                <Link href={codeURL || '/'} target="_blank">
                     <button>Code</button>
                 </Link>
             </div>
