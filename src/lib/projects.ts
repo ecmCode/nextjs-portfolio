@@ -1,4 +1,4 @@
-const projects = [
+const projects : Project[] = [
     {
         name: "countdown clock",
         desc:"countdown clock app using React + Typescript",
