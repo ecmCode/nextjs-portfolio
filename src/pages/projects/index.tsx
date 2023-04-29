@@ -1,5 +1,5 @@
 import Head from "next/head";
-import projects from "../../lib/projects";
+import {projects} from "../../lib/projects";
 import ProjectBox from "./components/ProjectBox";
 
 
