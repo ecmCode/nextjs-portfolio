@@ -1,4 +1,4 @@
-const projects : Project[] = [
+export const projects : Project[] = [
     {
         name: "countdown clock",
         desc:"countdown clock app using React + Typescript",
@@ -15,5 +15,3 @@ const projects : Project[] = [
     },
 
 ]
-
-export default projects
