@@ -14,9 +14,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "types": ["node", "jest", "@testing-library/jest-dom"],
     "paths": {
       "@/*": ["./src/*"]
     }
+    
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/tests/Navbar.test.tsx"],
   "exclude": ["node_modules"]
