@@ -1,8 +1,10 @@
 const HomeWelcome = () => {
     return (
-        <>
-            <h1>Portfolio</h1>
-            <h2>A collection of my work.</h2>
+        <div className="min-h-screen flex flex-col justify-start items-center">
+            <div className="py-10 flex flex-col gap-4">
+                <h1 className="text-6xl">Portfolio</h1>
+                <h2>A collection of my work.</h2>
+            </div>
             <div className="flex flex-col items-center justify-center">
                 <p>
                     Lorem, ipsum dolor sit amet consectetur 
@@ -13,7 +15,7 @@ const HomeWelcome = () => {
                     libero maiores est. Rem, numquam?
                 </p>
             </div>
-        </>
+        </div>
     );
 }
  
