@@ -1,0 +1,6 @@
+.mainPage{
+    @apply p-16
+}
+.mainPage main{
+    @apply flex flex-col items-center justify-center gap-10
+}

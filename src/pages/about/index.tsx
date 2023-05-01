@@ -7,9 +7,9 @@ const About = () => {
             <Head>
                 <title>About</title>
             </Head>
-            <main className="flex flex-col gap-10 items-center justify-between p-20">
+            <main>
                 <h1>About</h1>
-                <div className="w-1/2 flex flex-col gap-4">
+                <div>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas accusamus dolor totam exercitationem beatae, quae placeat? Consectetur, laboriosam unde! Dolorum nihil nulla eum deleniti laborum, velit accusamus totam temporibus?
                     </p>

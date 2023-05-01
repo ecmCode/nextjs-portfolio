@@ -5,13 +5,12 @@ import ProjectBox from "./components/ProjectBox";
 
 const Projects = () => {
     return (
-        <div>
+        <>
             <Head>
                 <title>Projects</title>
             </Head>
-            <main className="flex flex-col gap-10 items-center justify-between p-20">
+            <main>
                 <h1>Projects</h1>
-                <p>This is the Projects page</p>
                 <ul className="grid grid-cols-1 md:grid-cols-2 justify-center items-center place-items-center w-full h-60 gap-4">
                     {projects.map((project, index) => (
                         <ProjectBox
@@ -25,7 +24,7 @@ const Projects = () => {
                     ))}
                 </ul>
             </main>
-        </div>
+        </>
     );
 }
  
