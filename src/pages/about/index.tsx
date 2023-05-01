@@ -20,7 +20,9 @@ const About = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum temporibus, doloribus, atque nulla modi accusamus commodi mollitia explicabo natus deserunt sit ad. Odio explicabo eaque sequi! Veritatis, tempora aperiam?
                     </p>
                 </div>
-                <Link href="/">Home</Link>
+                <button className="px-4 py-2 bg-slate-200 dark:bg-slate-900">
+                    <Link href="/">Home</Link>
+                </button>
             </main>
         </>
     );

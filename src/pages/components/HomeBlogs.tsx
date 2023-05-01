@@ -10,7 +10,7 @@ const HomeBlogs = ({id,title,body}: Blog ) => {
                 {body}
             </p>
             <span className="text-right">
-                <Link href={`/blogs/${id}`} className=" px-4 py-2 bg-slate-200 dark:bg-slate-900">
+                <Link href={`/blogs/${id}`} className="px-4 py-2 bg-slate-200 dark:bg-slate-900">
                     More
                 </Link>
             </span>

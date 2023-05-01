@@ -3,10 +3,10 @@ import {projects} from "../../lib/projects"
 
 const HomeProjects = () => {
     return (
-        <ul className="w-1/2 flex justify-between">
+        <ul className="w-full flex flex-col md:flex-row justify-center gap-4">
             {projects.map(project => (
                 <li key={project.name.replace(' ','-')}
-                className="flex gap-4 bg-cyan-400/20 p-2"
+                className="flex justify-between gap-4 bg-cyan-400/20 p-2"
                 >
                     {project.name}
                     <Link href={project.demoURL} target="_blank">
