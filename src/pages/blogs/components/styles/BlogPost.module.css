@@ -1,0 +1,19 @@
+.box{
+    @apply bg-slate-200 dark:bg-slate-500/50 m-4 p-4 flex flex-col justify-between gap-4 shadow-lg
+}
+
+.title{
+    @apply text-2xl text-center overflow-ellipsis truncate
+}
+
+.id{
+    @apply font-bold text-right
+}
+
+.body{
+    @apply line-clamp-4 break-words
+}
+
+.link{
+    @apply text-cyan-600 dark:text-cyan-500 font-semibold
+}
