@@ -3,11 +3,12 @@ import HomeBlogs from "./components/HomeBlogs";
 import HomeWelcome from "./components/HomeWelcome";
 import HomeProjects from "./components/HomeProjects";
 import HomeTitle from "./components/HomeTitle";
+import { getData } from "@/lib/getData";
 
 export const getStaticProps = async () => {
-  const data = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+  const data = await getData()
   return {
-      props: {
+      props : {
           posts: data.slice(0,4)
       }
   }
@@ -20,7 +21,7 @@ export default function Home({posts} : Posts) {
       <Head>
         <title>Portfolio</title>
       </Head>
-      <main className="flex flex-col gap-4 items-center justify-between p-20">
+      <main>
         <HomeWelcome />
         <HomeTitle>Tech Stacks</HomeTitle>
         <HomeTitle>Projects</HomeTitle>
