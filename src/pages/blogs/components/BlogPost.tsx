@@ -8,11 +8,11 @@ interface Props {
 const BlogPost = ({blog}: Props) => {
     return ( 
         <li className={style.box}>
-            <h2 className={style.title}>{blog.title}</h2>
-            <p className={style.id}>#{blog.id}</p>
-            <p className={style.body}>{blog.body}</p>
+            <h2 className={style.title}>{blog?.title}</h2>
+            <p className={style.id}>#{blog?.id}</p>
+            <p className={style.body}>{blog?.body}</p>
             <div className="flex justify-end">
-                <Link href={'/blogs/' + blog.id} className={style.link}>
+                <Link href={'/blogs/' + blog?.id} className={style.link}>
                     Read More
                 </Link>
             </div>
