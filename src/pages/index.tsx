@@ -4,6 +4,9 @@ import HomeWelcome from "./components/HomeWelcome";
 import HomeProjects from "./components/HomeProjects";
 import HomeTitle from "./components/HomeTitle";
 import { getData } from "@/lib/getData";
+import ScreenHeight from "./components/ScreenHeight";
+import Container from "./components/Container";
+import { Posts } from "@/types/types";
 
 export const getStaticProps = async () => {
   const data = await getData()
@@ -38,6 +41,11 @@ export default function Home({posts} : Posts) {
           )}
         </div>
         <HomeTitle>Contact Me</HomeTitle>
+        <ScreenHeight>
+          <Container variant="1/3">
+            hello world
+          </Container>
+        </ScreenHeight>
       </main>
     </>
   )

@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 type Blog = {
     userId?: number,
     id: number,
@@ -6,7 +8,7 @@ type Blog = {
 
 }
 
-type Posts = {
+export interface Posts {
   posts: Blog[]
 }
 
@@ -16,4 +18,11 @@ type Project = {
   imageURL: string;
   codeURL: string;
   demoURL: string;
+}
+
+type variant = "1/3" | "2/3" | "full"
+
+export interface TContainer {
+  variant: variant,
+  children: ReactNode,
 }
