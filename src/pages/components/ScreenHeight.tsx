@@ -1,9 +1,9 @@
 // defines a wrapper component to be screen height.
 
-import { TContainer } from "@/types/types";
 import { ReactElement, ReactNode, useEffect } from "react";
 import React from "react";
 import Container from "./Container";
+import { TContainer } from "@/types/interfaces";
 
 type ChildType = ReactElement<TContainer> | ReactElement<TContainer>[]
 
@@ -13,17 +13,20 @@ interface Props{
 
 const ScreenHeight : React.FC<Props> = ({children}) => {
         
-    const childElements = React.Children.map(children, (child) : ChildType => {
+    const childElements = React.Children.map(children, (child) : ChildType | null => {
         if (child?.type !== Container) {
-            throw new Error('Parent component must only have specific children');
+            console.error('Parent component must only have specific children');
+            return null
         }
         return child
     })
     if (!childElements) {
-        throw new Error('Parent component must have a child element');
+        console.error('Parent component must have a child element');
+        return null
     }
     if (childElements?.length > 2) {
-        throw new Error('Parent component must have no more than 2 children');
+        console.error('Parent component must have no more than 2 children');
+        return null
     }
 
     return (

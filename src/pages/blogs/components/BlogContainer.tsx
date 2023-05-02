@@ -1,3 +1,4 @@
+import { Posts } from "@/types/interfaces";
 import BlogPost from "./BlogPost";
 
 const BlogContainer = ({posts}:Posts) => {

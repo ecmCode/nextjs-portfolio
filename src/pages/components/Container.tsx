@@ -1,7 +1,7 @@
 // defines a containe component to be children of parent ScreenHeight element 
 // and have max 2 components in each parent element.
 
-import { TContainer } from "@/types/types";
+import { TContainer } from "@/types/interfaces";
 
 const Container : React.FC<TContainer> = ({variant,children}) => {
 
