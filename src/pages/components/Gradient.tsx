@@ -1,11 +1,56 @@
+import { useEffect, useState } from "react";
+import style from "./styles/Gradient.module.css"
+
+
 const Gradient = () => {
+    
+    const [percentage, setPercentage] = useState<number>(0)
+
+
+    useEffect(() => {
+        
+        const unsub = () =>{
+            let docObj = document?.body?.firstChild?.firstChild as Element 
+            let scrollHeight = docObj.scrollHeight;
+            let scrollTop = docObj.scrollTop;
+            
+            setPercentage(
+                Math.floor((scrollTop /scrollHeight) * 100)
+            )
+
+            console.log(percentage)
+        }
+
+        window?.addEventListener("wheel", unsub)
+        return () => window?.removeEventListener("wheel", unsub)
+    }, [percentage]);
+    
+     
     return ( 
         <div>
-            <div className="w-60 h-60 rounded-full bg-gradient-radial from-rose-500/30 via-rose-300/20 to-rose-200/10 absolute top-1/5 right-1/4 opacity-30">
+            <div 
+            className={style.ball1}
+            style={{
+                translate:`${-percentage * 4}px ${-percentage * 2}px`,
+                scale:`${1 + (percentage/70)}`
+            }}
+            >
             </div> 
-            <div className="w-96 h-96 rounded-full bg-gradient-radial from-cyan-500/30 via-cyan-300/20 to-slate-700/10 absolute top-1/3 right-1/2 opacity-40">
+            <div 
+            className={style.ball2}
+            style={{
+                translate: `${percentage * 4}px ${percentage * 4}px`,
+                scale:`${1 + (percentage/50)}`
+            }}
+            >
             </div> 
-            <div className="w-60 h-60 rounded-full bg-gradient-radial from-cyan-500/30 via-cyan-300/20 to-cyan-200/10 absolute bottom-10 right-10 opacity-40">
+            <div 
+            className={style.ball3}
+            style={{
+                translate: `${-percentage * 2}px ${-percentage * 3}px`,
+                scale:`${1 + (percentage/90)}`
+            }}
+            >
             </div> 
         </div>
     );
