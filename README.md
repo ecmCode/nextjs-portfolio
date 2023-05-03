@@ -1,0 +1,1 @@
+My personal portfolio - powered by React + Typescript + Next.js.
