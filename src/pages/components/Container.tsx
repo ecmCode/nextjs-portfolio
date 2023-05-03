@@ -18,7 +18,8 @@ const Container : React.FC<TContainer> = ({variant,children}) => {
             className = "h-full"
             break;
         default: 
-            return variant;
+            const exhaustiveCheck: never = variant;
+            return exhaustiveCheck
     }
     
     return (
