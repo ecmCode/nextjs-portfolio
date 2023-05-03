@@ -7,7 +7,7 @@ const HomeWelcome = () => {
                 <h1 className="text-6xl">Portfolio</h1>
                 <h2>A collection of my work.</h2>
             </div>
-            <div className="w-1/2 flex flex-col items-center justify-center">
+            <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-0">
                 <p>
                     Lorem, ipsum dolor sit amet consectetur 
                     adipisicing elit. Optio mollitia sunt 

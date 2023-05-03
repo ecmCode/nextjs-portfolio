@@ -29,8 +29,8 @@ const ScreenHeight : React.FC<Props> = ({children}) => {
         return null
     }
 
-    return (
-        <section className="min-h-screen h-screen w-full overflow-hidden">
+    return ( 
+        <section className="h-screen w-full">
             {childElements}
         </section>
     ) 

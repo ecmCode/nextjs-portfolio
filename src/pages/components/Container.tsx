@@ -9,10 +9,10 @@ const Container : React.FC<TContainer> = ({variant,children}) => {
 
     switch(variant){
         case "1/3" : 
-            className = 'h-1/3';
+            className = 'min-h-[33vh]';
             break;
         case "2/3" : 
-            className = "h-2/3";
+            className = "min-h-[66vh]";
             break;
         case "full" :
             className = "h-full"
@@ -22,10 +22,12 @@ const Container : React.FC<TContainer> = ({variant,children}) => {
     }
     
     return (
-        <div
-        className={className}
-        >
-            {children}
+        <div className="w-full">
+            <div className={className}>
+                <div className="p-4">
+                    {children}
+                </div>
+            </div>
         </div>
     );
 }
