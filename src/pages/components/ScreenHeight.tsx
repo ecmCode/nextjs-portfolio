@@ -1,11 +1,14 @@
-// defines a wrapper component to be screen height.
+// Defines a wrapper component that is screen high.
+// Only Container component is allowed to be children of the element 
+// Max 2 components in each parent element.
+
 
 import { ReactElement, ReactNode, useEffect } from "react";
 import React from "react";
 import Container from "./Container";
-import { TContainer } from "@/types/interfaces";
+import { IContainer } from "@/types/interfaces";
 
-type ChildType = ReactElement<TContainer> | ReactElement<TContainer>[]
+type ChildType = ReactElement<IContainer> | ReactElement<IContainer>[]
 
 interface Props{
     children: ChildType
@@ -13,7 +16,7 @@ interface Props{
 
 const ScreenHeight : React.FC<Props> = ({children}) => {
         
-    const childElements = React.Children.map(children, (child) : ChildType | null => {
+    const childElements = React.Children.foreach(children, (child) : ChildType | null => {
         if (child?.type !== Container) {
             console.error('Parent component must only have specific children');
             return null

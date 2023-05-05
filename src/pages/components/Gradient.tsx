@@ -1,11 +1,11 @@
+// Blurred background gradient balls that transform themselves on scroll event
+
 import { useEffect, useState } from "react";
 import style from "./styles/Gradient.module.css"
-
 
 const Gradient = () => {
     
     const [percentage, setPercentage] = useState<number>(0)
-
 
     useEffect(() => {
         
@@ -28,30 +28,38 @@ const Gradient = () => {
      
     return ( 
         <div>
-            <div 
+            <span 
             className={style.ball1}
             style={{
                 translate:`${-percentage * 4}px ${-percentage * 2}px`,
                 scale:`${1 + (percentage/70)}`
             }}
             >
-            </div> 
-            <div 
+            </span> 
+            <span 
             className={style.ball2}
             style={{
                 translate: `${percentage * 4}px ${percentage * 4}px`,
                 scale:`${1 + (percentage/50)}`
             }}
             >
-            </div> 
-            <div 
+            </span> 
+            <span 
             className={style.ball3}
             style={{
                 translate: `${-percentage * 2}px ${-percentage * 3}px`,
                 scale:`${1 + (percentage/90)}`
             }}
             >
-            </div> 
+            </span> 
+            <span 
+            className={style.ball4}
+            style={{
+                translate: `${-percentage * 2}px ${-percentage * 3}px`,
+                scale:`${1 + (percentage/50)}`
+            }}
+            >
+            </span> 
         </div>
     );
 }
