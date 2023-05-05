@@ -28,6 +28,10 @@ html,body {
     var(--background-start-rgb);
 }
 
+body::-webkit-scrollbar{
+  display:none
+}
+
 h1{
   @apply text-4xl
 }
