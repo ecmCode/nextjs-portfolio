@@ -1,9 +1,6 @@
-// defines a containe component to be children of parent ScreenHeight element 
-// and have max 2 components in each parent element.
+import { IContainer } from "@/types/interfaces";
 
-import { TContainer } from "@/types/interfaces";
-
-const Container : React.FC<TContainer> = ({variant,children}) => {
+const Container : React.FC<IContainer> = ({variant,children}) => {
 
     let className;
 
@@ -18,6 +15,8 @@ const Container : React.FC<TContainer> = ({variant,children}) => {
             className = "h-full"
             break;
         default: 
+            // exhaustive check making sure all options are listed
+            // throws compiler error when something is missing 
             const exhaustiveCheck: never = variant;
             return exhaustiveCheck
     }
