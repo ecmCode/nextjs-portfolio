@@ -4,7 +4,7 @@ import Link from "next/link";
 const ProjectBox = ({name, desc, imageURL, codeURL, demoURL}: Project) => {
     return (
         <li className="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-500/50 rounded-lg">
-            {/* <Image alt={imageURL} src={imageURL}/> */}
+            {/* <Image alt={name || ""} src={imageURL || "/"} width={100} height={100}/> */}
             <h2>{name}</h2>
             <p>
                 {desc}
