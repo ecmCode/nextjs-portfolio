@@ -16,13 +16,14 @@ interface Props{
 
 const ScreenHeight : React.FC<Props> = ({children}) => {
         
-    const childElements = React.Children.foreach(children, (child) : ChildType | null => {
+    const childElements = React.Children.map(children, (child) : ChildType | null => {
         if (child?.type !== Container) {
             console.error('Parent component must only have specific children');
             return null
         }
         return child
     })
+
     if (!childElements) {
         console.error('Parent component must have a child element');
         return null

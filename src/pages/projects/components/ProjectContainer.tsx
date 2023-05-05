@@ -7,7 +7,7 @@ interface Props {
 const ProjectContainer = ({projects}: Props) => {
     return ( 
         <ul className="grid grid-cols-1 md:grid-cols-2 justify-center items-center place-items-center w-full h-auto gap-4 py-10">
-            {projects.map((project, index) => (
+            {projects && projects.map((project, index) => (
                 <ProjectBox
                     key={index}
                     name={project.name}
