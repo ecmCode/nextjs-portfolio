@@ -6,7 +6,7 @@ import HomeTitle from "./components/HomeTitle";
 import { getData } from "@/lib/getData";
 import ScreenHeight from "./components/ScreenHeight";
 import Container from "./components/Container";
-import { Posts } from "@/types/interfaces";
+import { IPosts } from "@/types/interfaces";
 import HomeSubtitle from "./components/HomeSubtitle";
 
 export const getStaticProps = async () => {
@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
   }
 }
 
-export default function Home({posts} : Posts) {
+export default function Home({posts} : IPosts) {
 
   return (
     <>
