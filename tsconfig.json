@@ -19,6 +19,6 @@
     }
     
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "src/tests/Navbar.test.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "babel.config.js"],
   "exclude": ["node_modules"]
 }

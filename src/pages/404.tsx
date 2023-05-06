@@ -7,6 +7,7 @@ Customized 404 Not Found page.
 */
 
 import Link from "next/link";
+import React from "react";
 
 const NotFound = () => {
     return (
