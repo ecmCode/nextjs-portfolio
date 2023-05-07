@@ -8,7 +8,7 @@ describe('Home', () => {
     expect(container).toBeInTheDocument();
   });
 
-  it('renders every element ', () => {
+  it('renders every element', () => {
     render(<NotFound/>);
  
     const heading = screen.getByRole('heading', {
