@@ -1,0 +1,266 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <main>
+    <div
+      class="min-h-screen flex flex-col justify-start items-center"
+    >
+      <div
+        class="py-10 flex flex-col gap-4"
+      >
+        <h1
+          class="text-6xl"
+        >
+          Portfolio
+        </h1>
+        <h2>
+          A collection of my work.
+        </h2>
+      </div>
+      <div
+        class="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-0"
+      >
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia sunt corporis, sapiente debitis odio qui, tenetur velit pariatur inventore odit itaque eius assumenda rerum libero maiores est. Rem, numquam?
+        </p>
+      </div>
+      <a
+        href="/projects"
+      >
+        <button
+          class="px-10 py-4 my-10 bg-slate-500/20 rounded-lg"
+        >
+          Projects
+        </button>
+      </a>
+    </div>
+    <div
+      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+    >
+      <h2
+        class="px-10"
+      >
+        About Me
+      </h2>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="h-full"
+      >
+        <div
+          class="p-4"
+        >
+          <div
+            class="w-full py-2 px-10 bg-gradient-to-b from-slate-700/20 to-slate-800/20"
+          >
+            <h4
+              class="px-10 uppercase tracking-widest"
+            >
+              Personal Life
+            </h4>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              class="min-h-[66vh]"
+            >
+              <div
+                class="p-4"
+              >
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam, odit nam blanditiis, ex tempore fugiat repudiandae reiciendis cum molestiae sed possimus optio eos dolores asperiores harum recusandae cumque quam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full py-2 px-10 bg-gradient-to-b from-slate-700/20 to-slate-800/20"
+          >
+            <h4
+              class="px-10 uppercase tracking-widest"
+            >
+              How I started Coding
+            </h4>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              class="min-h-[33vh]"
+            >
+              <div
+                class="p-4"
+              >
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam, odit nam blanditiis, ex tempore fugiat repudiandae reiciendis cum molestiae sed possimus optio eos dolores asperiores harum recusandae cumque quam.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-full py-2 px-10 bg-gradient-to-b from-slate-700/20 to-slate-800/20"
+          >
+            <h4
+              class="px-10 uppercase tracking-widest"
+            >
+              My Goal
+            </h4>
+          </div>
+          <div
+            class="w-full"
+          >
+            <div
+              class="min-h-[33vh]"
+            >
+              <div
+                class="p-4"
+              >
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam, odit nam blanditiis, ex tempore fugiat repudiandae reiciendis cum molestiae sed possimus optio eos dolores asperiores harum recusandae cumque quam.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+    >
+      <h2
+        class="px-10"
+      >
+        Techs
+      </h2>
+    </div>
+    <div
+      class="w-full py-2 px-10 bg-gradient-to-b from-slate-700/20 to-slate-800/20"
+    >
+      <h4
+        class="px-10 uppercase tracking-widest"
+      >
+        Stacks
+      </h4>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="min-h-[33vh]"
+      >
+        <div
+          class="p-4"
+        >
+          <p>
+            HTML
+          </p>
+          <p>
+            CSS
+          </p>
+          <p>
+            Javascript
+          </p>
+          <p>
+            Typescript
+          </p>
+          <p>
+            React
+          </p>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full py-2 px-10 bg-gradient-to-b from-slate-700/20 to-slate-800/20"
+    >
+      <h4
+        class="px-10 uppercase tracking-widest"
+      >
+        Projects
+      </h4>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="min-h-[33vh]"
+      >
+        <div
+          class="p-4"
+        >
+          <ul
+            class="w-full grid grid-cols-1 md:grid-cols-3 gap-4"
+          >
+            <li
+              class="flex justify-between gap-4 bg-cyan-400/20 p-2 uppercase tracking-wider select-none"
+            >
+              countdown clock
+              <a
+                href="https://ecmcode.github.io/countdown-timer/"
+                target="_blank"
+              >
+                <button
+                  class="text-cyan-400 font-semibold underline"
+                >
+                  Demo
+                </button>
+              </a>
+            </li>
+            <li
+              class="flex justify-between gap-4 bg-cyan-400/20 p-2 uppercase tracking-wider select-none"
+            >
+              shopping list
+              <a
+                href="https://ecmcode.github.io/shopping-list/"
+                target="_blank"
+              >
+                <button
+                  class="text-cyan-400 font-semibold underline"
+                >
+                  Demo
+                </button>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+    >
+      <h2
+        class="px-10"
+      >
+        Blogs
+      </h2>
+    </div>
+    <div
+      class="w-full"
+    >
+      <div
+        class="min-h-[66vh]"
+      >
+        <div
+          class="p-4"
+        >
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+    >
+      <h2
+        class="px-10"
+      >
+        Contact Me
+      </h2>
+    </div>
+  </main>
+</div>
+`;
