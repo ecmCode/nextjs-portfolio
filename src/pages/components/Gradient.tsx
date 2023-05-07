@@ -17,8 +17,6 @@ const Gradient = () => {
             setPercentage(
                 Math.floor((scrollTop /scrollHeight) * 100)
             )
-
-            console.log(percentage)
         }
 
         window?.addEventListener("wheel", unsub)

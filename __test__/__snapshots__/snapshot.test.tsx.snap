@@ -1,6 +1,70 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders homepage unchanged 1`] = `
+exports[`renders 404 page unchanged 1`] = `
+<div>
+  <main>
+    <h1>
+      404
+    </h1>
+    <p>
+      Page not found
+    </p>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+    <br />
+  </main>
+</div>
+`;
+
+exports[`renders About page unchanged 1`] = `
+<div>
+  <main>
+    <h1>
+      About
+    </h1>
+    <div
+      class="w-1/2 flex flex-col gap-4"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas accusamus dolor totam exercitationem beatae, quae placeat? Consectetur, laboriosam unde! Dolorum nihil nulla eum deleniti laborum, velit accusamus totam temporibus?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque praesentium sit, quam, omnis laudantium et cum libero dolore deleniti nisi, corrupti molestiae quis mollitia. Libero cupiditate repellendus laborum delectus impedit.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum temporibus, doloribus, atque nulla modi accusamus commodi mollitia explicabo natus deserunt sit ad. Odio explicabo eaque sequi! Veritatis, tempora aperiam?
+      </p>
+    </div>
+    <a
+      href="/"
+    >
+      <button
+        class="px-4 py-2 bg-slate-200 dark:bg-slate-900"
+      >
+        Home
+      </button>
+    </a>
+  </main>
+</div>
+`;
+
+exports[`renders Blogs page unchanged 1`] = `
+<div>
+  <main>
+    <h1>
+      Blogs
+    </h1>
+    <ul
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+    />
+  </main>
+</div>
+`;
+
+exports[`renders Home page unchanged 1`] = `
 <div>
   <main>
     <div
@@ -261,6 +325,80 @@ exports[`renders homepage unchanged 1`] = `
         Contact Me
       </h2>
     </div>
+  </main>
+</div>
+`;
+
+exports[`renders Projects page unchanged 1`] = `
+<div>
+  <main>
+    <h1>
+      Projects
+    </h1>
+    <ul
+      class="grid grid-cols-1 md:grid-cols-2 justify-center items-center place-items-center w-full h-auto gap-4 py-10"
+    >
+      <li
+        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-500/50 rounded-lg"
+      >
+        <h2>
+          countdown clock
+        </h2>
+        <p>
+          countdown clock app using React + Typescript
+        </p>
+        <div
+          class="flex justify-around w-full"
+        >
+          <a
+            href="https://ecmcode.github.io/countdown-timer/"
+            target="_blank"
+          >
+            <button>
+              Demo
+            </button>
+          </a>
+          <a
+            href="https://github.com/ecmCode/countdown-timer"
+            target="_blank"
+          >
+            <button>
+              Code
+            </button>
+          </a>
+        </div>
+      </li>
+      <li
+        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-500/50 rounded-lg"
+      >
+        <h2>
+          shopping list
+        </h2>
+        <p>
+          shopping list app using React
+        </p>
+        <div
+          class="flex justify-around w-full"
+        >
+          <a
+            href="https://ecmcode.github.io/shopping-list/"
+            target="_blank"
+          >
+            <button>
+              Demo
+            </button>
+          </a>
+          <a
+            href="https://github.com/ecmCode/shopping-list"
+            target="_blank"
+          >
+            <button>
+              Code
+            </button>
+          </a>
+        </div>
+      </li>
+    </ul>
   </main>
 </div>
 `;
