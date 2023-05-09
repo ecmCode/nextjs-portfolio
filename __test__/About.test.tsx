@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import About from '@/pages/about';
 import '@testing-library/jest-dom';
  
-describe('Home', () => {
+describe('About', () => {
   it('renders the component ', () => {
     const {container} = render(<About/>);
     expect(container).toBeInTheDocument();
@@ -23,7 +23,7 @@ describe('Home', () => {
         name: /Home/i,
     });
 
-    const paragraphs = screen.getAllByTestId('paragraph')
+    const paragraphs = screen.getAllByText(/Lorem ipsum/i)
 
     expect(heading).toBeInTheDocument();
     expect(link).toBeInTheDocument();
