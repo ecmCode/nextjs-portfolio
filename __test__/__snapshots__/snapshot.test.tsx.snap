@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders 404 page unchanged 1`] = `
+exports[`snapshot renders 404 page unchanged 1`] = `
 <div>
   <main>
     <h1>
@@ -19,7 +19,7 @@ exports[`renders 404 page unchanged 1`] = `
 </div>
 `;
 
-exports[`renders About page unchanged 1`] = `
+exports[`snapshot renders About page unchanged 1`] = `
 <div>
   <main>
     <h1>
@@ -51,7 +51,7 @@ exports[`renders About page unchanged 1`] = `
 </div>
 `;
 
-exports[`renders Blogs page unchanged 1`] = `
+exports[`snapshot renders Blogs page unchanged 1`] = `
 <div>
   <main>
     <h1>
@@ -64,7 +64,7 @@ exports[`renders Blogs page unchanged 1`] = `
 </div>
 `;
 
-exports[`renders Home page unchanged 1`] = `
+exports[`snapshot renders Home page unchanged 1`] = `
 <div>
   <main>
     <div
@@ -329,7 +329,7 @@ exports[`renders Home page unchanged 1`] = `
 </div>
 `;
 
-exports[`renders Projects page unchanged 1`] = `
+exports[`snapshot renders Projects page unchanged 1`] = `
 <div>
   <main>
     <h1>
