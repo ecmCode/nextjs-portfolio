@@ -9,12 +9,10 @@ describe('Home', () => {
   });
 
   it('renders the heading ', () => {
-    render(<Home posts={[]} />);
- 
+    render(<Home posts={[]}/>);
     const heading = screen.getByRole('heading', {
       name: /Portfolio/i,
     });
- 
     expect(heading).toBeInTheDocument();
   });
 });

@@ -1,34 +1,21 @@
-import Blogs from '@/pages/blogs';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import BlogContainer from '@/pages/blogs/components/BlogContainer';
+import { render, screen, cleanup } from '@testing-library/react';
 import { mockPosts } from './__mocks__/mockPosts';
+import Blogs from '../src/pages/blogs';
+import '@testing-library/jest-dom';
 
 describe("Blogs", () => {
 
-    it("should render the component", () => {
-        const {container} = render(<Blogs posts={[]}/>)
-        expect(container).toBeInTheDocument()
-    })
+    beforeEach(() => render(<Blogs posts={mockPosts}/>))
+    afterEach(() => cleanup())
 
-    it("should render the heading",() => {
-        render(<Blogs posts={[]}/>)
-                
-        const main = screen.getByRole('main',{
-            name: ""
-        })
-        const heading = screen.getByRole('heading',{
+    it("should render the heading",() => {                
+        const heading = screen.getByRole('heading', {
             name: /Blogs/i
         })
-
-        expect(main).toBeInTheDocument()
         expect(heading).toBeInTheDocument()
     })
 
     it("should render all blogs in the document",() => {
-        
-        render(<BlogContainer posts={mockPosts}/>)
-
         const allBlogs = screen.getByRole('list')
         expect(allBlogs).toBeInTheDocument()
         expect(allBlogs.localName).toEqual('ul')

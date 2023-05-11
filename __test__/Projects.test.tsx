@@ -1,9 +1,10 @@
-import Projects from "@/pages/projects";
+import Projects from "../src/pages/projects";
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import ProjectContainer from "@/pages/projects/components/ProjectContainer";
-import ProjectBox from "@/pages/projects/components/ProjectBox";
-import {projects} from "@/lib/projects";
+import ProjectContainer from "../src/pages/projects/components/ProjectContainer";
+import ProjectBox from "../src/pages/projects/components/ProjectBox";
+import {projects} from "../src/lib/projects";
+import React from "react";
 
 
 describe("Projects", () => {
