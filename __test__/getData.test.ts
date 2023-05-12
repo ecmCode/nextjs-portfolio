@@ -5,7 +5,7 @@ describe('getData function', () => {
   it('should return data from API', async () => {
    
     const mockedFetch = jest.fn().mockResolvedValue({
-        json: () => Promise.resolve(Array(100).fill({})),
+        json: () => Promise.resolve(Array(10).fill({})),
     });
 
     global.fetch = mockedFetch;
@@ -15,7 +15,7 @@ describe('getData function', () => {
     expect(data).toBeDefined();
     expect(Array.isArray(data)).toBe(true);
     expect(data.length).toBeGreaterThan(0);
-    expect(data).toHaveLength(100)
+    expect(data).toHaveLength(10)
     mockedFetch.mockRestore()
   });
 
