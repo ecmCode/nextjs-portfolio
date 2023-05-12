@@ -29,18 +29,6 @@ export default function Home({posts} : IPosts) {
         <HomeWelcome />
         <HomeTitle>About Me</HomeTitle>
         <Container variant="full">
-          <HomeSubtitle>Personal Life</HomeSubtitle>
-          <Container variant="2/3">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam, odit nam blanditiis, ex tempore fugiat repudiandae reiciendis cum molestiae sed possimus optio eos dolores asperiores harum recusandae cumque quam.</p>
-          </Container>
-          <HomeSubtitle>How I started Coding</HomeSubtitle>
-          <Container variant="1/3">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam, odit nam blanditiis, ex tempore fugiat repudiandae reiciendis cum molestiae sed possimus optio eos dolores asperiores harum recusandae cumque quam.</p>
-          </Container>
-          <HomeSubtitle>My Goal</HomeSubtitle>
-          <Container variant="1/3">
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus aperiam, odit nam blanditiis, ex tempore fugiat repudiandae reiciendis cum molestiae sed possimus optio eos dolores asperiores harum recusandae cumque quam.</p>
-          </Container>
         </Container>
         <HomeTitle>Techs</HomeTitle>
         <HomeSubtitle>Stacks</HomeSubtitle>

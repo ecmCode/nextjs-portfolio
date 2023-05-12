@@ -1,36 +1,44 @@
-import { render, screen } from '@testing-library/react';
+import { cleanup, render, screen } from '@testing-library/react';
 import About from '../src/pages/about';
 import '@testing-library/jest-dom';
  
 describe('About', () => {
-  it('renders the component ', () => {
-    const {container} = render(<About/>);
-    expect(container).toBeInTheDocument();
-  });
 
-  it('renders all the elements ', () => {
-    render(<About/>);
- 
+  beforeEach(() => render(<About/>))
+  afterEach(() => cleanup())
+
+  it('renders all interactive elements ', () => { 
+
     const heading = screen.getByRole('heading', {
-      name: /About/i,
+      name: /About Me/,
     });
 
     const link = screen.getByRole('link', {
-        name: /Home/i,
+        name: /Home/,
     });
 
     const button = screen.getByRole('button', {
-        name: /Home/i,
+        name: /Home/,
     });
-
-    const paragraphs = screen.getAllByText(/Lorem ipsum/i)
-
+    
     expect(heading).toBeInTheDocument();
     expect(link).toBeInTheDocument();
     expect(button).toBeInTheDocument();
-    expect(paragraphs).toHaveLength(3)
+    
+  });
+
+  it('renders paragraphs with expected length', () => {
+
+    const paragraphs = screen
+      .getByTestId('paragraphs')
+      .childNodes as unknown as HTMLParagraphElement[]
+
+    expect(paragraphs).toHaveLength(7)
+
     paragraphs.forEach(p => {
         expect(p).toBeInTheDocument();
     })
+
   });
+
 });

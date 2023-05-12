@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-
+import { aboutme } from "./assets/aboutme";
+import {BsInstagram, BsDiscord, BsGithub} from "react-icons/bs"
+import {HiOutlineMail, HiPhone} from "react-icons/hi"
 const About = () => {
     return (
         <>
@@ -8,19 +10,33 @@ const About = () => {
                 <title>About</title>
             </Head>
             <main>
-                <h1>About</h1>
-                <div className="w-1/2 flex flex-col gap-4">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas accusamus dolor totam exercitationem beatae, quae placeat? Consectetur, laboriosam unde! Dolorum nihil nulla eum deleniti laborum, velit accusamus totam temporibus?
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque praesentium sit, quam, omnis laudantium et cum libero dolore deleniti nisi, corrupti molestiae quis mollitia. Libero cupiditate repellendus laborum delectus impedit.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta ipsum temporibus, doloribus, atque nulla modi accusamus commodi mollitia explicabo natus deserunt sit ad. Odio explicabo eaque sequi! Veritatis, tempora aperiam?
-                    </p>
+                <h1>About Me</h1>
+                <div className="flex flex-col gap-4">
+                    {/* Contacts */}
+                    <div>
+                        <h4 className="flex gap-2 items-center">
+                            <HiPhone/>012345678
+                        </h4>
+                        <h4 className="flex gap-2 items-center">
+                            <HiOutlineMail/>example@example.com
+                        </h4>
+                    </div>
+                    <div className="flex gap-10 text-3xl">
+                        <BsGithub/>
+                        <BsInstagram/>
+                        <BsDiscord/>
+                    </div>
+                </div>
+                <div 
+                data-testid="paragraphs" 
+                className="w-full md:w-4/5 lg:w-2/5 flex flex-col gap-10 p-10"
+                >
+                    {aboutme.map((p,index) => (
+                        <p key={index}>{p}</p>
+                    ))}
                 </div>
                 <Link href="/">
+                    {/* Link to home  */}
                     <button className="px-4 py-2 bg-slate-200 dark:bg-slate-900">Home</button>
                 </Link>
             </main>
