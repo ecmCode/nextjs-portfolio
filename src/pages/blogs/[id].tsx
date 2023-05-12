@@ -32,11 +32,11 @@ export const getStaticProps = async (context:{params:{id: string}}) => {
 
 const Post = ({post}:{post: Blog}) => {
     return (
-        <div className="p-10">
+        <div className="p-20">
             <Head>
                 <title>{post.title}</title>
             </Head>
-            <h1 className="text-center text-4xl">{post.title}</h1>
+            <h1 className="text-center text-3xl mx-20">{post.title}</h1>
             <p className="p-10">{post.body}</p>
             <div className="flex gap-4 justify-end">
                 <Link href="/blogs">

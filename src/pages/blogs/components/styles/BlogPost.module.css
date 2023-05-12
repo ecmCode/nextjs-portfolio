@@ -1,17 +1,13 @@
-.box{
-    @apply bg-slate-200 dark:bg-slate-500/50 m-4 p-4 flex flex-col justify-between gap-4 shadow-lg
+.box{ 
+    @apply bg-slate-200 dark:bg-slate-500/10 p-6 flex flex-col justify-between gap-4 shadow-lg rounded-md backdrop-blur-xl;
 }
 
 .title{
-    @apply text-2xl text-center overflow-ellipsis truncate
-}
-
-.id{
-    @apply font-bold text-right
+    @apply text-2xl text-center overflow-ellipsis truncate mx-6
 }
 
 .body{
-    @apply line-clamp-4 break-words
+    @apply line-clamp-4 break-words my-4
 }
 
 .link{
