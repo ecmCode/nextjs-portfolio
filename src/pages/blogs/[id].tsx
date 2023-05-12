@@ -1,8 +1,9 @@
+import { getData } from "@/lib/getData";
 import Head from "next/head";
 import Link from "next/link";
 
 export const getStaticPaths = async () => {
-    const data : Blog[] = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
+    const data : Blog[] = await getData()
 
     const paths = data.map(blog => {
         return {
@@ -20,8 +21,10 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context:{params:{id: string}}) => {
     const id = context.params.id;
-    const data : Blog[] = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`).then(res => res.json());
-    // const post = data.find(post => post.id.toString() === id)
+    
+    const data : Blog[] = 
+    await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/`)
+    .then(res => res.json());
 
     return {
         props: {
