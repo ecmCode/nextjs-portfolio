@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import { aboutme } from "./assets/aboutme";
+import aboutme from "./assets/aboutme.json";
 import {BsInstagram, BsDiscord, BsGithub} from "react-icons/bs"
 import {HiOutlineMail, HiPhone} from "react-icons/hi"
 const About = () => {
