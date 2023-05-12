@@ -1,8 +1,9 @@
 import Gradient from "./Gradient";
+import style from "./styles/Layout.module.css"
 
 const Layout = ({children}:React.PropsWithChildren) => {
     return (
-        <div className="h-screen w-screen overflow-y-auto overflow-x-hidden">
+        <div className={style.layout}>
             <Gradient/>
             {children}
         </div>
