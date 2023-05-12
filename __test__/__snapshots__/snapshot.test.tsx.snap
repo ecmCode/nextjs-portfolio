@@ -170,10 +170,10 @@ exports[`snapshot renders Home page unchanged 1`] = `
 <div>
   <main>
     <div
-      class="min-h-screen flex flex-col justify-start items-center"
+      class="min-h-screen flex flex-col gap-4 justify-start items-center"
     >
       <div
-        class="py-10 flex flex-col gap-4"
+        class="py-4 flex flex-col gap-4"
       >
         <h1
           class="text-6xl"
@@ -188,18 +188,33 @@ exports[`snapshot renders Home page unchanged 1`] = `
         class="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-0"
       >
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio mollitia sunt corporis, sapiente debitis odio qui, tenetur velit pariatur inventore odit itaque eius assumenda rerum libero maiores est. Rem, numquam?
+          
+                    I'm Lee, a self taught frontend developer since 2019. I specialize in responsive and user-friendly websites. Whether you're a small business or a large corporation, I'm here to help bring your vision to life. Feel free to explore my portfolio and contact me to discuss your project.
+                    
         </p>
       </div>
-      <a
-        href="/projects"
+      <div
+        class="flex gap-10"
       >
-        <button
-          class="px-10 py-4 my-10 bg-slate-500/20 rounded-lg"
+        <a
+          href="/projects"
         >
-          Projects
-        </button>
-      </a>
+          <button
+            class="px-6 py-2 bg-slate-500/20 rounded-sm"
+          >
+            Projects
+          </button>
+        </a>
+        <a
+          href="#contact"
+        >
+          <button
+            class="px-6 py-2 bg-slate-500/20 rounded-sm"
+          >
+            Contact
+          </button>
+        </a>
+      </div>
     </div>
     <div
       class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
@@ -214,11 +229,35 @@ exports[`snapshot renders Home page unchanged 1`] = `
       class="w-full"
     >
       <div
-        class="h-full"
+        class="min-h-[33vh]"
       >
         <div
           class="p-4"
-        />
+        >
+          <div
+            class="px-10 md:px-40 py-10 flex flex-col gap-6"
+          >
+            <p>
+              Hi there! My name is Lee and I'm a self-taught web developer traveling around the world while working remotely. 
+            </p>
+            <p>
+              I started my programming journey in 2019. Throughout the years I've developed a passion for building websites that are both functional and beautiful. I've always been interested in technology and how it can be used to create amazing things.
+            </p>
+            <p>
+              I specialize in HTML, CSS, JavaScript, Typescript, and React. I have been always looking for new ways to improve my skills and stay up-to-date with the latest trends in web development.
+            </p>
+            <div
+              class="text-right"
+            >
+              <a
+                class="bg-slate-500/20 rounded-sm py-2 px-6"
+                href="/about"
+              >
+                Read More
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div
@@ -363,6 +402,11 @@ exports[`snapshot renders Home page unchanged 1`] = `
       >
         Contact Me
       </h2>
+    </div>
+    <div
+      id="contact"
+    >
+      Contact Me
     </div>
   </main>
 </div>

@@ -4,11 +4,11 @@ import HomeWelcome from "./components/HomeWelcome";
 import HomeProjects from "./components/HomeProjects";
 import HomeTitle from "./components/HomeTitle";
 import { getData } from "@/lib/getData";
-import ScreenHeight from "./components/ScreenHeight";
 import Container from "./components/Container";
 import { IPosts } from "@/types/interfaces";
 import HomeSubtitle from "./components/HomeSubtitle";
 import Link from "next/link";
+import aboutme from "./about/assets/aboutme.json"
 
 export const getStaticProps = async () => {
   const data = await getData()
@@ -29,7 +29,18 @@ export default function Home({posts} : IPosts) {
       <main>
         <HomeWelcome />
         <HomeTitle>About Me</HomeTitle>
-        <Container variant="full">
+        <Container variant="1/3">
+          <div className="px-10 md:px-40 py-10 flex flex-col gap-6">
+            {
+              aboutme && aboutme
+              .slice(0,3).map((p,index) => <p key={index}>{p}</p> )
+            }
+            <div className="text-right">
+              <Link href="/about/" className="bg-slate-500/20 rounded-sm py-2 px-6">
+                Read More
+              </Link>
+            </div>
+          </div>
         </Container>
         <HomeTitle>Techs</HomeTitle>
         <HomeSubtitle>Stacks</HomeSubtitle>
@@ -63,14 +74,9 @@ export default function Home({posts} : IPosts) {
           </div>
         </Container>
         <HomeTitle>Contact Me</HomeTitle>
-        {/* <ScreenHeight>
-          <Container variant="1/3">
-            hello world
-          </Container>
-          <Container variant="2/3">
-            hello world
-          </Container>
-        </ScreenHeight> */}
+        <div id="contact">
+              Contact Me
+        </div>
       </main>
     </>
   )
