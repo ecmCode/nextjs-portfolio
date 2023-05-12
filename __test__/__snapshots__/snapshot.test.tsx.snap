@@ -122,8 +122,7 @@ exports[`snapshot renders About page unchanged 1`] = `
         Hi there! My name is Lee and I'm a self-taught web developer traveling around the world while working remotely. 
       </p>
       <p>
-        I started my programming journey in 2019. Throughout the years I've developed a passion for building websites that are both functional and beautiful.
-    I've always been interested in technology and how it can be used to create amazing things.
+        I started my programming journey in 2019. Throughout the years I've developed a passion for building websites that are both functional and beautiful. I've always been interested in technology and how it can be used to create amazing things.
       </p>
       <p>
         I specialize in HTML, CSS, JavaScript, Typescript, and React. I have been always looking for new ways to improve my skills and stay up-to-date with the latest trends in web development.
@@ -161,7 +160,7 @@ exports[`snapshot renders Blogs page unchanged 1`] = `
       Blogs
     </h1>
     <ul
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      class="grid grid-cols-1 lg:grid-cols-2 w-full sm:w-2/3 gap-10 my-10"
     />
   </main>
 </div>
@@ -335,7 +334,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
       class="w-full"
     >
       <div
-        class="min-h-[66vh]"
+        class="min-h-[33vh]"
       >
         <div
           class="p-4"
@@ -343,6 +342,16 @@ exports[`snapshot renders Home page unchanged 1`] = `
           <div
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
           />
+          <div
+            class="text-center mt-10"
+          >
+            <a
+              class="bg-slate-500/20 rounded-sm py-2 px-6"
+              href="/blogs"
+            >
+              All Blogs
+            </a>
+          </div>
         </div>
       </div>
     </div>
