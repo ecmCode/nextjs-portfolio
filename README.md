@@ -1,11 +1,11 @@
-My personal portfolio
+My personal portfolio: [Page URL](portfolio-ecmcode.vercel.app) 
 
-Techs used:
+### Techs used:
 
-React for UI components
-Typescript for type cheking and type safety
-Next.js for server side rendering and deployment 
-Tailwind CSS for styles
-Jest for unit tests
-React icons for icons
-ChatGPT for ideas and dummy tests
+- **React:** UI components
+- **Typescript:** Type cheking and type safety
+- **Next.js:** Server side rendering and deployment 
+- **Tailwind CSS:** Styling
+- **Jest:** Unit tests
+- **React icons:** Icons
+- **ChatGPT:** Creating ideas and dummy tests
