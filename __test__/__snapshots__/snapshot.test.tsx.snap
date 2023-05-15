@@ -208,6 +208,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
           </p>
           <div
             class="flex gap-10"
+            data-testid="buttons"
           >
             <a
               href="/projects"

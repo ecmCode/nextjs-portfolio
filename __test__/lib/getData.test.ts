@@ -1,4 +1,4 @@
-import { getData } from "../src/lib/getData";
+import { getData } from "@/lib/getData";
 
 describe('getData function', () => {
 

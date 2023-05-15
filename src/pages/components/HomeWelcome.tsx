@@ -34,7 +34,7 @@ const Article = () => {
 
 const Buttons = () => { 
     return (
-        <div className="flex gap-10">
+        <div className="flex gap-10" data-testid="buttons">
             <Link href='/projects'>
                 <button className={style.btn}>
                     Projects
@@ -54,7 +54,7 @@ const HomeWelcome = () => {
         <div className="w-auto z-0 mb-10 lg:mb-0">
             <h1 className={style.title}>Portfolio</h1>
             <div className={style.wrapper}>
-                <Icon />
+                <Icon data-testid="icon"/>
                 <div className={style.content}>
                     <Article/>
                     <Buttons/>

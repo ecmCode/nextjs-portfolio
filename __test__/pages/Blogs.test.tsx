@@ -1,6 +1,6 @@
 import { render, screen, cleanup } from '@testing-library/react';
-import { mockPosts } from './__mocks__/mockPosts';
-import Blogs from '../src/pages/blogs';
+import { mockPosts } from '../__mocks__/mockPosts';
+import Blogs from '@/pages/blogs';
 import '@testing-library/jest-dom';
 
 describe("Blogs", () => {
