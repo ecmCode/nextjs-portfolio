@@ -170,50 +170,65 @@ exports[`snapshot renders Home page unchanged 1`] = `
 <div>
   <main>
     <div
-      class="min-h-screen flex flex-col gap-4 justify-start items-center"
+      class="w-auto z-0 mb-10 lg:mb-0"
     >
-      <div
-        class="py-4 flex flex-col gap-4"
+      <h1
+        class="title"
       >
-        <h1
-          class="text-6xl"
+        Portfolio
+      </h1>
+      <div
+        class="wrapper"
+      >
+        <img
+          alt="A fantasy portal icon"
+          class="icon"
+          data-nimg="1"
+          decoding="async"
+          draggable="false"
+          fetchpriority="high"
+          height="400"
+          src="/_next/image?url=%2Fimg.jpg&w=828&q=100"
+          srcset="/_next/image?url=%2Fimg.jpg&w=640&q=100 1x, /_next/image?url=%2Fimg.jpg&w=828&q=100 2x"
+          style="color: transparent;"
+          width="400"
+        />
+        <div
+          class="content"
         >
-          Portfolio
-        </h1>
-        <h2>
-          A collection of my work.
-        </h2>
-      </div>
-      <div
-        class="w-full md:w-1/2 flex flex-col items-center justify-center p-4 md:p-0"
-      >
-        <p>
-          
-                    I'm Lee, a self taught frontend developer since 2019. I specialize in responsive and user-friendly websites. Whether you're a small business or a large corporation, I'm here to help bring your vision to life. Feel free to explore my portfolio and contact me to discuss your project.
-                    
-        </p>
-      </div>
-      <div
-        class="flex gap-10"
-      >
-        <a
-          href="/projects"
-        >
-          <button
-            class="px-6 py-2 bg-slate-500/20 rounded-sm"
+          <h2>
+            A collection of my work.
+          </h2>
+          <p
+            class="paragraph"
           >
-            Projects
-          </button>
-        </a>
-        <a
-          href="#contact"
-        >
-          <button
-            class="px-6 py-2 bg-slate-500/20 rounded-sm"
+            
+                I'm Lee, a self taught frontend developer since 2019. I specialize in responsive and user-friendly websites. Whether you're a small business or a large corporation, I'm here to help bring your vision to life. Feel free to explore my portfolio and contact me to discuss your project.
+                
+          </p>
+          <div
+            class="flex gap-10"
           >
-            Contact
-          </button>
-        </a>
+            <a
+              href="/projects"
+            >
+              <button
+                class="btn"
+              >
+                Projects
+              </button>
+            </a>
+            <a
+              href="#contact"
+            >
+              <button
+                class="btn"
+              >
+                Contact
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
     <div
