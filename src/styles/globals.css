@@ -19,6 +19,7 @@
 html,body {
   overflow: hidden;
   min-height: 100vh;
+  height: max-content;
   color: var(--foreground-rgb);
   background: linear-gradient(
       to bottom,

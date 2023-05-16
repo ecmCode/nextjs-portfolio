@@ -25,7 +25,7 @@ const Gradient = () => {
     
      
     return ( 
-        <div>
+        <div className="fixed inset-0">
             <span 
             className={style.ball1}
             style={{

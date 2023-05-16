@@ -49,7 +49,7 @@ export default function Home({posts} : IPosts) {
             )}
           </div>
           <div className="text-center mt-10">
-            <Link href='/blogs/' className="bg-slate-500/20 rounded-sm py-2 px-6">
+            <Link href='/blogs#top' className="bg-slate-500/20 rounded-sm py-2 px-6">
               All Blogs
             </Link>
           </div>
