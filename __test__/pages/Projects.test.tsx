@@ -8,6 +8,7 @@ import React from "react";
 
 
 describe("Projects", () => {
+    
     it("should render all the components", () => {
         const {container: projects} = render(<Projects/>)
         const {container: projectBox} = render(<ProjectBox name={""} desc={""} imageURL={""} codeURL={""} demoURL={""} />)
