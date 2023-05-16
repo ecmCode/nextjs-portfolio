@@ -267,7 +267,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
             >
               <a
                 class="bg-slate-500/20 rounded-sm py-2 px-6"
-                href="/about"
+                href="/about#top"
               >
                 Read More
               </a>
@@ -510,7 +510,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
           >
             <a
               class="bg-slate-500/20 rounded-sm py-2 px-6"
-              href="/blogs"
+              href="/blogs#top"
             >
               All Blogs
             </a>
