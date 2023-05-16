@@ -8,7 +8,8 @@ import Container from "./components/Container";
 import { IPosts } from "@/types/interfaces";
 import HomeSubtitle from "./components/HomeSubtitle";
 import Link from "next/link";
-import aboutme from "./about/assets/aboutme.json"
+import HomeAboutme from "./components/HomeAboutme";
+import HomeStacks from "./components/HomeStacks";
 
 export const getStaticProps = async () => {
   const data = await getData()
@@ -29,32 +30,12 @@ export default function Home({posts} : IPosts) {
       <main>
         <HomeWelcome />
         <HomeTitle>About Me</HomeTitle>
-        <Container variant="1/3">
-          <div className="px-10 md:px-40 py-10 flex flex-col gap-6">
-            {
-              aboutme && aboutme
-              .slice(0,3).map((p,index) => <p key={index}>{p}</p> )
-            }
-            <div className="text-right">
-              <Link href="/about/" className="bg-slate-500/20 rounded-sm py-2 px-6">
-                Read More
-              </Link>
-            </div>
-          </div>
-        </Container>
+        <HomeAboutme/>
         <HomeTitle>Techs</HomeTitle>
         <HomeSubtitle>Stacks</HomeSubtitle>
-        <Container variant="1/3">
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>Javascript</p>
-            <p>Typescript</p>
-            <p>React</p>
-          </Container>
+        <HomeStacks/>
         <HomeSubtitle>Projects</HomeSubtitle>
-        <Container variant="1/3">
-          <HomeProjects />
-        </Container>
+        <HomeProjects />
         <HomeTitle>Blogs</HomeTitle>
         <Container variant="1/3">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
