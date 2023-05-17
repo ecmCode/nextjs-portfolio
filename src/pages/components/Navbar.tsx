@@ -2,8 +2,9 @@ import Link from "next/link";
 import style from "./styles/Navbar.module.css"
 
 const Navbar = () => {
+
     return (
-        <nav>
+        <nav className="relative">
             <ul className={style.nav}>
                 <li>
                     <Link href="/">Home</Link>
@@ -18,6 +19,7 @@ const Navbar = () => {
                     <Link href="/blogs">Blogs</Link>
                 </li>
             </ul>
+            <div className={style.fade}></div>
         </nav>
     );
 }

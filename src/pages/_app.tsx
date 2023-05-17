@@ -7,8 +7,8 @@ import MainPage from './components/MainPage'
 export default function App({ Component, pageProps }: AppProps) {
   return (
       <Layout>
+        <Navbar/>
         <MainPage>
-          <Navbar/>
           <Component {...pageProps} />
         </MainPage>
       </Layout>
