@@ -48,8 +48,8 @@ export default function Home({posts} : IPosts) {
               />)
             )}
           </div>
-          <div className="text-center mt-10">
-            <Link href='/blogs#top' className="bg-slate-500/20 rounded-sm py-2 px-6">
+          <div className="text-right mt-10">
+            <Link href='/blogs#top' className="bg-cyan-400/20 px-12">
               All Blogs
             </Link>
           </div>

@@ -1,7 +1,5 @@
 import Link from "next/link";
 
-
-
 const HomeBlogs = ({id,title,body}: Blog ) => {
     return (
         <div className="flex flex-col justify-between gap-6 p-2">
@@ -10,7 +8,7 @@ const HomeBlogs = ({id,title,body}: Blog ) => {
                 {body}
             </p>
             <span className="text-right">
-                <Link href={`/blogs/${id}`} className="px-4 py-2 bg-slate-200 dark:bg-slate-900">
+                <Link href={`/blogs/${id}`}>
                     More
                 </Link>
             </span>

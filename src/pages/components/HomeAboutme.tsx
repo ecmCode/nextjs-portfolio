@@ -12,7 +12,7 @@ const HomeAboutme = () => {
                     .map((p,index) => <p key={index}>{p}</p> )
                 }
                 <div className="text-right">
-                    <Link href="/about/#top"className="bg-slate-500/20 rounded-sm py-2 px-6">
+                    <Link href="/about/#top">
                         Read More
                     </Link>
                 </div>

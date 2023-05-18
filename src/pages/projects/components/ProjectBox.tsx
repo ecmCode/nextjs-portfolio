@@ -3,18 +3,17 @@ import Link from "next/link";
 
 const ProjectBox = ({name, desc, imageURL, codeURL, demoURL}: Project) => {
     return (
-        <li className="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-500/50 rounded-lg">
-            {/* <Image alt={name || ""} src={imageURL || "/"} width={100} height={100}/> */}
+        <li className="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 ">
             <h2>{name}</h2>
             <p>
                 {desc}
             </p>
             <div className="flex justify-around w-full">
                 <Link href={demoURL || "/"} target="_blank">
-                    <button>Demo</button>
+                    Demo
                 </Link>
-                <Link href={codeURL || "/"} target="_blank">
-                    <button>Code</button>
+                <Link href={codeURL || "/"} target="_blank" className="bg-cyan-400/20">
+                    Code
                 </Link>
             </div>
         </li>

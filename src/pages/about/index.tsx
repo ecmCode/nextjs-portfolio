@@ -36,8 +36,7 @@ const About = () => {
                     ))}
                 </div>
                 <Link href="/">
-                    {/* Link to home  */}
-                    <button className="px-4 py-2 bg-slate-200 dark:bg-slate-900">Home</button>
+                    Home
                 </Link>
             </main>
         </>

@@ -36,14 +36,10 @@ const Buttons = () => {
     return (
         <div className="flex gap-10" data-testid="buttons">
             <Link href='/projects'>
-                <button className={style.btn}>
-                    Projects
-                </button>
+                Projects
             </Link>
-            <Link href='#contact'>
-                <button className={style.btn}>
-                    Contact
-                </button>
+            <Link href='#contact' className="bg-cyan-400/20">
+                Contact
             </Link>
         </div>
     )

@@ -7,7 +7,8 @@
 }
 
 .icon{
-    @apply relative -right-0 lg:right-6 -top-0 lg:top-10 scale-100 lg:scale-125 drop-shadow-xl z-10 brightness-100 hover:brightness-110 rounded-full transition duration-300 opacity-90 hover:opacity-100 cursor-pointer flex-initial
+    @apply relative inset-y-0 lg:inset-y-14 scale-100 lg:scale-125 z-10 
+    drop-shadow-xl brightness-100 hover:brightness-125 dark:hover:brightness-110 rounded-full transition-[filter] duration-300 opacity-100 dark:opacity-90 dark:hover:opacity-100 cursor-pointer flex-initial
 }
 
 .content{
@@ -16,8 +17,4 @@
 
 .paragraph{
     @apply w-full md:w-3/4 flex flex-col items-end justify-center p-4 md:p-0 text-left
-}
-
-.btn{
-    @apply px-6 py-2 bg-slate-500/20 rounded-sm
 }

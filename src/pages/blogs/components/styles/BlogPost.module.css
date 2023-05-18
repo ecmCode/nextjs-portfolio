@@ -1,5 +1,5 @@
 .box{ 
-    @apply bg-slate-200 dark:bg-slate-500/10 p-6 flex flex-col justify-between gap-4 shadow-lg rounded-md backdrop-blur-xl;
+    @apply bg-slate-200/20 dark:bg-slate-500/10 p-6 flex flex-col justify-between gap-4 shadow-md shadow-slate-200 dark:shadow-slate-900 rounded-md backdrop-blur-xl;
 }
 
 .title{

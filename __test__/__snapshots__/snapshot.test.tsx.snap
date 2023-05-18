@@ -143,11 +143,7 @@ exports[`snapshot renders About page unchanged 1`] = `
     <a
       href="/"
     >
-      <button
-        class="px-4 py-2 bg-slate-200 dark:bg-slate-900"
-      >
-        Home
-      </button>
+      Home
     </a>
   </main>
 </div>
@@ -213,27 +209,20 @@ exports[`snapshot renders Home page unchanged 1`] = `
             <a
               href="/projects"
             >
-              <button
-                class="btn"
-              >
-                Projects
-              </button>
+              Projects
             </a>
             <a
+              class="bg-cyan-400/20"
               href="#contact"
             >
-              <button
-                class="btn"
-              >
-                Contact
-              </button>
+              Contact
             </a>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+      class="w-full py-6 bg-gradient-to-tl dark:bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
     >
       <h2
         class="px-10"
@@ -266,7 +255,6 @@ exports[`snapshot renders Home page unchanged 1`] = `
               class="text-right"
             >
               <a
-                class="bg-slate-500/20 rounded-sm py-2 px-6"
                 href="/about#top"
               >
                 Read More
@@ -277,7 +265,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+      class="w-full py-6 bg-gradient-to-tl dark:bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
     >
       <h2
         class="px-10"
@@ -451,33 +439,27 @@ exports[`snapshot renders Home page unchanged 1`] = `
             class="w-full grid grid-cols-1 md:grid-cols-3 gap-4"
           >
             <li
-              class="flex justify-between gap-4 bg-cyan-400/20 py-2 px-6 uppercase tracking-wider select-none hover:brightness-125"
+              class="flex justify-between items-center gap-4 bg-cyan-400/10 py-2 px-6 uppercase tracking-wider select-none hover:brightness-125"
             >
               countdown clock
               <a
+                class="text-cyan-600 font-semibold underline p-0 bg-transparent underline-offset-4"
                 href="https://ecmcode.github.io/countdown-timer/"
                 target="_blank"
               >
-                <button
-                  class="text-cyan-400 font-semibold underline"
-                >
-                  Demo
-                </button>
+                Demo
               </a>
             </li>
             <li
-              class="flex justify-between gap-4 bg-cyan-400/20 py-2 px-6 uppercase tracking-wider select-none hover:brightness-125"
+              class="flex justify-between items-center gap-4 bg-cyan-400/10 py-2 px-6 uppercase tracking-wider select-none hover:brightness-125"
             >
               shopping list
               <a
+                class="text-cyan-600 font-semibold underline p-0 bg-transparent underline-offset-4"
                 href="https://ecmcode.github.io/shopping-list/"
                 target="_blank"
               >
-                <button
-                  class="text-cyan-400 font-semibold underline"
-                >
-                  Demo
-                </button>
+                Demo
               </a>
             </li>
           </ul>
@@ -485,7 +467,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+      class="w-full py-6 bg-gradient-to-tl dark:bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
     >
       <h2
         class="px-10"
@@ -506,10 +488,10 @@ exports[`snapshot renders Home page unchanged 1`] = `
             class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
           />
           <div
-            class="text-center mt-10"
+            class="text-right mt-10"
           >
             <a
-              class="bg-slate-500/20 rounded-sm py-2 px-6"
+              class="bg-cyan-400/20 px-12"
               href="/blogs#top"
             >
               All Blogs
@@ -519,7 +501,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="w-full py-6 bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
+      class="w-full py-6 bg-gradient-to-tl dark:bg-gradient-to-br from-slate-50/10 to-slate-300/30 "
     >
       <h2
         class="px-10"
@@ -546,7 +528,7 @@ exports[`snapshot renders Projects page unchanged 1`] = `
       class="grid grid-cols-1 md:grid-cols-2 justify-center items-center place-items-center w-full h-auto gap-4 py-10"
     >
       <li
-        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-500/50 rounded-lg"
+        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 "
       >
         <h2>
           countdown clock
@@ -561,22 +543,19 @@ exports[`snapshot renders Projects page unchanged 1`] = `
             href="https://ecmcode.github.io/countdown-timer/"
             target="_blank"
           >
-            <button>
-              Demo
-            </button>
+            Demo
           </a>
           <a
+            class="bg-cyan-400/20"
             href="https://github.com/ecmCode/countdown-timer"
             target="_blank"
           >
-            <button>
-              Code
-            </button>
+            Code
           </a>
         </div>
       </li>
       <li
-        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-500/50 rounded-lg"
+        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-10 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 "
       >
         <h2>
           shopping list
@@ -591,17 +570,14 @@ exports[`snapshot renders Projects page unchanged 1`] = `
             href="https://ecmcode.github.io/shopping-list/"
             target="_blank"
           >
-            <button>
-              Demo
-            </button>
+            Demo
           </a>
           <a
+            class="bg-cyan-400/20"
             href="https://github.com/ecmCode/shopping-list"
             target="_blank"
           >
-            <button>
-              Code
-            </button>
+            Code
           </a>
         </div>
       </li>
