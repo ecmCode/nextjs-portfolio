@@ -1,3 +1,4 @@
+import { classes } from "@/lib/classes";
 import { IContainer } from "@/types/interfaces";
 
 const Container : React.FC<IContainer> = ({variant,children}) => {
@@ -20,7 +21,7 @@ const Container : React.FC<IContainer> = ({variant,children}) => {
 
     return (
         <div className="w-full">
-            <div className={`${option()} h-full flex items-start`}>
+            <div className={classes(option(),' h-full flex items-start')}>
                 <div className="p-4 w-full">
                     {children}
                 </div>
