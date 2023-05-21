@@ -17,14 +17,8 @@ describe('About', () => {
         name: /Home/,
     });
 
-    const button = screen.getByRole('button', {
-        name: /Home/,
-    });
-    
     expect(heading).toBeInTheDocument();
-    expect(link).toBeInTheDocument();
-    expect(button).toBeInTheDocument();
-    
+    expect(link).toBeInTheDocument();    
   });
 
   it('renders paragraphs with expected length', () => {

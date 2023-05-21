@@ -1,6 +1,6 @@
 .nav{
     @apply fixed w-full flex gap-6 md:gap-20 justify-center items-center py-4 px-8 backdrop-blur-md z-50
-    bg-slate-500/10 dark:bg-slate-200/10
+    bg-slate-500/10 dark:bg-slate-600/30
 }
 
 .nav li a{
@@ -8,7 +8,7 @@
 } 
 
 .fade{
-    @apply w-full h-10 fixed inset-y-14
-    bg-gradient-to-b from-slate-600/40 via-slate-300/20 
-    dark:from-slate-400/40 dark:via-slate-600/20 to-transparent
+    @apply w-full h-14 fixed inset-y-12
+    bg-gradient-to-b from-slate-600/30 via-slate-400/10 
+    dark:from-slate-400/30 dark:via-slate-600/20 to-transparent
 }

@@ -1,0 +1,15 @@
+.box{
+    @apply flex flex-col gap-8 rounded p-4 bg-slate-200/10
+}
+
+.contacts{
+    @apply flex gap-2 items-center
+}
+
+.social{
+    @apply flex gap-10 items-center justify-center text-3xl
+}
+
+.social a{
+    @apply transition hover:text-cyan-400 bg-transparent p-0
+}
