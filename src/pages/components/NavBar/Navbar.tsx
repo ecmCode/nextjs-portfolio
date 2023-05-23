@@ -1,5 +1,5 @@
 import Link from "next/link";
-import style from "./styles/Navbar.module.css"
+import style from "./Navbar.module.css"
 import { useRouter } from "next/router";
 
 const routes = [

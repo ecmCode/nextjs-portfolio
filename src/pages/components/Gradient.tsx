@@ -1,8 +1,10 @@
-// Blurred background gradient balls that transform themselves on scroll event
 
 import { useEffect, useState } from "react";
 import style from "./styles/Gradient.module.css"
 
+/**
+ *  Blurred background gradient balls that transform themselves on scroll event
+ */
 const Gradient = () => {
     
     const [percentage, setPercentage] = useState<number>(0)

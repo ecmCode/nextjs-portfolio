@@ -1,7 +1,7 @@
 import { classes } from "@/lib/classes";
 import { IContainer } from "@/types/interfaces";
 
-const Container : React.FC<IContainer> = ({variant,children}) => {
+const Container = ({variant,children}: IContainer) => {
 
     const option = () => {
         switch(variant){
@@ -12,10 +12,12 @@ const Container : React.FC<IContainer> = ({variant,children}) => {
             case "full" :
                 return "h-full"
             default: 
-                // exhaustive check making sure all options are listed
-                // throws compiler error when something is missing 
-                const exhaustiveCheck: never = variant;
-                return exhaustiveCheck
+                /** 
+                * Exhaustive check making sure all options are listed. 
+                * It should throw a compiler error if an option is missing 
+                */
+                const _exhaustiveCheck: never = variant;
+                return _exhaustiveCheck
         }
     }
 
