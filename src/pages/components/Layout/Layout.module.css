@@ -1,7 +1,7 @@
-.layout{
-    @apply h-screen w-screen overflow-y-auto overflow-x-hidden relative;
+.layout {
+  @apply h-screen w-screen overflow-y-auto overflow-x-hidden relative;
 }
 
-.layout::-webkit-scrollbar{
-    display: none;
+.layout::-webkit-scrollbar {
+  display: none;
 }

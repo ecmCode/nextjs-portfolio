@@ -1,15 +1,15 @@
-.box{ 
-    @apply bg-slate-200/20 dark:bg-slate-500/10 p-6 flex flex-col justify-between gap-4 shadow-md shadow-slate-200 dark:shadow-slate-900 rounded-md backdrop-blur-xl;
+.box {
+  @apply bg-slate-200/20 dark:bg-slate-500/10 p-6 flex flex-col justify-between gap-4 shadow-md shadow-slate-200 dark:shadow-slate-900 rounded-md backdrop-blur-xl;
 }
 
-.title{
-    @apply text-2xl text-center overflow-ellipsis truncate mx-6
+.title {
+  @apply text-2xl text-center overflow-ellipsis truncate mx-6;
 }
 
-.body{
-    @apply line-clamp-4 break-words my-4
+.body {
+  @apply line-clamp-4 break-words my-4;
 }
 
-.link{
-    @apply text-cyan-600 dark:text-cyan-500 font-semibold
+.link {
+  @apply text-cyan-600 dark:text-cyan-500 font-semibold;
 }

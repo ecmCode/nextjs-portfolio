@@ -1,0 +1,16 @@
+export const projects: Project[] = [
+  {
+    name: "countdown clock",
+    desc: "countdown clock app using React + Typescript",
+    imageURL: "image url",
+    codeURL: "https://github.com/ecmCode/countdown-timer",
+    demoURL: "https://ecmcode.github.io/countdown-timer/",
+  },
+  {
+    name: "shopping list",
+    desc: "shopping list app using React",
+    imageURL: "image url",
+    codeURL: "https://github.com/ecmCode/shopping-list",
+    demoURL: "https://ecmcode.github.io/shopping-list/",
+  },
+];

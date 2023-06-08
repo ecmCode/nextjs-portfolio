@@ -2,7 +2,7 @@ import Head from "next/head";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import HomeProjects from "./components/HomeProjects";
 import HomeTitle from "./components/HomeTitle";
-import { getData } from "@/lib/getData";
+import { getData } from "@/utility/getData";
 import { IPosts } from "@/types/interfaces";
 import HomeSubtitle from "./components/HomeSubtitle";
 import HomeAboutme from "./components/HomeAboutme";
@@ -11,40 +11,37 @@ import BlogList from "./components/BlogList/BlogList";
 
 import type { GetStaticProps } from "next";
 
-export const getStaticProps : GetStaticProps = async () => {
-  const data = await getData()
+export const getStaticProps: GetStaticProps = async () => {
+  const data = await getData();
   return {
-      props : {
-          posts: data.slice(0,4)
-      }
-  }
-}
+    props: {
+      posts: data.slice(0, 4),
+    },
+  };
+};
 
-const Home = ({posts} : IPosts) => {
-
+const Home = ({ posts }: IPosts) => {
   return (
     <>
       <Head>
         <title>Portfolio</title>
       </Head>
       <main>
-        <WelcomePage/>
+        <WelcomePage />
         <HomeTitle>About Me</HomeTitle>
-        <HomeAboutme/>
+        <HomeAboutme />
         <HomeTitle>Techs</HomeTitle>
         <HomeSubtitle>Stacks</HomeSubtitle>
-        <HomeStacks/>
+        <HomeStacks />
         <HomeSubtitle>Projects</HomeSubtitle>
-        <HomeProjects/>
-        
-        <BlogList posts={posts}/>
+        <HomeProjects />
+
+        <BlogList posts={posts} />
         <HomeTitle>Contact Me</HomeTitle>
-        <div id="contact">
-              Contact Me
-        </div>
+        <div id="contact">Contact Me</div>
       </main>
     </>
-  )
-}
+  );
+};
 
 export default Home;

@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
 
 export interface IPosts {
-    posts: Blog[]
+  posts: Blog[];
 }
 
 export interface IContainer {
-    variant: variant,
-    children: ReactNode,
+  variant: variant;
+  children: ReactNode;
 }
