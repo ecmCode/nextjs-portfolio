@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export interface IPosts {
-  posts: Blog[];
+  posts?: Blog[];
 }
 
 export interface IContainer {
