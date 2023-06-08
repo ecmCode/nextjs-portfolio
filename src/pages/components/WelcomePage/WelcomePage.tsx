@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import img from "./assets/portal.png"
-import style from "./styles/HomeWelcome.module.css"
+import img from "./portal.png"
+import style from "./WelcomePage.module.css"
 
 const Icon = () => {
     const size = 400;
@@ -45,7 +45,7 @@ const Buttons = () => {
     )
 }
 
-const HomeWelcome = () => {
+const WelcomePage = () => {
     return (
         <div className="w-auto z-0 mb-10 lg:mb-0">
             <h1 className={style.title}>Portfolio</h1>
@@ -60,4 +60,4 @@ const HomeWelcome = () => {
     );
 }
  
-export default HomeWelcome;
+export default WelcomePage;

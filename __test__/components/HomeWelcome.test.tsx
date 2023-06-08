@@ -1,4 +1,4 @@
-import HomeWelcome from "@/pages/components/HomeWelcome";
+import HomeWelcome from "@/pages/components/WelcomePage/WelcomePage";
 import { cleanup, screen, render } from "@testing-library/react";
 import '@testing-library/jest-dom';
 

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HomeWelcome from "./components/HomeWelcome";
+import WelcomePage from "./components/WelcomePage/WelcomePage";
 import HomeProjects from "./components/HomeProjects";
 import HomeTitle from "./components/HomeTitle";
 import { getData } from "@/lib/getData";
@@ -9,7 +9,9 @@ import HomeAboutme from "./components/HomeAboutme";
 import HomeStacks from "./components/HomeStacks";
 import BlogList from "./components/BlogList/BlogList";
 
-export const getStaticProps = async () => {
+import type { GetStaticProps } from "next";
+
+export const getStaticProps : GetStaticProps = async () => {
   const data = await getData()
   return {
       props : {
@@ -26,14 +28,14 @@ const Home = ({posts} : IPosts) => {
         <title>Portfolio</title>
       </Head>
       <main>
-        <HomeWelcome />
+        <WelcomePage/>
         <HomeTitle>About Me</HomeTitle>
         <HomeAboutme/>
         <HomeTitle>Techs</HomeTitle>
         <HomeSubtitle>Stacks</HomeSubtitle>
         <HomeStacks/>
         <HomeSubtitle>Projects</HomeSubtitle>
-        <HomeProjects />
+        <HomeProjects/>
         
         <BlogList posts={posts}/>
         <HomeTitle>Contact Me</HomeTitle>

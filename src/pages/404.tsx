@@ -1,11 +1,3 @@
-/*  
-Customized 404 Not Found page. 
-    Todo:
-        - add animation 
-        - add vector image
-        - change styping 
-*/
-
 import Link from "next/link";
 
 const NotFound = () => {

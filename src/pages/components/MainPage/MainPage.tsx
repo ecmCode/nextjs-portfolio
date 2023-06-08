@@ -1,4 +1,4 @@
-import style from "./styles/MainPage.module.css"
+import style from "./MainPage.module.css"
 
 const MainPage = ({children}: React.PropsWithChildren) => {
     return ( 

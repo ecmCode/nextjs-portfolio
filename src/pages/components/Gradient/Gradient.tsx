@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import style from "./styles/Gradient.module.css"
+import style from "./Gradient.module.css"
 
 /**
  *  Blurred background gradient balls that transform themselves on scroll event

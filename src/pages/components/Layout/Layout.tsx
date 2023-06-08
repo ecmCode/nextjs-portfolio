@@ -1,5 +1,5 @@
-import Gradient from "./Gradient";
-import style from "./styles/Layout.module.css"
+import Gradient from "../Gradient/Gradient";
+import style from "./Layout.module.css"
 
 const Layout = ({children}:React.PropsWithChildren) => {
     return (
