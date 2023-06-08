@@ -35,23 +35,25 @@ export const getStaticProps = async (context: { params: { id: string } }) => {
 
 const Post = ({ post }: { post: Blog }) => {
   return (
-    <div className="p-20">
+    <>
       <Head>
         <title>{post.title}</title>
       </Head>
-      <h1 className="text-center text-3xl mx-20">{post.title}</h1>
-      <p className="p-10">{post.body}</p>
-      <div className="flex gap-4 justify-end">
-        <Link href="/blogs">
-          <p className="text-cyan-500 hover:brightness-125">
-            Go back to the blogs
-          </p>
-        </Link>
-        <Link href="/">
-          <p className="underline hover:brightness-125">Home</p>
-        </Link>
-      </div>
-    </div>
+      <main className="mt-10 mx-0 lg:mx-40">
+        <h1 className="text-left mx-10">{post.title}</h1>
+        <p className="p-10">{post.body}</p>
+        <div className="flex gap-4 justify-end">
+          <Link href="/blogs">
+            <p className="text-cyan-500 hover:brightness-125">
+              Go back to the blogs
+            </p>
+          </Link>
+          <Link href="/">
+            <p className="underline hover:brightness-125">Home</p>
+          </Link>
+        </div>
+      </main>
+    </>
   );
 };
 
