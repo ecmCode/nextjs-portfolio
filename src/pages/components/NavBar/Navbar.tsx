@@ -25,7 +25,6 @@ const Navbar = () => {
           </li>
         ))}
       </ul>
-      <div className={style.fade}></div>
     </nav>
   );
 };
