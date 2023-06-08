@@ -1,9 +1,8 @@
 import Link from "next/link";
 import Container from "../Container";
 import HomeTitle from "../HomeTitle";
-import { IPosts } from "@/types/interfaces";
 
-const Blogs = ({ id, title, body }: Blog) => {
+const Blog = ({ id, title, body }: Blog) => {
   return (
     <div className="flex flex-col justify-between gap-6 p-2">
       <h3 className="truncate text-center">{title}</h3>
@@ -15,27 +14,44 @@ const Blogs = ({ id, title, body }: Blog) => {
   );
 };
 
-const BlogList = ({ posts }: IPosts) => {
+const BlogList = ({
+  posts,
+  error,
+  isLoading,
+}: {
+  posts: Blog[] | undefined;
+  error: Error | undefined;
+  isLoading: boolean;
+}) => {
   return (
     <>
       <HomeTitle>Blogs</HomeTitle>
       <Container variant="1/3">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {posts &&
-            posts.map((post) => (
-              <Blogs
-                key={post.id}
-                id={post.id}
-                title={post.title}
-                body={post.body}
-              />
-            ))}
-        </div>
-        <div className="text-right mt-10">
-          <Link href="/blogs#top" className="bg-cyan-400/20 px-12">
-            All Blogs
-          </Link>
-        </div>
+        {isLoading && !error && <p>Loading...</p>}
+        {error ? (
+          <p>Error: {error.message}</p>
+        ) : (
+          !isLoading && (
+            <>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {posts &&
+                  posts.map((post) => (
+                    <Blog
+                      key={post.id}
+                      id={post.id}
+                      title={post.title}
+                      body={post.body}
+                    />
+                  ))}
+              </div>
+              <div className="text-right mt-10">
+                <Link href="/blogs#top" className="bg-cyan-400/20 px-12">
+                  All Blogs
+                </Link>
+              </div>
+            </>
+          )
+        )}
       </Container>
     </>
   );
