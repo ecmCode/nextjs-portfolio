@@ -1,7 +1,6 @@
 import Head from "next/head";
 import BlogContainer from "./components/BlogContainer";
 import { getData } from "@/utility/getData";
-import { IPosts } from "@/types/interfaces";
 
 export const getStaticProps = async () => {
   const data = await getData();
@@ -12,7 +11,7 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blogs = ({ posts }: IPosts) => {
+const Blogs = ({ posts }: { posts: BlogType[] }) => {
   return (
     <>
       <Head>

@@ -1,7 +1,13 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 
-const ProjectBox = ({ name, desc, imageURL, codeURL, demoURL }: Project) => {
+const ProjectBox = ({
+  name,
+  desc,
+  imageURL,
+  codeURL,
+  demoURL,
+}: ProjectType) => {
   return (
     <li className="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-4 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 ">
       <h2>{name}</h2>

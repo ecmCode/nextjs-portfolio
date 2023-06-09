@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 
 export const getStaticPaths = async () => {
-  const data: Blog[] = await getData();
+  const data: BlogType[] = await getData();
 
   const paths = data.map((blog) => {
     return {
@@ -22,7 +22,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context: { params: { id: string } }) => {
   const id = context.params.id;
 
-  const data: Blog[] = await fetch(
+  const data: BlogType[] = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}/`
   ).then((res) => res.json());
 
@@ -33,7 +33,7 @@ export const getStaticProps = async (context: { params: { id: string } }) => {
   };
 };
 
-const Post = ({ post }: { post: Blog }) => {
+const Post = ({ post }: { post: BlogType }) => {
   return (
     <>
       <Head>

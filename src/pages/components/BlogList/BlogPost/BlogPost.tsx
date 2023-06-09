@@ -1,7 +1,7 @@
 import Link from "next/link";
 import style from "./BlogPost.module.css";
 
-const BlogPost = ({ id, title, body }: Blog) => {
+const BlogPost = ({ id, title, body }: BlogType) => {
   return (
     <div className={style.box}>
       <h3 className={style.title}>{title}</h3>
