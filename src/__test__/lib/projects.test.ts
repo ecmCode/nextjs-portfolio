@@ -1,4 +1,4 @@
-import { projects } from "@/utility/projects";
+import projects from "@/pages/projects/assets/projects.json";
 
 describe("projects array", () => {
   it("exists with right length", () => {

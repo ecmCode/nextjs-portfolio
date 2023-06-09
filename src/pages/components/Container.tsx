@@ -1,7 +1,7 @@
 import { classes } from "@/utility/classes";
-import { IContainer } from "@/types/interfaces";
+import { ContainerType } from "@/types/ContainerType";
 
-const Container = ({ variant, children }: IContainer) => {
+const Container = ({ variant, children }: ContainerType) => {
   const option = () => {
     switch (variant) {
       case "1/3":

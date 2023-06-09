@@ -1,12 +1,12 @@
 import Link from "next/link";
-import { projects } from "../../utility/projects";
+import projects from "../projects/assets/projects.json";
 import Container from "./Container";
 
 const HomeProjects = () => {
   return (
     <Container variant="1/3">
       <ul className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
-        {projects.map((project) => (
+        {(projects as ProjectType[])?.map((project) => (
           <li
             key={project.name.replace(" ", "-")}
             className="flex justify-between items-center gap-4 bg-cyan-400/10 py-2 px-6 uppercase tracking-wider select-none hover:brightness-125"
