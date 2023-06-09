@@ -23,7 +23,7 @@ const Container = ({ variant, children }: IContainer) => {
   return (
     <div className="w-full">
       <div className={classes(option(), " h-full flex items-start")}>
-        <div className="p-4 w-full">{children}</div>
+        <div className="p-6 w-full">{children}</div>
       </div>
     </div>
   );

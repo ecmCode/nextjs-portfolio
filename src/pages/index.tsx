@@ -2,16 +2,13 @@ import Head from "next/head";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import HomeProjects from "./components/HomeProjects";
 import HomeTitle from "./components/HomeTitle";
-// import { getData } from "@/utility/getData";
-import { IPosts } from "@/types/interfaces";
 import HomeSubtitle from "./components/HomeSubtitle";
 import HomeAboutme from "./components/HomeAboutme";
 import HomeStacks from "./components/HomeStacks";
 import BlogList from "./components/BlogList/BlogList";
 import { usePosts } from "@/hooks/usePosts";
 
-import type { GetStaticProps } from "next";
-
+// import type { GetStaticProps } from "next";
 // export const getStaticProps: GetStaticProps = async () => {
 //   const data = await getData();
 //   return {

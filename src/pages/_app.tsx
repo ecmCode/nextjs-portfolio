@@ -1,17 +1,20 @@
 import type { AppProps } from "next/app";
 import Navbar from "@/pages/components/NavBar/Navbar";
-import Layout from "./components/Layout/Layout";
+import BaseLayout from "./components/BaseLayout/BaseLayout";
 import MainPage from "./components/MainPage/MainPage";
 import "./globals.css";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
   return (
-    <Layout>
+    <BaseLayout>
       <Navbar />
       <MainPage>
         <Component {...pageProps} />
       </MainPage>
-    </Layout>
+    </BaseLayout>
   );
 };
 

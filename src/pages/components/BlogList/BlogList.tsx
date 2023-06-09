@@ -1,18 +1,8 @@
 import Link from "next/link";
 import Container from "../Container";
 import HomeTitle from "../HomeTitle";
-
-const Blog = ({ id, title, body }: Blog) => {
-  return (
-    <div className="flex flex-col justify-between gap-6 p-2">
-      <h3 className="truncate text-center">{title}</h3>
-      <p className="line-clamp-4 break-words">{body}</p>
-      <span className="text-right">
-        <Link href={`/blogs/${id}`}>More</Link>
-      </span>
-    </div>
-  );
-};
+import BlogPost from "./BlogPost/BlogPost";
+import style from "./BlogList.module.css";
 
 const BlogList = ({
   posts,
@@ -33,10 +23,10 @@ const BlogList = ({
         ) : (
           !isLoading && (
             <>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className={style.gridbox}>
                 {posts &&
                   posts.map((post) => (
-                    <Blog
+                    <BlogPost
                       key={post.id}
                       id={post.id}
                       title={post.title}
@@ -44,8 +34,8 @@ const BlogList = ({
                     />
                   ))}
               </div>
-              <div className="text-right mt-10">
-                <Link href="/blogs#top" className="bg-cyan-400/20 px-12">
+              <div className={style.bottom}>
+                <Link href="/blogs#top" className={style.link}>
                   All Blogs
                 </Link>
               </div>
