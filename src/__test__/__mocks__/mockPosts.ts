@@ -1,4 +1,4 @@
-export const mockPosts: Blog[] = [
+export const mockPosts: BlogType[] = [
   {
     userId: 1,
     id: 1,

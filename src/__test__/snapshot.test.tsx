@@ -1,5 +1,5 @@
 import { render } from "@testing-library/react";
-import Home from "../src/pages/index";
+import Home from "@/pages/index";
 import React from "react";
 import NotFound from "@/pages/404";
 import Blogs from "@/pages/blogs";
@@ -8,7 +8,7 @@ import Projects from "@/pages/projects";
 
 describe("snapshot", () => {
   it("renders Home page unchanged", () => {
-    const { container } = render(<Home posts={[]} />);
+    const { container } = render(<Home />);
     expect(container).toMatchSnapshot();
   });
 
