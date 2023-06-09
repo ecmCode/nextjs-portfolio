@@ -1,0 +1,11 @@
+.gridbox {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8;
+}
+
+.bottom {
+  @apply text-center mt-10 flex flex-col items-stretch md:items-center lg:items-end;
+}
+
+.link {
+  @apply bg-cyan-400/20 md:px-24 lg:px-12;
+}

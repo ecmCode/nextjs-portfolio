@@ -1,0 +1,11 @@
+.box {
+  @apply flex flex-col justify-between gap-6 p-4 bg-slate-500/10 backdrop-blur-sm rounded;
+}
+
+.title {
+  @apply truncate text-center;
+}
+
+.body {
+  @apply line-clamp-4 break-words;
+}
