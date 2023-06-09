@@ -1,0 +1,20 @@
+.title {
+  @apply text-6xl md:text-7xl text-center z-20;
+}
+
+.wrapper {
+  @apply flex flex-col gap-4 lg:flex-row-reverse justify-between items-center mx-0 lg:mx-20;
+}
+
+.icon {
+  @apply relative inset-y-0 lg:inset-y-14 scale-100 lg:scale-125 z-10 
+    drop-shadow-xl brightness-100 hover:brightness-125 dark:hover:brightness-110 rounded-full transition-[filter] duration-300 opacity-100 dark:opacity-90 dark:hover:opacity-100 cursor-pointer flex-initial;
+}
+
+.content {
+  @apply flex flex-col gap-6 justify-center items-center lg:items-start z-20 flex-1;
+}
+
+.paragraph {
+  @apply w-full md:w-3/4 flex flex-col items-end justify-center p-4 md:p-0 text-left;
+}

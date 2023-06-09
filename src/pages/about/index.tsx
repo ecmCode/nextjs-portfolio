@@ -1,19 +1,22 @@
 import Head from "next/head";
 import Link from "next/link";
-
+import aboutme from "./assets/aboutme.json";
+import ContactInfo from "./components/ContactInfo/ContactInfo";
+import Paragraphs from "./components/Paragraphs/Paragraphs";
 const About = () => {
-    return (
-        <div>
-            <Head>
-                <title>About</title>
-            </Head>
-            <h1>About</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quas accusamus dolor totam exercitationem beatae, quae placeat? Consectetur, laboriosam unde! Dolorum nihil nulla eum deleniti laborum, velit accusamus totam temporibus?
-            </p>
-            <Link href="/">Home</Link>
-        </div>
-    );
-}
- 
+  return (
+    <>
+      <Head>
+        <title>About</title>
+      </Head>
+      <main>
+        <h1>About Me</h1>
+        <ContactInfo />
+        <Paragraphs />
+        <Link href="/">Home</Link>
+      </main>
+    </>
+  );
+};
+
 export default About;

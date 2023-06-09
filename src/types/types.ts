@@ -1,12 +1,16 @@
 type Blog = {
-    userId?: number,
-    id: number,
-    title: string,
-    body:string
+  userId?: number;
+  id: number;
+  title: string;
+  body: string;
+};
 
-}
+type Project = {
+  name: string;
+  desc: string;
+  imageURL: string;
+  codeURL: string;
+  demoURL: string;
+};
 
-type Posts = {
-  posts: Blog[]
-}
-
+type variant = "1/3" | "2/3" | "full";

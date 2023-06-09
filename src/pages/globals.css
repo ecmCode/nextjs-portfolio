@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: #111;
-  --background-start-rgb:#eef;
+  --background-start-rgb: #eef;
   --background-end-rgb: #fff;
 }
 
@@ -16,8 +16,11 @@
   }
 }
 
-html,body {
+html,
+body {
+  overflow: hidden;
   min-height: 100vh;
+  height: max-content;
   color: var(--foreground-rgb);
   background: linear-gradient(
       to bottom,
@@ -27,13 +30,26 @@ html,body {
     var(--background-start-rgb);
 }
 
-h1{
-  @apply text-4xl
-}
-h2{
-  @apply text-2xl
+body::-webkit-scrollbar {
+  display: none;
 }
 
-h3{
-  @apply text-xl
+h1 {
+  @apply text-4xl;
+}
+h2 {
+  @apply text-2xl;
+}
+
+h3 {
+  @apply text-xl;
+}
+
+h4 {
+  @apply text-lg;
+}
+
+a {
+  @apply hover:brightness-150 px-6 py-2 
+  bg-slate-600/20 dark:bg-slate-500/20 rounded-sm;
 }

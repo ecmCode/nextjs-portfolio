@@ -1,17 +1,20 @@
 import Head from "next/head";
-import Link from "next/link";
+import { projects } from "../../utility/projects";
+import ProjectBox from "./components/ProjectBox";
+import ProjectContainer from "./components/ProjectContainer";
 
 const Projects = () => {
-    return (
-        <div>
-            <Head>
-                <title>Projects</title>
-            </Head>
-            <h1>Projects</h1>
-            <p>This is the Projects page</p>
-            <Link href="/">Go back to the homepage</Link>
-        </div>
-    );
-}
- 
+  return (
+    <>
+      <Head>
+        <title>Projects</title>
+      </Head>
+      <main>
+        <h1>Projects</h1>
+        <ProjectContainer projects={projects} />
+      </main>
+    </>
+  );
+};
+
 export default Projects;

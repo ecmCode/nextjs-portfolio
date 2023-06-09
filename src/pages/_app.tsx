@@ -1,13 +1,18 @@
-import Navbar from '@/pages/components/Navbar'
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
-import Layout from './components/Layout'
+import type { AppProps } from "next/app";
+import Navbar from "@/pages/components/NavBar/Navbar";
+import Layout from "./components/Layout/Layout";
+import MainPage from "./components/MainPage/MainPage";
+import "./globals.css";
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
-      <Layout>
-        <Navbar/>
+    <Layout>
+      <Navbar />
+      <MainPage>
         <Component {...pageProps} />
-      </Layout>
-  )
-}
+      </MainPage>
+    </Layout>
+  );
+};
+
+export default App;

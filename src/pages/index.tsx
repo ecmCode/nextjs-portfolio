@@ -8,8 +8,7 @@ import HomeStacks from "./components/HomeStacks";
 import BlogList from "./components/BlogList/BlogList";
 import { usePosts } from "@/hooks/usePosts";
 
-import type { GetStaticProps } from "next";
-
+// import type { GetStaticProps } from "next";
 // export const getStaticProps: GetStaticProps = async () => {
 //   const data = await getData();
 //   return {
@@ -19,26 +18,28 @@ import type { GetStaticProps } from "next";
 //   };
 // };
 
+const Home = () => {
+  const { data: posts, error, isLoading } = usePosts(4);
   return (
     <>
       <Head>
         <title>Portfolio</title>
       </Head>
-      <main className="flex flex-col gap-4 items-center justify-between p-20">
-        <HomeWelcome />
-        <h2>Projects</h2>
-        <h2>Blogs</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {posts && posts.map((post) => (
-            <HomeBlogs 
-              key={post.id} 
-              id={post.id}
-              title={post.title}
-              body={post.body}
-            />)
-          )}
-        </div>
+      <main>
+        <WelcomePage />
+        <HomeTitle>About Me</HomeTitle>
+        <HomeAboutme />
+        <HomeTitle>Techs</HomeTitle>
+        <HomeSubtitle>Stacks</HomeSubtitle>
+        <HomeStacks />
+        <HomeSubtitle>Projects</HomeSubtitle>
+        <HomeProjects />
+        <BlogList posts={posts} error={error} isLoading={isLoading} />
+        <HomeTitle>Contact Me</HomeTitle>
+        <div id="contact">Contact Me</div>
       </main>
     </>
-  )
-}
+  );
+};
+
+export default Home;
