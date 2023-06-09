@@ -1,17 +1,23 @@
 import Head from "next/head";
-import HomeBlogs from "./components/HomeBlogs";
-import HomeWelcome from "./components/HomeWelcome";
+import WelcomePage from "./components/WelcomePage/WelcomePage";
+import HomeProjects from "./components/HomeProjects";
+import HomeTitle from "./components/HomeTitle";
+import HomeSubtitle from "./components/HomeSubtitle";
+import HomeAboutme from "./components/HomeAboutme";
+import HomeStacks from "./components/HomeStacks";
+import BlogList from "./components/BlogList/BlogList";
+import { usePosts } from "@/hooks/usePosts";
 
-export const getStaticProps = async () => {
-  const data = await fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json())
-  return {
-      props: {
-          posts: data.slice(0,4)
-      }
-  }
-}
+import type { GetStaticProps } from "next";
 
-export default function Home({posts} : Posts) {
+// export const getStaticProps: GetStaticProps = async () => {
+//   const data = await getData();
+//   return {
+//     props: {
+//       posts: data.slice(0, 4),
+//     },
+//   };
+// };
 
   return (
     <>
