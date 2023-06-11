@@ -1,0 +1,19 @@
+.main {
+  @apply mt-10 mx-0 lg:mx-40;
+}
+
+.title {
+  @apply text-left mx-10;
+}
+
+.body {
+  @apply p-10;
+}
+
+.btns {
+  @apply w-full flex gap-10 justify-center lg:justify-end items-center;
+}
+
+.homebtn {
+  @apply underline hover:text-cyan-500 underline-offset-4 bg-transparent p-0;
+}
