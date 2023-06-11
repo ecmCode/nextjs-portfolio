@@ -1,8 +1,9 @@
 import Head from "next/head";
-import BlogContainer from "./components/BlogContainer";
+import BlogPageContent from "./components/BlogPageContent";
 import { getData } from "@/utility/getData";
+import type { GetStaticProps } from "next";
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = await getData();
   return {
     props: {
@@ -11,18 +12,15 @@ export const getStaticProps = async () => {
   };
 };
 
-const Blogs = ({ posts }: { posts: BlogType[] }) => {
+const BlogPage = ({ posts }: { posts: BlogType[] }) => {
   return (
     <>
       <Head>
         <title>Blogs</title>
       </Head>
-      <main>
-        <h1>Blogs</h1>
-        <BlogContainer posts={posts} />
-      </main>
+      <BlogPageContent posts={posts} />
     </>
   );
 };
 
-export default Blogs;
+export default BlogPage;

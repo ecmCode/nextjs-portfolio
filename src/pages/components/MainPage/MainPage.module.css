@@ -1,6 +1,10 @@
 .mainPage {
-  @apply p-6 md:p-10 overflow-auto min-h-screen backdrop-blur-lg;
+  @apply p-6 md:p-16 overflow-auto min-h-screen backdrop-blur-lg;
 }
 .mainPage main {
-  @apply flex flex-col items-center justify-center gap-4 py-16;
+  @apply flex flex-col items-center justify-center py-12;
+}
+
+.mainPage main h1:first-child{
+  @apply my-10
 }
