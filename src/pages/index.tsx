@@ -6,16 +6,6 @@ import Techs from "./components/Techs/Techs";
 import Contact from "./components/Contact/Contact";
 import { usePosts } from "@/hooks/usePosts";
 
-// import type { GetStaticProps } from "next";
-// export const getStaticProps: GetStaticProps = async () => {
-//   const data = await getData();
-//   return {
-//     props: {
-//       posts: data.slice(0, 4),
-//     },
-//   };
-// };
-
 const Home = () => {
   const { data: posts, error, isLoading } = usePosts(4);
   return (

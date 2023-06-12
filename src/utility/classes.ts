@@ -3,5 +3,5 @@
  * @param args imported module css or tailwind classes
  */
 export const classes = (...args: string[]): string => {
-  return args.join(" ");
+  return args.filter(arg => arg?.trim().length).join(" ");
 };
