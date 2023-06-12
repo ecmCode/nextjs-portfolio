@@ -5,6 +5,6 @@
   @apply flex flex-col items-center justify-center py-12;
 }
 
-.mainPage main h1:first-child{
-  @apply my-10
+.mainPage main h1:first-child {
+  @apply my-10;
 }

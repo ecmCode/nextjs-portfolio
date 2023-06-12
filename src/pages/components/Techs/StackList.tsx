@@ -1,6 +1,7 @@
 import { SiTypescript, SiReact } from "react-icons/si";
 import { FaHtml5, FaCss3, FaJs } from "react-icons/fa";
-import Container from "./Container";
+import React from "react";
+import Container from "../Container";
 
 const stacks = [
   { name: "html", icon: <FaHtml5 /> },

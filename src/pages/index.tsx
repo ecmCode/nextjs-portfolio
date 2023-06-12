@@ -1,11 +1,9 @@
 import Head from "next/head";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
-import HomeProjects from "./components/HomeProjects";
-import Title from "./components/Title";
-import Subtitle from "./components/Subtitle";
-import Aboutme from "./components/Aboutme";
-import StackList from "./components/StackList";
+import Aboutme from "./components/Aboutme/Aboutme";
 import BlogList from "./components/BlogList/BlogList";
+import Techs from "./components/Techs/Techs";
+import Contact from "./components/Contact/Contact";
 import { usePosts } from "@/hooks/usePosts";
 
 // import type { GetStaticProps } from "next";
@@ -28,14 +26,9 @@ const Home = () => {
       <main>
         <WelcomePage />
         <Aboutme />
-        <Title>Techs</Title>
-        <Subtitle>Stacks</Subtitle>
-        <StackList />
-        <Subtitle>Projects</Subtitle>
-        <HomeProjects />
+        <Techs />
         <BlogList posts={posts} error={error} isLoading={isLoading} />
-        <Title>Contact Me</Title>
-        <div id="contact">Contact Me</div>
+        <Contact />
       </main>
     </>
   );

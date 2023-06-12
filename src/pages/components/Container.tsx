@@ -1,5 +1,5 @@
 import { classes } from "@/utility/classes";
-import { ContainerType } from "@/types/ContainerType";
+import type { ContainerType } from "@/types/ContainerType";
 
 const Container = ({ variant, children }: ContainerType) => {
   const option = () => {

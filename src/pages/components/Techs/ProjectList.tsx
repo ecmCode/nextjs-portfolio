@@ -1,8 +1,8 @@
 import Link from "next/link";
-import projects from "../projects/assets/projects.json";
-import Container from "./Container";
+import projects from "../../projects/assets/projects.json";
+import Container from "../Container";
 
-const HomeProjects = () => {
+const ProjectList = () => {
   return (
     <Container variant="1/3">
       <ul className="w-full grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -26,4 +26,4 @@ const HomeProjects = () => {
   );
 };
 
-export default HomeProjects;
+export default ProjectList;

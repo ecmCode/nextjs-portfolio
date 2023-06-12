@@ -1,7 +1,7 @@
 import Link from "next/link";
-import aboutme from "../about/assets/aboutme.json";
-import Container from "./Container";
-import Title from "./Title";
+import aboutme from "../../about/assets/aboutme.json";
+import Container from "../Container";
+import Title from "../Title";
 
 const Aboutme = () => {
   return (
