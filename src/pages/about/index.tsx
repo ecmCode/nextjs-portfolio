@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Link from "next/link";
-import aboutme from "./assets/aboutme.json";
 import ContactInfo from "./components/ContactInfo/ContactInfo";
 import Paragraphs from "./components/Paragraphs/Paragraphs";
 const About = () => {

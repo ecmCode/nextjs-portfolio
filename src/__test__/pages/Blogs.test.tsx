@@ -1,10 +1,10 @@
 import { render, screen, cleanup } from "@testing-library/react";
 import { mockPosts } from "../__mocks__/mockPosts";
-import Blogs from "@/pages/blogs";
+import BlogPage from "@/pages/blogs";
 import "@testing-library/jest-dom";
 
 describe("Blogs", () => {
-  beforeEach(() => render(<Blogs posts={mockPosts} />));
+  beforeEach(() => render(<BlogPage posts={mockPosts} />));
   afterEach(() => cleanup());
 
   it("should render the heading", () => {

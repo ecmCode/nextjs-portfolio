@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { projects } from "../../utility/projects";
-import ProjectBox from "./components/ProjectBox";
+import projects from "./assets/projects.json";
 import ProjectContainer from "./components/ProjectContainer";
 
 const Projects = () => {

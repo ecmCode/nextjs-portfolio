@@ -1,9 +1,10 @@
 import { getData } from "@/utility/getData";
+import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import Link from "next/link";
+import PostPageContent from "./components/PostPageContent";
 
-export const getStaticPaths = async () => {
-  const data: Blog[] = await getData();
+export const getStaticPaths: GetStaticPaths = async () => {
+  const data: BlogType[] = await getData();
 
   const paths = data.map((blog) => {
     return {
@@ -19,10 +20,10 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps = async (context: { params: { id: string } }) => {
-  const id = context.params.id;
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id = context.params?.id as string;
 
-  const data: Blog[] = await fetch(
+  const data: BlogType[] = await fetch(
     `https://jsonplaceholder.typicode.com/posts/${id}/`
   ).then((res) => res.json());
 
@@ -33,28 +34,15 @@ export const getStaticProps = async (context: { params: { id: string } }) => {
   };
 };
 
-const Post = ({ post }: { post: Blog }) => {
+const PostPage = ({ post }: { post: BlogType }) => {
   return (
     <>
       <Head>
         <title>{post.title}</title>
       </Head>
-      <main className="mt-10 mx-0 lg:mx-40">
-        <h1 className="text-left mx-10">{post.title}</h1>
-        <p className="p-10">{post.body}</p>
-        <div className="flex gap-4 justify-end">
-          <Link href="/blogs">
-            <p className="text-cyan-500 hover:brightness-125">
-              Go back to the blogs
-            </p>
-          </Link>
-          <Link href="/">
-            <p className="underline hover:brightness-125">Home</p>
-          </Link>
-        </div>
-      </main>
+      <PostPageContent {...post} />
     </>
   );
 };
 
-export default Post;
+export default PostPage;

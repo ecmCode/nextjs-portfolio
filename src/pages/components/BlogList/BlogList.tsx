@@ -9,7 +9,7 @@ const BlogList = ({
   error,
   isLoading,
 }: {
-  posts: Blog[] | undefined;
+  posts: BlogType[] | undefined;
   error: Error | undefined;
   isLoading: boolean;
 }) => {

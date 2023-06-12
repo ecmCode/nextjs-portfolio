@@ -8,7 +8,7 @@ describe("getData function", () => {
 
     global.fetch = mockedFetch;
 
-    const data = (await getData()) as unknown as Blog[];
+    const data = (await getData()) as unknown as BlogType[];
 
     expect(data).toBeDefined();
     expect(Array.isArray(data)).toBe(true);

@@ -1,14 +1,15 @@
-import { render } from "@testing-library/react";
-import Home from "../src/pages/index";
+import { cleanup, render } from "@testing-library/react";
+import Home from "@/pages/index";
 import React from "react";
 import NotFound from "@/pages/404";
-import Blogs from "@/pages/blogs";
+import BlogPage from "@/pages/blogs";
 import About from "@/pages/about";
 import Projects from "@/pages/projects";
 
 describe("snapshot", () => {
+  afterEach(() => cleanup());
   it("renders Home page unchanged", () => {
-    const { container } = render(<Home posts={[]} />);
+    const { container } = render(<Home />);
     expect(container).toMatchSnapshot();
   });
 
@@ -28,7 +29,7 @@ describe("snapshot", () => {
   });
 
   it("renders Blogs page unchanged", () => {
-    const { container } = render(<Blogs posts={[]} />);
+    const { container } = render(<BlogPage posts={[]} />);
     expect(container).toMatchSnapshot();
   });
 });

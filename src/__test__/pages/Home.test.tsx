@@ -3,7 +3,7 @@ import Home from "@/pages/index";
 import "@testing-library/jest-dom";
 
 describe("Home", () => {
-  beforeEach(() => render(<Home posts={[]} />));
+  beforeEach(() => render(<Home />));
   afterEach(() => cleanup());
 
   it("should render the heading", () => {
