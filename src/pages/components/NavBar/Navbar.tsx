@@ -18,7 +18,7 @@ const Navbar = () => {
           <li key={route.name.toLowerCase()}>
             <Link
               href={route.link}
-              className={router.pathname === route.link ? "text-cyan-400" : ""}
+              className={router.pathname === route.link ? "text-cyan-500" : ""}
             >
               {route.name}
             </Link>
