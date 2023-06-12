@@ -1,22 +1,10 @@
 import Head from "next/head";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
-import HomeProjects from "./components/HomeProjects";
-import HomeTitle from "./components/HomeTitle";
-import HomeSubtitle from "./components/HomeSubtitle";
-import HomeAboutme from "./components/HomeAboutme";
-import HomeStacks from "./components/HomeStacks";
+import Aboutme from "./components/Aboutme/Aboutme";
 import BlogList from "./components/BlogList/BlogList";
+import Techs from "./components/Techs/Techs";
+import Contact from "./components/Contact/Contact";
 import { usePosts } from "@/hooks/usePosts";
-
-// import type { GetStaticProps } from "next";
-// export const getStaticProps: GetStaticProps = async () => {
-//   const data = await getData();
-//   return {
-//     props: {
-//       posts: data.slice(0, 4),
-//     },
-//   };
-// };
 
 const Home = () => {
   const { data: posts, error, isLoading } = usePosts(4);
@@ -27,16 +15,10 @@ const Home = () => {
       </Head>
       <main>
         <WelcomePage />
-        <HomeTitle>About Me</HomeTitle>
-        <HomeAboutme />
-        <HomeTitle>Techs</HomeTitle>
-        <HomeSubtitle>Stacks</HomeSubtitle>
-        <HomeStacks />
-        <HomeSubtitle>Projects</HomeSubtitle>
-        <HomeProjects />
+        <Aboutme />
+        <Techs />
         <BlogList posts={posts} error={error} isLoading={isLoading} />
-        <HomeTitle>Contact Me</HomeTitle>
-        <div id="contact">Contact Me</div>
+        <Contact />
       </main>
     </>
   );

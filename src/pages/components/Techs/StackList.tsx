@@ -1,6 +1,7 @@
 import { SiTypescript, SiReact } from "react-icons/si";
 import { FaHtml5, FaCss3, FaJs } from "react-icons/fa";
-import Container from "./Container";
+import React from "react";
+import Container from "../Container";
 
 const stacks = [
   { name: "html", icon: <FaHtml5 /> },
@@ -18,7 +19,7 @@ const Stack = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-const HomeStacks = () => {
+const StackList = () => {
   return (
     <Container variant="1/3">
       <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-items-center gap-4">
@@ -34,4 +35,4 @@ const HomeStacks = () => {
   );
 };
 
-export default HomeStacks;
+export default StackList;

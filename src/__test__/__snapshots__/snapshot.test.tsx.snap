@@ -509,7 +509,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
       <h2
         class="px-10"
       >
-        Contact Me
+        Contact
       </h2>
     </div>
     <div

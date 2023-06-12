@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Container from "../Container";
-import HomeTitle from "../HomeTitle";
+import Title from "../Title";
 import BlogPost from "./BlogPost/BlogPost";
 import style from "./BlogList.module.css";
 
@@ -15,7 +15,7 @@ const BlogList = ({
 }) => {
   return (
     <>
-      <HomeTitle>Blogs</HomeTitle>
+      <Title>Blogs</Title>
       <Container variant="1/3">
         {isLoading && !error && <p>Loading...</p>}
         {error ? (
