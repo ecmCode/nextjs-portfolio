@@ -18,7 +18,7 @@ const Stack = ({ children }: React.PropsWithChildren) => {
   );
 };
 
-const HomeStacks = () => {
+const StackList = () => {
   return (
     <Container variant="1/3">
       <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 place-items-center gap-4">
@@ -34,4 +34,4 @@ const HomeStacks = () => {
   );
 };
 
-export default HomeStacks;
+export default StackList;

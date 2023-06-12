@@ -1,10 +1,10 @@
 import Head from "next/head";
 import WelcomePage from "./components/WelcomePage/WelcomePage";
 import HomeProjects from "./components/HomeProjects";
-import HomeTitle from "./components/HomeTitle";
-import HomeSubtitle from "./components/HomeSubtitle";
-import HomeAboutme from "./components/HomeAboutme";
-import HomeStacks from "./components/HomeStacks";
+import Title from "./components/Title";
+import Subtitle from "./components/Subtitle";
+import Aboutme from "./components/Aboutme";
+import StackList from "./components/StackList";
 import BlogList from "./components/BlogList/BlogList";
 import { usePosts } from "@/hooks/usePosts";
 
@@ -27,15 +27,14 @@ const Home = () => {
       </Head>
       <main>
         <WelcomePage />
-        <HomeTitle>About Me</HomeTitle>
-        <HomeAboutme />
-        <HomeTitle>Techs</HomeTitle>
-        <HomeSubtitle>Stacks</HomeSubtitle>
-        <HomeStacks />
-        <HomeSubtitle>Projects</HomeSubtitle>
+        <Aboutme />
+        <Title>Techs</Title>
+        <Subtitle>Stacks</Subtitle>
+        <StackList />
+        <Subtitle>Projects</Subtitle>
         <HomeProjects />
         <BlogList posts={posts} error={error} isLoading={isLoading} />
-        <HomeTitle>Contact Me</HomeTitle>
+        <Title>Contact Me</Title>
         <div id="contact">Contact Me</div>
       </main>
     </>
