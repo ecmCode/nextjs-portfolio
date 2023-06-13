@@ -1,8 +1,11 @@
 .nav {
-  @apply fixed w-full flex gap-6 md:gap-20 justify-center items-center py-4 px-8 backdrop-blur-sm z-50 
-  bg-slate-500/10 dark:bg-slate-600/30;
+  @apply fixed w-full flex gap-0 md:gap-20 justify-center items-center 
+  py-4 px-8 backdrop-blur-sm z-50 
+  bg-slate-300/50 dark:bg-slate-700/20 ring-1 ring-slate-800/50 dark:ring-slate-200/50;
 }
 
 .nav li a {
-  @apply text-xl font-light hover:text-slate-200 dark:hover:text-slate-500 bg-transparent;
+  @apply text-base sm:text-lg md:text-xl 
+  font-normal dark:font-light 
+  hover:text-slate-200 dark:hover:text-slate-500 bg-transparent;
 }
