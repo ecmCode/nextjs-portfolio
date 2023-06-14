@@ -34,7 +34,7 @@ const Article = () => {
 
 const Buttons = () => {
   return (
-    <div className="flex gap-10" data-testid="buttons">
+    <div className="flex gap-12 w-full justify-center" data-testid="buttons">
       <Link href="/projects">Projects</Link>
       <Link href="#contact" className="bg-cyan-400/20">
         Contact

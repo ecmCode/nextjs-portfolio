@@ -3,7 +3,7 @@
 }
 
 .wrapper {
-  @apply flex flex-col gap-4 lg:flex-row-reverse justify-between items-center mx-0 lg:mx-20 my-10;
+  @apply flex flex-col gap-6 lg:flex-row-reverse justify-between items-center mx-0 lg:mx-20 my-10;
 }
 
 .icon {
@@ -12,9 +12,9 @@
 }
 
 .content {
-  @apply flex flex-col gap-6 justify-center items-center lg:items-start z-20 flex-1;
+  @apply flex flex-col gap-10 justify-center items-center lg:items-start z-20 flex-1;
 }
 
 .paragraph {
-  @apply w-full md:w-3/4 flex flex-col items-end justify-center p-4 md:p-0 text-left;
+  @apply w-full md:w-3/4 flex flex-col items-end justify-center text-left;
 }
