@@ -12,7 +12,7 @@ const Aboutme = () => {
           {aboutme &&
             aboutme.slice(0, 3).map((p, index) => <p key={index}>{p}</p>)}
           <div className="text-right">
-            <Link href="/about/#top">Read More</Link>
+            <Link href="/about">Read More</Link>
           </div>
         </div>
       </Container>

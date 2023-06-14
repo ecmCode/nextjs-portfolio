@@ -1,5 +1,5 @@
 .mainPage {
-  @apply p-6 md:p-16 overflow-auto min-h-screen backdrop-blur-lg;
+  @apply p-6 md:p-16 overflow-auto min-h-screen backdrop-blur-xl;
 }
 .mainPage main {
   @apply flex flex-col items-center justify-center py-12;

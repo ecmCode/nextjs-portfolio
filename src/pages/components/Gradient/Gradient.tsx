@@ -9,10 +9,9 @@ const Gradient = () => {
 
   useEffect(() => {
     const unsub = () => {
-      let docObj = document?.body?.firstChild?.firstChild as Element;
+      let docObj = document?.body as Element;
       let scrollHeight = docObj.scrollHeight;
-      let scrollTop = docObj.scrollTop;
-
+      let scrollTop = window?.scrollY;
       setPercentage(Math.floor((scrollTop / scrollHeight) * 100));
     };
 

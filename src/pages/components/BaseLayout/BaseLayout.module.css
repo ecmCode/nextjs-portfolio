@@ -1,7 +1,0 @@
-.layout {
-  @apply h-screen w-screen overflow-y-auto overflow-x-hidden relative;
-}
-
-.layout::-webkit-scrollbar {
-  display: none;
-}
