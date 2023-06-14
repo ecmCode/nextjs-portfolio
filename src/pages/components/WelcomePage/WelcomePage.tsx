@@ -4,7 +4,7 @@ import img from "./portal.png";
 import style from "./WelcomePage.module.css";
 
 const Icon = () => {
-  const size = 400;
+  const size = 350;
   return (
     <Image
       src={img}
