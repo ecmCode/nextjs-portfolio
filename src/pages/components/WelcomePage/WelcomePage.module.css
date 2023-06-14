@@ -3,12 +3,12 @@
 }
 
 .wrapper {
-  @apply flex flex-col gap-4 lg:flex-row-reverse justify-between items-center mx-0 lg:mx-20;
+  @apply flex flex-col gap-4 lg:flex-row-reverse justify-between items-center mx-0 lg:mx-20 my-10;
 }
 
 .icon {
   @apply relative inset-y-0 lg:inset-y-14 scale-100 lg:scale-125 z-10 
-    drop-shadow-xl brightness-100 hover:brightness-125 dark:hover:brightness-110 rounded-full transition-[filter] duration-300 opacity-100 dark:opacity-90 dark:hover:opacity-100 cursor-pointer flex-initial;
+    drop-shadow-xl brightness-100 hover:brightness-90 rounded-full transition-[filter] duration-300 opacity-100 hover:opacity-80 cursor-pointer flex-initial select-none;
 }
 
 .content {
