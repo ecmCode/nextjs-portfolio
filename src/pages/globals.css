@@ -50,6 +50,6 @@ h4 {
 }
 
 a {
-  @apply dark:hover:brightness-150 hover:brightness-75 px-6 py-2 
+  @apply dark:hover:brightness-150 hover:brightness-110 px-6 py-2 
   bg-slate-400/50 dark:bg-slate-500/20 rounded-sm;
 }
