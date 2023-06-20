@@ -35,7 +35,7 @@ const BlogList = ({
                   ))}
               </div>
               <div className={style.bottom}>
-                <Link href="/blogs#top" className={style.link}>
+                <Link href="/blogs" className={style.link}>
                   All Blogs
                 </Link>
               </div>

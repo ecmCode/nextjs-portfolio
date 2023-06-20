@@ -4,7 +4,7 @@
 
 :root {
   --foreground-rgb: #111;
-  --background-start-rgb: #eef;
+  --background-start-rgb: #fff;
   --background-end-rgb: #fff;
 }
 
@@ -18,7 +18,7 @@
 
 html,
 body {
-  overflow: hidden;
+  overflow: auto;
   min-height: 100vh;
   height: max-content;
   color: var(--foreground-rgb);

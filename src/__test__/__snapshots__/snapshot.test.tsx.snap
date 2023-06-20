@@ -267,7 +267,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
               class="text-right"
             >
               <a
-                href="/about#top"
+                href="/about"
               >
                 Read More
               </a>
