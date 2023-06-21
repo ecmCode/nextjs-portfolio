@@ -127,7 +127,7 @@ exports[`snapshot renders About page unchanged 1`] = `
       </div>
     </div>
     <div
-      class="w-full md:w-4/5 lg:w-2/5 flex flex-col gap-10 p-10"
+      class="w-full md:w-4/5 lg:w-1/2 flex flex-col gap-10 p-16"
       data-testid="paragraphs"
     >
       <p>
@@ -195,11 +195,11 @@ exports[`snapshot renders Home page unchanged 1`] = `
           decoding="async"
           draggable="false"
           fetchpriority="high"
-          height="400"
-          src="/_next/image?url=%2Fimg.jpg&w=828&q=100"
-          srcset="/_next/image?url=%2Fimg.jpg&w=640&q=100 1x, /_next/image?url=%2Fimg.jpg&w=828&q=100 2x"
+          height="350"
+          src="/_next/image?url=%2Fimg.jpg&w=750&q=100"
+          srcset="/_next/image?url=%2Fimg.jpg&w=384&q=100 1x, /_next/image?url=%2Fimg.jpg&w=750&q=100 2x"
           style="color: transparent;"
-          width="400"
+          width="350"
         />
         <div
           class="content"
@@ -215,7 +215,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
                 
           </p>
           <div
-            class="flex gap-10"
+            class="flex gap-12 w-full justify-center"
             data-testid="buttons"
           >
             <a
@@ -252,7 +252,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
           class="p-6 w-full"
         >
           <div
-            class="px-10 md:px-40 py-10 flex flex-col gap-6"
+            class="px-6 lg:px-20 py-10 flex flex-col gap-6"
           >
             <p>
               Hi there! My name is Lee and I'm a self-taught web developer traveling around the world while working remotely. 
@@ -264,7 +264,7 @@ exports[`snapshot renders Home page unchanged 1`] = `
               I specialize in HTML, CSS, JavaScript, Typescript, and React. I have been always looking for new ways to improve my skills and stay up-to-date with the latest trends in web development.
             </p>
             <div
-              class="text-right"
+              class="text-center md:text-right my-4"
             >
               <a
                 href="/about"
