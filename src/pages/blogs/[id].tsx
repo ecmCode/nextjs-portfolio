@@ -1,6 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import PostPageContent from "./components/PostPageContent";
+import PostPageContent from "@/components/blogs/PostPageContent";
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const data: BlogType[] = await fetch(

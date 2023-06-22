@@ -1,5 +1,5 @@
 import Head from "next/head";
-import BlogPageContent from "./components/BlogPageContent";
+import BlogPageContent from "../../components/blogs/BlogPageContent";
 import type { GetStaticProps } from "next";
 
 export const getStaticProps: GetStaticProps = async () => {
