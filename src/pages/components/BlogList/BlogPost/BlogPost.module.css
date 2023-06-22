@@ -10,6 +10,6 @@
   @apply line-clamp-4 break-words;
 }
 
-.btn{
-  @apply w-full md:block inline px-20
+.btn {
+  @apply w-full md:block inline px-20;
 }

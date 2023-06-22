@@ -1,10 +1,11 @@
-import { getData } from "@/utility/getData";
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import PostPageContent from "./components/PostPageContent";
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data: BlogType[] = await getData();
+  const data: BlogType[] = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/?_limit=10`
+  ).then((res) => res.json());
 
   const paths = data.map((blog) => {
     return {
