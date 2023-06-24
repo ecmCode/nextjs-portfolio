@@ -1,6 +1,6 @@
 import Head from "next/head";
-import projects from "./assets/projects.json";
-import ProjectContainer from "./components/ProjectContainer";
+import projects from "@/assets/projects.json";
+import ProjectContainer from "@/components/projects/ProjectContainer";
 
 const Projects = () => {
   return (

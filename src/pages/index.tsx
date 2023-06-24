@@ -1,9 +1,9 @@
 import Head from "next/head";
-import WelcomePage from "./components/WelcomePage/WelcomePage";
-import Aboutme from "./components/Aboutme/Aboutme";
-import BlogList from "./components/BlogList/BlogList";
-import Techs from "./components/Techs/Techs";
-import Contact from "./components/Contact/Contact";
+import WelcomePage from "@/components/home/WelcomePage/WelcomePage";
+import Aboutme from "@/components/home/Aboutme";
+import BlogList from "@/components/home/BlogList/BlogList";
+import Techs from "@/components/home/Techs/Techs";
+import Contact from "@/components/home/Contact/Contact";
 import { usePosts } from "@/hooks/usePosts";
 
 const Home = () => {

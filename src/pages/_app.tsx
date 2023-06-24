@@ -1,8 +1,8 @@
 import type { AppProps } from "next/app";
-import Navbar from "@/pages/components/NavBar/Navbar";
-import MainPage from "./components/MainPage/MainPage";
+import Navbar from "@/components/home/NavBar/Navbar";
+import MainPage from "@/components/home/MainPage/MainPage";
 import "./globals.css";
-import Gradient from "./components/Gradient/Gradient";
+import Gradient from "@/components/home/Gradient/Gradient";
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

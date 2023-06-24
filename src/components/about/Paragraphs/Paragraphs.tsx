@@ -1,4 +1,4 @@
-import aboutme from "../../assets/aboutme.json";
+import aboutme from "@/assets/aboutme.json";
 
 const Paragraphs = () => {
   return (

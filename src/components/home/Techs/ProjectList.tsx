@@ -1,5 +1,5 @@
 import Link from "next/link";
-import projects from "../../projects/assets/projects.json";
+import projects from "@/assets/projects.json";
 import Container from "../Container";
 
 const ProjectList = () => {

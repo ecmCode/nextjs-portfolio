@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
-import ContactInfo from "./components/ContactInfo/ContactInfo";
-import Paragraphs from "./components/Paragraphs/Paragraphs";
+import ContactInfo from "../../components/about/ContactInfo/ContactInfo";
+import Paragraphs from "@/components/about/Paragraphs/Paragraphs";
 const About = () => {
   return (
     <>
