@@ -3,7 +3,7 @@
 }
 
 .item {
-  @apply uppercase bg-slate-500/20 py-2 w-full px-6 flex content-start items-center hover:brightness-125;
+  @apply uppercase bg-slate-500/20 py-2 w-full px-6 flex content-start items-center tracking-wider select-none hover:brightness-125;
 }
 
 .icon {
