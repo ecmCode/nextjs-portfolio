@@ -1,17 +1,16 @@
 import ProjectList from "./ProjectList";
 import StackList from "./StackList";
-import Subtitle from "../Subtitle";
 import Title from "../Title";
-import React from "react";
+import Container from "../Container";
 
 const Techs = () => {
   return (
     <>
       <Title>Techs</Title>
-      <Subtitle>Stacks</Subtitle>
-      <StackList />
-      <Subtitle>Projects</Subtitle>
-      <ProjectList />
+      <Container variant="full">
+        <StackList />
+        <ProjectList />
+      </Container>
     </>
   );
 };
