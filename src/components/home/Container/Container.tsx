@@ -21,7 +21,9 @@ const Container = ({ variant, children }: ContainerType) => {
   return (
     <div className="w-full">
       <div className={classes(option(), "h-full flex")}>
-        <div className="p-4 w-full h-full flex flex-col self-center">{children}</div>
+        <div className="p-4 w-full h-full flex flex-col self-center">
+          {children}
+        </div>
       </div>
     </div>
   );

@@ -10,10 +10,10 @@
   @apply tracking-wider uppercase w-full my-4 text-center;
 }
 
-.imgContainer{
+.imgContainer {
   @apply overflow-hidden relative;
 }
-.img{
+.img {
   @apply object-cover aspect-square;
 }
 
@@ -21,7 +21,7 @@
   @apply flex justify-center items-center py-6 gap-14 bg-gradient-to-t from-slate-900/100 via-slate-900/50 to-transparent absolute z-10 bottom-0 w-full opacity-0 transition ease-in-out hover:opacity-100;
 }
 
-.img:hover ~ .btns{
+.img:hover ~ .btns {
   @apply opacity-100;
 }
 
