@@ -1,7 +1,7 @@
 const Subtitle = ({ children }: React.PropsWithChildren) => {
   return (
-    <div className="w-full py-2 px-10 bg-gradient-to-b from-slate-700/20 to-slate-800/20">
-      <h4 className="px-10 uppercase tracking-widest">{children}</h4>
+    <div className="border-l-[32px] border-l-slate-100/80 w-full py-2 px-10 bg-gradient-to-r from-slate-500/30 via-slate-800/20 to-transparent">
+      <h4 className="px-4 uppercase tracking-widest">{children}</h4>
     </div>
   );
 };
