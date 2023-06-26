@@ -9,7 +9,7 @@ const ProjectList = () => {
   return (
     <>
       <Subtitle>Projects</Subtitle>
-      <Container variant="1/3">
+      <Container variant="2/3">
         <ul className={style.list}>
           {(projects as ProjectType[])?.map((project) => (
             <li key={project.name.replace(" ", "-")} className={style.item}>

@@ -16,7 +16,7 @@ const BlogList = ({
   return (
     <>
       <Title>Blogs</Title>
-      <Container variant="1/3">
+      <Container variant="2/3">
         {isLoading && !error && <p>Loading...</p>}
         {error ? (
           <p>Error: {error.message}</p>

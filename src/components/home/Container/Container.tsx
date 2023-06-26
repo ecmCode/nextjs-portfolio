@@ -5,9 +5,9 @@ const Container = ({ variant, children }: ContainerType) => {
   const option = () => {
     switch (variant) {
       case "1/3":
-        return "min-h-[33vh]";
+        return "min-h-[35vh]";
       case "2/3":
-        return "min-h-[66vh]";
+        return "min-h-[70vh]";
       case "full":
         return "min-h-full";
       default:
