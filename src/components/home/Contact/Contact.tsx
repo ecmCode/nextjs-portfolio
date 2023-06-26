@@ -1,4 +1,4 @@
-import Title from "../Title";
+import Title from "../Titles/Title";
 import React from "react";
 const Contact = () => {
   return (

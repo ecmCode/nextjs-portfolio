@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Container from "../Container";
-import Title from "../Title";
+import Container from "../Container/Container";
+import Title from "../Titles/Title";
 import BlogPost from "./BlogPost/BlogPost";
 import style from "./BlogList.module.css";
 

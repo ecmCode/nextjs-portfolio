@@ -1,7 +1,7 @@
 import ProjectList from "./ProjectList";
 import StackList from "./StackList";
-import Title from "../Title";
-import Container from "../Container";
+import Title from "../Titles/Title";
+import Container from "../Container/Container";
 
 const Techs = () => {
   return (

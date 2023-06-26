@@ -1,7 +1,7 @@
 import Link from "next/link";
 import projects from "@/assets/projects.json";
-import Container from "../Container";
-import Subtitle from "../Subtitle";
+import Container from "../Container/Container";
+import Subtitle from "../Titles/Subtitle";
 import style from "./ProjectList.module.css";
 
 const ProjectList = () => {

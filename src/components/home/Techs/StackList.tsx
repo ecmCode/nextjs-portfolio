@@ -1,6 +1,6 @@
 import { stacks } from "./stack";
-import Container from "../Container";
-import Subtitle from "../Subtitle";
+import Container from "../Container/Container";
+import Subtitle from "../Titles/Subtitle";
 import style from "./StackList.module.css";
 
 const StackList = () => {
