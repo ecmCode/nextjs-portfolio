@@ -12,8 +12,11 @@ const StackList = () => {
           {stacks.map((stack) => {
             return (
               <li className={style.item} key={stack.name}>
-                <span className={style.icon}>{stack.icon}</span>
-                <p>{stack.name}</p>
+                <span className={style.border}></span>
+                <div className={style.container}>
+                  <span className={style.icon}>{stack.icon}</span>
+                  <p>{stack.name}</p>
+                </div>
               </li>
             );
           })}
