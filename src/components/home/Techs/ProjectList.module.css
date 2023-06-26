@@ -10,7 +10,7 @@
   @apply tracking-wider uppercase w-full my-4 text-center;
 }
 
-.btns{
+.btns {
   @apply flex justify-between items-center h-full w-full;
 }
 .demo {

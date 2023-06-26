@@ -1,14 +1,12 @@
 import useSWR, { MutatorOptions } from "swr";
 import { usePosts } from "@/hooks/usePosts";
+import { mockPosts } from "../__mocks__/mockPosts";
 
 jest.mock("swr");
 
 describe("usePosts", () => {
   it("should fetch and return data", async () => {
-    const mockedData: BlogType[] = [
-      { id: 1, title: "Post 1", body: "Lorem ipsum dolor sit amet." },
-      { id: 2, title: "Post 2", body: "Consectetur adipiscing elit." },
-    ];
+    const mockedData: BlogType[] = mockPosts;
 
     const mockUseSWR = useSWR as jest.MockedFunction<typeof useSWR>;
     mockUseSWR.mockReturnValueOnce({

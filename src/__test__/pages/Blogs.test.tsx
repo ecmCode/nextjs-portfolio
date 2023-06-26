@@ -4,7 +4,7 @@ import BlogPage from "@/pages/blogs";
 import "@testing-library/jest-dom";
 
 describe("Blogs", () => {
-  beforeEach(() => render(<BlogPage posts={mockPosts} />));
+  beforeEach(() => render(<BlogPage posts={mockPosts} error={""} />));
   afterEach(() => cleanup());
 
   it("should render the heading", () => {
