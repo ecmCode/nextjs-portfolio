@@ -1,7 +1,6 @@
 import type { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import PostPageContent from "@/components/blogs/PostPageContent";
-import { useEffect } from "react";
 import { PostType } from "@/types/PostType";
 import { BlogPostSkeleton } from "@/types/BlogPostSkeleton";
 import { client } from "@/client";
@@ -26,10 +25,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  const res = await client.getEntries({
+  const res = await client.getEntries<BlogPostSkeleton>({
     content_type: "blogPost",
-
-    "fields.slug": context.params?.slug,
+    "fields.slug": context.params?.slug as string,
   });
 
   return {
