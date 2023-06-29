@@ -26,15 +26,16 @@ const BlogPost = ({ post }: { post: PostType }) => {
 
         <h2 className={style.title}>{post.title}</h2>
         <p>
-          by: {post.author.fields.name} ({post.author.fields.isAdmin && "Admin"})
+          by: {post.author.fields.name} {post.author.fields.isAdmin && "(Admin)"}
         </p>
         <p className={style.excerpt}>{excerpt}</p>
-        <div className="flex justify-end">
-          <Link href={"/blogs/" + post.slug} className={style.link}>
-            Read More
-          </Link>
-        </div>
 
+      </div>
+
+      <div className="flex justify-end">
+        <Link href={"/blogs/" + post.slug} className={style.link}>
+          Read More
+        </Link>
       </div>
     </li>
   );
