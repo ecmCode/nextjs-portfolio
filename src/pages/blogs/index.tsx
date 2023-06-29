@@ -1,16 +1,24 @@
 import Head from "next/head";
 import BlogPageContent from "../../components/blogs/BlogPageContent";
 import type { GetStaticProps } from "next";
+import { createClient, type ContentfulClientApi } from "contentful";
+import { useEffect } from "react";
+import type { PostType } from "@/types/PostType";
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
-    const res = await fetch(
-      "https://jsonplaceholder.typicode.com/posts/?_limit=10"
-    );
-    const data = await res.json();
+    const client: ContentfulClientApi<undefined> = createClient({
+      space: process.env.CONTENTFUL_SPACE_ID as string,
+      accessToken: process.env.CONTENTFUL_ACCESS_TOKEN as string,
+    });
+
+    const res = await client.getEntries({
+      content_type: "blogPost",
+    });
+
     return {
       props: {
-        posts: data,
+        posts: res.items,
       },
     };
   } catch (error) {
@@ -23,7 +31,14 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
-const BlogPage = ({ posts, error }: { posts: BlogType[]; error: string }) => {
+const BlogPage = ({
+  posts,
+  error,
+}: {
+  posts: { fields: PostType }[];
+  error: string;
+}) => {
+  
   return (
     <>
       <Head>

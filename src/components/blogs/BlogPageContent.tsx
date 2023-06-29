@@ -1,10 +1,11 @@
+import { PostType } from "@/types/PostType";
 import BlogPost from "./BlogPost";
 
 const BlogPageContent = ({
   posts,
   error,
 }: {
-  posts: BlogType[];
+  posts: { fields: PostType }[];
   error: string;
 }) => {
   const style = "grid grid-cols-1 lg:grid-cols-2 w-full sm:w-2/3 gap-10 my-10";
@@ -15,7 +16,9 @@ const BlogPageContent = ({
         {error ? (
           <p>{error}</p>
         ) : (
-          posts?.map((blog) => <BlogPost key={blog.id} {...blog} />)
+          posts?.map((post, index) => (
+            <BlogPost key={index} post={post.fields} />
+          ))
         )}
       </ul>
     </main>
