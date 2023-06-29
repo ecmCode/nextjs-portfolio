@@ -1,4 +1,4 @@
-import {  EntryFieldTypes } from "contentful";
+import { EntryFieldTypes } from "contentful";
 import { PostType } from "./PostType";
 
 export type BlogPostSkeleton = {
@@ -9,25 +9,25 @@ export type BlogPostSkeleton = {
     tags: EntryFieldTypes.Text[];
     content: EntryFieldTypes.RichText;
     author: {
-        fields: {
-            name: EntryFieldTypes.Text;
-            isAdmin: EntryFieldTypes.Boolean;
-            email: EntryFieldTypes.Text;
-        };
+      fields: {
+        name: EntryFieldTypes.Text;
+        isAdmin: EntryFieldTypes.Boolean;
+        email: EntryFieldTypes.Text;
+      };
     };
     thumbnail: {
-        fields: {
-            file: {
-                details: {
-                    image: {
-                        width: EntryFieldTypes.Number;
-                        height: EntryFieldTypes.Number;
-                    };
-                };
-                url: EntryFieldTypes.Text;
-                title: EntryFieldTypes.Text;
+      fields: {
+        file: {
+          details: {
+            image: {
+              width: EntryFieldTypes.Number;
+              height: EntryFieldTypes.Number;
             };
+          };
+          url: EntryFieldTypes.Text;
+          title: EntryFieldTypes.Text;
         };
+      };
     };
   };
 };

@@ -23,13 +23,12 @@ const BlogPost = ({ post }: { post: PostType }) => {
         className={style.thumbnail}
       />
       <div className={style.body}>
-
         <h2 className={style.title}>{post.title}</h2>
         <p>
-          by: {post.author.fields.name} {post.author.fields.isAdmin && "(Admin)"}
+          by: {post.author.fields.name}{" "}
+          {post.author.fields.isAdmin && "(Admin)"}
         </p>
         <p className={style.excerpt}>{excerpt}</p>
-
       </div>
 
       <div className="flex justify-end">

@@ -38,14 +38,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const PostPage = ({ post }: { post: PostType }) => {
-  if (!post) return (
-    <>
-      <Head>
-        <title>Loading...</title>
-      </Head>
-      <p>Loading...</p>
-    </>
-  );
+  if (!post)
+    return (
+      <>
+        <Head>
+          <title>Loading...</title>
+        </Head>
+        <p>Loading...</p>
+      </>
+    );
 
   return (
     <>

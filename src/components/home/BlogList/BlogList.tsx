@@ -20,27 +20,23 @@ const BlogList = ({
         {error ? (
           <p>Error: {error}</p>
         ) : (
-            <>
-              <div className={style.gridbox}>
-                {posts &&
-                  posts
-                  .filter(post => post.fields.author.fields.isAdmin)
-                  .slice(0,4)
+          <>
+            <div className={style.gridbox}>
+              {posts &&
+                posts
+                  .filter((post) => post.fields.author.fields.isAdmin)
+                  .slice(0, 4)
                   .map((post) => (
-                    <BlogPost
-                      key={post.fields.slug}
-                      {...post.fields}
-                    />
+                    <BlogPost key={post.fields.slug} {...post.fields} />
                   ))}
-              </div>
-              <div className={style.bottom}>
-                <Link href="/blogs" className={style.link}>
-                  All Blogs
-                </Link>
-              </div>
-            </>
-          )
-        }
+            </div>
+            <div className={style.bottom}>
+              <Link href="/blogs" className={style.link}>
+                All Blogs
+              </Link>
+            </div>
+          </>
+        )}
       </Container>
     </>
   );

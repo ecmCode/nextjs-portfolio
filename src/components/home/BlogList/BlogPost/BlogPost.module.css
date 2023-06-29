@@ -6,8 +6,8 @@
   rounded-md backdrop-blur-xl;
 }
 
-.thumbnail{
-  @apply object-cover aspect-video
+.thumbnail {
+  @apply object-cover aspect-video;
 }
 
 .title {

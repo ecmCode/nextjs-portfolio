@@ -4,7 +4,7 @@ import { PostType } from "@/types/PostType";
 import { Text } from "@contentful/rich-text-types";
 import Image from "next/image";
 
-const BlogPost = ({ content,title,thumbnail,slug}: PostType) => {
+const BlogPost = ({ content, title, thumbnail, slug }: PostType) => {
   const excerpt = (content.content[0].content[0] as Text).value;
   const {
     details: {

@@ -32,7 +32,6 @@ const BlogPage = ({
   posts: { fields: PostType }[];
   error: string;
 }) => {
-  
   return (
     <>
       <Head>

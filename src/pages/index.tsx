@@ -27,9 +27,12 @@ export const getStaticProps: GetStaticProps = async () => {
       },
     };
   }
-}
+};
 
-const Home = ({posts, error}: {
+const Home = ({
+  posts,
+  error,
+}: {
   posts: { fields: PostType }[];
   error: string;
 }) => {
