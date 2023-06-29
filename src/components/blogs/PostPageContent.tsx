@@ -31,7 +31,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         <div>Email: {email}</div>
         <div>
           Tags:{" "}
-          {post.tags.map((tag) => (
+          {post.tags?.map((tag) => (
             <span key={tag} className="bg-slate-500/30 px-4 mx-2">
               {tag}
             </span>

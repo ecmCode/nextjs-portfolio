@@ -21,7 +21,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -40,9 +40,15 @@ export const getStaticProps: GetStaticProps = async (context) => {
 };
 
 const PostPage = ({ post }: { post: PostType }) => {
-  useEffect(() => {
-    console.log(post);
-  });
+  if (!post) return (
+    <>
+      <Head>
+        <title>Loading...</title>
+      </Head>
+      <p>Loading...</p>
+    </>
+  );
+
   return (
     <>
       <Head>
