@@ -11,10 +11,12 @@
     "prettier": "prettier --write src"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^15.17.0",
     "@types/node": "18.15.13",
     "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
     "autoprefixer": "10.4.14",
+    "contentful": "^10.3.0",
     "eslint": "8.38.0",
     "eslint-config-next": "13.3.0",
     "next": "13.3.0",

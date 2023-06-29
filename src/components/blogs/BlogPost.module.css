@@ -5,12 +5,17 @@
   shadow-md shadow-slate-200 dark:shadow-slate-950 
   rounded-md backdrop-blur-xl;
 }
+.thumbnail{
+  @apply aspect-video object-cover rounded ring-1 ring-slate-800/50 dark:ring-slate-200/50 ;
+}
+
+
 
 .title {
   @apply text-2xl text-center overflow-ellipsis truncate mx-6;
 }
 
-.body {
+.excerpt {
   @apply line-clamp-4 break-words my-4;
 }
 

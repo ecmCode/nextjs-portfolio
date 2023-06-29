@@ -3,34 +3,30 @@ import Container from "../Container/Container";
 import Title from "../Titles/Title";
 import BlogPost from "./BlogPost/BlogPost";
 import style from "./BlogList.module.css";
+import { PostType } from "@/types/PostType";
 
 const BlogList = ({
   posts,
   error,
-  isLoading,
 }: {
-  posts: BlogType[] | undefined;
-  error: Error | undefined;
-  isLoading: boolean;
+  posts: { fields: PostType }[];
+  error: string;
 }) => {
   return (
     <>
       <Title>Blogs</Title>
       <Container variant="2/3">
-        {isLoading && !error && <p>Loading...</p>}
+        {!posts && <p>Loading...</p>}
         {error ? (
-          <p>Error: {error.message}</p>
+          <p>Error: {error}</p>
         ) : (
-          !isLoading && (
             <>
               <div className={style.gridbox}>
                 {posts &&
                   posts.map((post) => (
                     <BlogPost
-                      key={post.id}
-                      id={post.id}
-                      title={post.title}
-                      body={post.body}
+                      key={post.fields.slug}
+                      {...post.fields}
                     />
                   ))}
               </div>
@@ -41,7 +37,7 @@ const BlogList = ({
               </div>
             </>
           )
-        )}
+        }
       </Container>
     </>
   );

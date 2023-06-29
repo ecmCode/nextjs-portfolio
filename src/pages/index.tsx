@@ -4,10 +4,35 @@ import Aboutme from "@/components/home/Aboutme/Aboutme";
 import BlogList from "@/components/home/BlogList/BlogList";
 import Techs from "@/components/home/Techs/Techs";
 import Contact from "@/components/home/Contact/Contact";
-import { usePosts } from "@/hooks/usePosts";
+import { client } from "@/client";
+import { GetStaticProps } from "next";
+import { PostType } from "@/types/PostType";
 
-const Home = () => {
-  const { data: posts, error, isLoading } = usePosts(4);
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const res = await client.getEntries({
+      content_type: "blogPost",
+    });
+
+    return {
+      props: {
+        posts: res.items,
+      },
+    };
+  } catch (error) {
+    console.log(error);
+    return {
+      props: {
+        error: "Error: Failed to fetch",
+      },
+    };
+  }
+}
+
+const Home = ({posts, error}: {
+  posts: { fields: PostType }[];
+  error: string;
+}) => {
   return (
     <>
       <Head>
@@ -17,7 +42,7 @@ const Home = () => {
         <WelcomePage />
         <Aboutme />
         <Techs />
-        <BlogList posts={posts} error={error} isLoading={isLoading} />
+        <BlogList posts={posts} error={error} />
         <Contact />
       </main>
     </>
