@@ -25,18 +25,19 @@ const PostPageContent = ({ post }: { post: PostType }) => {
       <h1 className={style.title}>{post.title}</h1>
       <div>
         <div>
-          Author: {name}{" "}
-          {isAdmin && <div className="italic text-sm">Admin</div>}
+          Author: {name} {isAdmin && <span className="italic text-sm text-amber-400">Admin</span>}
         </div>
         <div>Email: {email}</div>
-        <div>
-          Tags:{" "}
-          {post.tags.map((tag) => (
-            <span key={tag} className="bg-slate-500/30 px-4 mx-2">
-              {tag}
-            </span>
-          ))}
-        </div>
+        {post.tags &&
+          <div>
+            Tags:
+            {post.tags?.map((tag) => (
+              <span key={tag} className="bg-slate-500/30 px-4 mx-2">
+                {tag}
+              </span>
+            ))}
+          </div>
+        }
       </div>
       <div className={style.body}>
         {documentToReactComponents(post.content)}
