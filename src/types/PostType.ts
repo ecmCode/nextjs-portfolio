@@ -22,8 +22,8 @@ export type PostType = {
           };
         };
         url: string;
-        title: string;
       };
+      title: string;
     };
   };
 };

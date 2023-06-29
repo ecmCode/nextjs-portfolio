@@ -7,12 +7,14 @@ import Image from "next/image";
 const BlogPost = ({ content, title, thumbnail, slug }: PostType) => {
   const excerpt = (content.content[0].content[0] as Text).value;
   const {
-    details: {
-      image: { width, height },
+    file: {
+      details: {
+        image: { width, height },
+      },
+      url,
     },
-    url,
     title: alt,
-  } = thumbnail.fields.file;
+  } = thumbnail.fields;
   return (
     <li className={style.box}>
       <Image

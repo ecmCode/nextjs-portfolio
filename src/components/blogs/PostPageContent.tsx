@@ -1,7 +1,7 @@
 import Link from "next/link";
 import style from "./PostPageContent.module.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
 
 import Image from "next/image";
 import { PostType } from "@/types/PostType";
@@ -9,12 +9,14 @@ import { PostType } from "@/types/PostType";
 const PostPageContent = ({ post }: { post: PostType }) => {
   const { name, isAdmin, email } = post.author.fields;
   const {
-    details: {
-      image: { width, height },
+    file: {
+      details: {
+        image: { width, height },
+      },
+      url,
     },
-    url,
     title: alt,
-  } = post.thumbnail.fields.file;
+  } = post.thumbnail.fields;
 
   return (
     <main className={style.main}>
@@ -22,7 +24,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         width={width}
         height={height}
         src={`https:${url}`}
-        alt={alt}
+        alt={alt || "header img"}
         className={style.thumbnail}
       />
       <h1 className={style.title}>{post.title}</h1>
@@ -35,6 +37,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         </div>
 
         {email && <div>Email: {email}</div>}
+
         {post.tags && (
           <div>
             Tags:
@@ -50,18 +53,37 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         {documentToReactComponents(post.content, {
           renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: (node) => {
-              if (node.data.target.fields.file.url) {
+              const {
+                title: alt,
+                file: {
+                  url,
+                  details: {
+                    image: { height, width },
+                  },
+                },
+              } = node.data.target.fields;
+              if (url && width > 0) {
                 return (
-                  <Image
-                    src={"https://" + node.data.target.fields.file.url}
-                    height={node.data.target.fields.file.details.image.height}
-                    width={node.data.target.fields.file.details.image.width}
-                    alt={node.data.target.fields.title}
-                    className="w-full object-cover"
-                  />
+                  <div className="w-full flex items-center justify-center my-10">
+                    <Image
+                      src={`https:${url}`}
+                      height={height}
+                      width={width}
+                      alt={alt || "image"}
+                      className="object-cover"
+                    />
+                  </div>
                 );
               }
             },
+            [BLOCKS.PARAGRAPH]: (_, children) => (
+              <p className="my-10">{children}</p>
+            ),
+          },
+          renderMark: {
+            [MARKS.CODE]: (children) => (
+              <code className="bg-slate-900/60 rounded p-2">{children}</code>
+            ),
           },
         })}
       </div>
