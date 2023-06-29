@@ -14,7 +14,7 @@ const BlogList = ({
 }) => {
   return (
     <>
-      <Title>Blogs</Title>
+      <Title>Posts by Admin</Title>
       <Container variant="2/3">
         {!posts && <p>Loading...</p>}
         {error ? (
@@ -23,7 +23,10 @@ const BlogList = ({
             <>
               <div className={style.gridbox}>
                 {posts &&
-                  posts.map((post) => (
+                  posts
+                  .filter(post => post.fields.author.fields.isAdmin)
+                  .slice(0,4)
+                  .map((post) => (
                     <BlogPost
                       key={post.fields.slug}
                       {...post.fields}

@@ -6,6 +6,10 @@
   rounded-md backdrop-blur-xl;
 }
 
+.thumbnail{
+  @apply object-cover aspect-video
+}
+
 .title {
   @apply text-2xl text-center overflow-ellipsis truncate mx-6;
 }
