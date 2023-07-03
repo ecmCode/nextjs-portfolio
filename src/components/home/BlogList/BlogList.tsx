@@ -4,6 +4,7 @@ import Title from "../Titles/Title";
 import BlogPost from "./BlogPost/BlogPost";
 import style from "./BlogList.module.css";
 import { PostType } from "@/types/PostType";
+import { useState } from "react";
 
 const BlogList = ({
   posts,
@@ -12,11 +13,12 @@ const BlogList = ({
   posts: { fields: PostType }[];
   error: string;
 }) => {
+  const [loading, setLoading] = useState(true);
+
   return (
     <>
       <Title>Posts by Admin</Title>
       <Container variant="2/3">
-        {!posts && <p>Loading...</p>}
         {error ? (
           <p>Error: {error}</p>
         ) : (
@@ -27,13 +29,20 @@ const BlogList = ({
                   .filter((post) => post.fields.author.fields.isAdmin)
                   .slice(0, 4)
                   .map((post) => (
-                    <BlogPost key={post.fields.slug} {...post.fields} />
+                    <BlogPost
+                      key={post.fields.slug}
+                      {...post.fields}
+                      loading={loading}
+                      setLoading={setLoading}
+                    />
                   ))}
             </div>
             <div className={style.bottom}>
-              <Link href="/blogs" className={style.link}>
-                All Blogs
-              </Link>
+              {!loading && (
+                <Link href="/blogs" className={style.link}>
+                  All Blogs
+                </Link>
+              )}
             </div>
           </>
         )}

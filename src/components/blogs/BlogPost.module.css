@@ -5,9 +5,6 @@
   shadow-md shadow-slate-200 dark:shadow-slate-950 
   rounded-md backdrop-blur-xl;
 }
-.thumbnail {
-  @apply aspect-video object-cover rounded ring-1 ring-slate-800/50 dark:ring-slate-200/50;
-}
 
 .body {
   @apply h-full;
