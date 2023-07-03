@@ -38,11 +38,11 @@ const BlogList = ({
                   ))}
             </div>
             <div className={style.bottom}>
-              {!loading &&
+              {!loading && (
                 <Link href="/blogs" className={style.link}>
                   All Blogs
                 </Link>
-              }
+              )}
             </div>
           </>
         )}
