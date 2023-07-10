@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
+import {MdOutlineMail,MdPermIdentity} from "react-icons/md"
 import Title from "../Titles/Title";
 import Container from "../Container/Container";
 import style from "./Contact.module.css";
@@ -55,30 +56,36 @@ const Contact: React.FC = () => {
         <form id="contact" className={style.form} onSubmit={handleSubmit}>
           <div className={style.slot}>
             <label htmlFor="name">Name</label>
-            <input
-              required
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              onInvalid={handleInvalid}
-            />
+            <div className={style.inputBox}>
+              <MdPermIdentity className={style.icon}/> 
+              <input
+                required
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                onInvalid={handleInvalid}
+                />
+            </div>
             {invalid && (
               <span className={style.warning}>Name must not be empty</span>
             )}
           </div>
           <div className={style.slot}>
             <label htmlFor="email">Email</label>
-            <input
-              required
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              onInvalid={handleInvalid}
-            />
+            <div className={style.inputBox}>
+              <MdOutlineMail className={style.icon}/>
+              <input
+                required
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                onInvalid={handleInvalid}
+                />
+            </div>
             {invalid && <span className={style.warning}>Invalid Email</span>}
           </div>
           <div className={style.slot}>
@@ -90,10 +97,10 @@ const Contact: React.FC = () => {
               value={formData.message}
               onChange={handleChange}
               onInvalid={handleInvalid}
-            />
-            {invalid && (
-              <span className={style.warning}>Message must not be empty</span>
-            )}
+              />
+              {invalid && (
+                <span className={style.warning}>Message must not be empty</span>
+              )}
           </div>
           <button className={style.btn} type="submit">
             Submit
