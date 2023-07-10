@@ -16,8 +16,8 @@ const Contact: React.FC = () => {
     message: "",
   });
 
-  const [invalid, setInvalid] = useState(false) 
-  const [submitted, setSubmitted] = useState(false) 
+  const [invalid, setInvalid] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,7 +27,7 @@ const Contact: React.FC = () => {
       ...prevFormData,
       [name]: value,
     }));
-    setSubmitted(false)
+    setSubmitted(false);
   };
 
   const handleSubmit = (event: React.FormEvent) => {
@@ -40,13 +40,13 @@ const Contact: React.FC = () => {
       email: "",
       message: "",
     });
-    setInvalid(false)
-    setSubmitted(true)
+    setInvalid(false);
+    setSubmitted(true);
   };
 
   const handleInvalid = () => {
-    setInvalid(true)
-  }
+    setInvalid(true);
+  };
 
   return (
     <>
@@ -64,10 +64,9 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               onInvalid={handleInvalid}
             />
-            {
-              invalid && <span className={style.warning}>Name must not be empty</span>
-            }
-            
+            {invalid && (
+              <span className={style.warning}>Name must not be empty</span>
+            )}
           </div>
           <div className={style.slot}>
             <label htmlFor="email">Email</label>
@@ -80,10 +79,7 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               onInvalid={handleInvalid}
             />
-            {
-              invalid &&  <span className={style.warning}>Invalid Email</span>
-            }
-           
+            {invalid && <span className={style.warning}>Invalid Email</span>}
           </div>
           <div className={style.slot}>
             <label htmlFor="message">Message</label>
@@ -95,19 +91,18 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               onInvalid={handleInvalid}
             />
-            {
-              invalid &&  <span className={style.warning}>Message must not be empty</span>
-            }
+            {invalid && (
+              <span className={style.warning}>Message must not be empty</span>
+            )}
           </div>
           <button className={style.btn} type="submit">
             Submit
           </button>
-          {
-              submitted && 
-              <div className={style.submitted}>
-                Thanks for your feedback! We will get you back ASAP.
-              </div>
-          }
+          {submitted && (
+            <div className={style.submitted}>
+              Thanks for your feedback! We will get you back ASAP.
+            </div>
+          )}
         </form>
       </Container>
     </>

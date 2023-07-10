@@ -4,6 +4,7 @@ import Aboutme from "@/components/home/Aboutme/Aboutme";
 import BlogList from "@/components/home/BlogList/BlogList";
 import Techs from "@/components/home/Techs/Techs";
 import Contact from "@/components/home/Contact/Contact";
+import Footer from "@/components/home/Footer/Footer";
 import { client } from "@/client";
 import { GetStaticProps } from "next";
 import { PostType } from "@/types/PostType";
@@ -47,6 +48,7 @@ const Home = ({
         <Techs />
         <BlogList posts={posts} error={error} />
         <Contact />
+        <Footer />
       </main>
     </>
   );

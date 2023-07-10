@@ -19,16 +19,16 @@
 .slot input:focus,
 .slot textarea:valid,
 .slot textarea:focus {
-    @apply ring-cyan-400
+  @apply ring-cyan-400;
 }
 
 .warning {
-    @apply text-right text-red-400 absolute top-0 right-0 opacity-0;
+  @apply text-right text-red-400 absolute top-0 right-0 opacity-0;
 }
 
 .slot input:not(:focus):invalid ~ .warning,
 .slot textarea:not(:focus):invalid ~ .warning {
-    @apply opacity-100 
+  @apply opacity-100;
 }
 
 .slot textarea {
@@ -39,6 +39,6 @@
   @apply w-full lg:w-auto bg-cyan-400/20 my-4;
 }
 
-.submitted{
-    @apply text-green-500 absolute bottom-2 text-center
+.submitted {
+  @apply text-green-500 absolute bottom-2 text-center;
 }
