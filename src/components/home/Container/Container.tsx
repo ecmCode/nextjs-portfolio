@@ -1,4 +1,3 @@
-import { classes } from "@/utility/classes";
 import type { ContainerType } from "@/types/ContainerType";
 
 const Container = ({ variant, children }: ContainerType) => {
@@ -20,8 +19,8 @@ const Container = ({ variant, children }: ContainerType) => {
 
   return (
     <div className="w-full">
-      <div className={classes(option(), "h-full flex")}>
-        <div className="p-4 w-full h-full flex flex-col self-center">
+      <div className={option()}>
+        <div className="p-10 w-full h-full flex flex-col items-center justify-center">
           {children}
         </div>
       </div>
