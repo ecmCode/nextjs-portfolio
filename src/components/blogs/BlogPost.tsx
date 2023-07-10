@@ -1,9 +1,10 @@
 import Link from "next/link";
 import style from "./BlogPost.module.css";
-import type { PostType } from "@/types/PostType";
-import { Text } from "@contentful/rich-text-types";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import type { PostType } from "@/types/PostType";
+import type { AssetFile } from "contentful/dist/types/types";
+import type { Text } from "@contentful/rich-text-types";
 
 const ImgSkeleton = () => {
   return (
@@ -36,15 +37,9 @@ const LinkSkeleton = () => {
 
 const BlogPost = ({ post }: { post: PostType }) => {
   const excerpt = (post.content.content[0].content[0] as Text).value;
-  const {
-    file: {
-      details: {
-        image: { width, height },
-      },
-      url,
-    },
-    title: alt,
-  } = post.thumbnail.fields;
+  const { file, title: alt } = post.thumbnail.fields;
+  const { url, details } = file as AssetFile;
+  const { height, width } = details.image!;
 
   const [loading, setLoading] = useState(true);
 
@@ -62,7 +57,7 @@ const BlogPost = ({ post }: { post: PostType }) => {
             width={width}
             height={height}
             src={`https:${url}`}
-            alt={alt}
+            alt={alt as string}
             loading="eager"
             className="object-cover aspect-video"
           />

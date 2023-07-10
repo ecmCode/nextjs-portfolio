@@ -5,18 +5,13 @@ import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
 
 import Image from "next/image";
 import { PostType } from "@/types/PostType";
+import { AssetFile } from "contentful/dist/types/types";
 
 const PostPageContent = ({ post }: { post: PostType }) => {
   const { name, isAdmin, email } = post.author.fields;
-  const {
-    file: {
-      details: {
-        image: { width, height },
-      },
-      url,
-    },
-    title: alt,
-  } = post.thumbnail.fields;
+  const { file, title: alt } = post.thumbnail.fields;
+  const { url, details } = file as AssetFile;
+  const { height, width } = details.image!;
 
   return (
     <main className={style.main}>
@@ -24,7 +19,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         width={width}
         height={height}
         src={`https:${url}`}
-        alt={alt || "header img"}
+        alt={(alt as string) || "header img"}
         className={style.thumbnail}
       />
       <h1 className={style.title}>{post.title}</h1>

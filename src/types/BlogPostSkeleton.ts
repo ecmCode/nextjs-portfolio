@@ -1,5 +1,4 @@
-import { EntryFieldTypes } from "contentful";
-import { PostType } from "./PostType";
+import type { EntryFieldTypes } from "contentful";
 
 export type BlogPostSkeleton = {
   contentTypeId: "blogPost";

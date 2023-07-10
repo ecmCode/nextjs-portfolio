@@ -10,23 +10,45 @@
   @apply text-lg;
 }
 
-.slot input,
-.slot textarea {
-  @apply w-full bg-slate-100/10 text-slate-100 rounded p-2 outline-none ring-1 ring-transparent transition duration-200;
+.slot .inputBox {
+  @apply flex items-center;
 }
 
-.slot input:valid,
-.slot input:focus,
+.icon {
+  @apply mx-4 text-xl transition;
+}
+
+.slot .inputBox:has(input:valid) .icon,
+.slot .inputBox:has(input:focus) .icon {
+  @apply translate-x-2 text-cyan-400;
+}
+
+.slot .inputBox,
+.slot textarea {
+  @apply w-full bg-slate-100/10 text-slate-100 rounded ring-1 ring-transparent transition duration-200;
+}
+
+.slot .inputBox input,
+.slot textarea {
+  @apply p-2 outline-none w-full caret-cyan-400;
+}
+
+.slot .inputBox input {
+  @apply bg-transparent;
+}
+
+.slot .inputBox:has(input:valid),
+.slot .inputBox:has(input:focus),
 .slot textarea:valid,
 .slot textarea:focus {
-  @apply ring-cyan-400;
+  @apply ring-cyan-400 shadow-md shadow-cyan-500/30;
 }
 
 .warning {
   @apply text-right text-red-400 absolute top-0 right-0 opacity-0;
 }
 
-.slot input:not(:focus):invalid ~ .warning,
+.slot .inputBox:has(input:not(:focus):invalid) ~ .warning,
 .slot textarea:not(:focus):invalid ~ .warning {
   @apply opacity-100;
 }
@@ -35,8 +57,12 @@
   @apply h-40 resize-none;
 }
 
+.slot textarea::-webkit-scrollbar {
+  @apply hidden;
+}
+
 .btn {
-  @apply w-full lg:w-auto bg-cyan-400/20 my-4;
+  @apply w-full lg:w-auto bg-cyan-400/20 my-4 px-10;
 }
 
 .submitted {
