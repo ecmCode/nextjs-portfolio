@@ -113,7 +113,7 @@ const Contact: React.FC = () => {
               </div>
             )}
           </form>
-          <ContactInfo/>
+          <ContactInfo />
         </div>
       </Container>
     </>

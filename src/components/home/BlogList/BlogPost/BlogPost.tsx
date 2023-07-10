@@ -1,10 +1,10 @@
 import Link from "next/link";
 import style from "./BlogPost.module.css";
-import { PostType } from "@/types/PostType";
-import { Text } from "@contentful/rich-text-types";
 import Image from "next/image";
 import { Dispatch, SetStateAction, useEffect } from "react";
-
+import type { Text } from "@contentful/rich-text-types";
+import type { AssetFile } from "contentful";
+import type { PostType } from "@/types/PostType";
 const ImgSkeleton = () => {
   return (
     <div className="animate-pulse bg-slate-400/40 aspect-video w-full"></div>
@@ -41,18 +41,15 @@ const BlogPost = ({
   setLoading,
 }: PostType & Props) => {
   const excerpt = (content.content[0].content[0] as Text).value;
-  const {
-    file: {
-      details: {
-        image: { width, height },
-      },
-      url,
-    },
-    title: alt,
-  } = thumbnail.fields;
+
+  const { file, title: alt } = thumbnail.fields;
+  const { url, details } = file as AssetFile;
+  const { height, width } = details.image!;
+
   useEffect(() => {
     setLoading(false);
   }, [url, alt, setLoading]);
+
   return (
     <li className={style.box}>
       {loading ? (
@@ -62,7 +59,7 @@ const BlogPost = ({
           width={width}
           height={height}
           src={`https:${url}`}
-          alt={alt}
+          alt={alt as string}
           className={style.thumbnail}
         />
       )}

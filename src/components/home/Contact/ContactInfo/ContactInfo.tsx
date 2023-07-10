@@ -34,9 +34,7 @@ const ContactInfo = () => {
             <BsDiscord />
           </Link>
           <span>Discord</span>
-
         </div>
-        
       </div>
     </div>
   );

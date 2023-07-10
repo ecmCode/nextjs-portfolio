@@ -12,7 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Navbar />
       <MainPage>
         <Component {...pageProps} />
-        <Footer/>
+        <Footer />
       </MainPage>
     </>
   );
