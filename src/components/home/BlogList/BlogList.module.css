@@ -3,9 +3,5 @@
 }
 
 .bottom {
-  @apply text-center mt-10 flex flex-col items-stretch md:items-center lg:items-end;
-}
-
-.link {
-  @apply bg-cyan-300/60 dark:bg-cyan-400/20 md:px-24 lg:px-12;
+  @apply w-full mt-10 flex flex-col items-stretch sm:items-end;
 }

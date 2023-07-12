@@ -88,10 +88,10 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         })}
       </div>
       <div className={style.btns}>
-        <Link href="/blogs" className="text-cyan-500">
+        <Link href="/blogs" className="btn btn-action">
           All Blogs
         </Link>
-        <Link href="/" className={style.homebtn}>
+        <Link href="/" className="btn btn-secondary">
           Home
         </Link>
       </div>

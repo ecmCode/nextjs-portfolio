@@ -84,7 +84,10 @@ const BlogPost = ({ post }: { post: PostType }) => {
         {loading ? (
           <LinkSkeleton />
         ) : (
-          <Link href={"/blogs/" + post.slug} className={style.link}>
+          <Link
+            href={"/blogs/" + post.slug}
+            className="btn btn-action w-full lg:w-auto"
+          >
             Read More
           </Link>
         )}

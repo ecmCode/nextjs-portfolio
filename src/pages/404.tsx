@@ -20,7 +20,9 @@ const NotFound = () => {
           <h1 className="border-r-4 pr-4">404</h1>
           <h2>Page Not Found.</h2>
         </div>
-        <Link href="/">Home</Link>
+        <Link href="/" className="btn btn-action">
+          Home
+        </Link>
       </main>
     </>
   );

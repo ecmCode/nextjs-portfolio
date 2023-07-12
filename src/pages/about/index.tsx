@@ -12,7 +12,9 @@ const About = () => {
         <h1>About Me</h1>
         <ContactInfo />
         <Paragraphs />
-        <Link href="/">Home</Link>
+        <Link href="/" className="btn btn-primary">
+          Home
+        </Link>
       </main>
     </>
   );

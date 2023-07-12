@@ -28,14 +28,14 @@ const ProjectList = () => {
                   <Link
                     href={project.demoURL}
                     target="_blank"
-                    className={style.demo}
+                    className="btn btn-action"
                   >
                     Demo
                   </Link>
                   <Link
                     href={project.codeURL}
                     target="_blank"
-                    className={style.code}
+                    className="btn btn-secondary"
                   >
                     Code
                   </Link>

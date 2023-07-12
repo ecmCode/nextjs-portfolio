@@ -39,7 +39,7 @@ const BlogList = ({
             </div>
             <div className={style.bottom}>
               {!loading && (
-                <Link href="/blogs" className={style.link}>
+                <Link href="/blogs" className=" btn btn-primary">
                   All Blogs
                 </Link>
               )}

@@ -9,16 +9,20 @@ const ProjectBox = ({
   demoURL,
 }: ProjectType) => {
   return (
-    <li className="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-4 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 ">
+    <li className="flex flex-col gap-6 justify-between items-center w-full h-full p-4 bg-slate-200/40 dark:bg-slate-400/10 card">
       <h2>{name}</h2>
       <div className="p-10">
         <p>{desc}</p>
       </div>
-      <div className="flex flex-col lg:flex-row gap-2 justify-around w-full">
-        <Link href={demoURL || "/"} target="_blank">
+      <div className="flex flex-col md:flex-row gap-6 justify-center items-stretch md:items-center w-full">
+        <Link href={demoURL || "/"} target="_blank" className="btn btn-action">
           Demo
         </Link>
-        <Link href={codeURL || "/"} target="_blank" className="bg-cyan-400/20">
+        <Link
+          href={codeURL || "/"}
+          target="_blank"
+          className="btn btn-secondary"
+        >
           Code
         </Link>
       </div>

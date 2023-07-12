@@ -1,10 +1,8 @@
 import ProjectBox from "./ProjectBox";
 
 const ProjectContainer = ({ projects }: { projects: ProjectType[] }) => {
-  const style =
-    "grid grid-cols-1 md:grid-cols-2 justify-center items-center place-items-center w-full h-auto gap-4 py-10";
   return (
-    <ul className={style}>
+    <ul className="grid grid-cols-1 sm:grid-cols-2 justify-center items-center place-items-center w-full h-auto gap-10 p-10">
       {projects?.map((project) => (
         <ProjectBox key={project.name.split(" ").join("-")} {...project} />
       ))}
