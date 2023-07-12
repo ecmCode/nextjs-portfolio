@@ -1,18 +1,23 @@
 import Link from "next/link";
 import style from "./PostPageContent.module.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS, INLINES } from "@contentful/rich-text-types";
-
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 import { PostType } from "@/types/PostType";
-import { AssetFile } from "contentful/dist/types/types";
+import usePost from "@/hooks/usePost";
 
 const PostPageContent = ({ post }: { post: PostType }) => {
-  const { name, isAdmin, email } = post.author.fields;
-  const { file, title: alt } = post.thumbnail.fields;
-  const { url, details } = file as AssetFile;
-  const { height, width } = details.image!;
-
+  const {
+    alt,
+    height,
+    tags,
+    title,
+    url,
+    width,
+    author: {
+      fields: { name, isAdmin, email },
+    },
+  } = usePost(post);
   return (
     <main className={style.main}>
       <Image
@@ -22,7 +27,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         alt={(alt as string) || "header img"}
         className={style.thumbnail}
       />
-      <h1 className={style.title}>{post.title}</h1>
+      <h1 className={style.title}>{title}</h1>
       <div>
         <div>
           Author: {name}{" "}
@@ -33,10 +38,10 @@ const PostPageContent = ({ post }: { post: PostType }) => {
 
         {email && <div>Email: {email}</div>}
 
-        {post.tags && (
+        {tags && (
           <div>
             Tags:
-            {post.tags?.map((tag) => (
+            {tags?.map((tag) => (
               <span key={tag} className="bg-slate-500/30 px-4 mx-2">
                 {tag}
               </span>

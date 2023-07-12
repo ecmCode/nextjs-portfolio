@@ -31,7 +31,7 @@ const BlogList = ({
                   .map((post) => (
                     <BlogPost
                       key={post.fields.slug}
-                      {...post.fields}
+                      post={post.fields}
                       loading={loading}
                       setLoading={setLoading}
                     />

@@ -8,11 +8,10 @@ const BlogPageContent = ({
   posts: { fields: PostType }[];
   error: string;
 }) => {
-  const style = "grid grid-cols-1 lg:grid-cols-2 w-full sm:w-2/3 gap-10 my-10";
   return (
     <main>
       <h1>Blogs</h1>
-      <ul className={style}>
+      <ul className="grid grid-cols-1 lg:grid-cols-2 w-full sm:w-2/3 gap-10 my-10">
         {error ? (
           <p>{error}</p>
         ) : (

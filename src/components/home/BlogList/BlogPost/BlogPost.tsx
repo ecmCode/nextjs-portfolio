@@ -2,9 +2,8 @@ import Link from "next/link";
 import style from "./BlogPost.module.css";
 import Image from "next/image";
 import { Dispatch, SetStateAction, useEffect } from "react";
-import type { Text } from "@contentful/rich-text-types";
-import type { AssetFile } from "contentful";
 import type { PostType } from "@/types/PostType";
+import usePost from "@/hooks/usePost";
 const ImgSkeleton = () => {
   return (
     <div className="animate-pulse bg-slate-400/40 aspect-video w-full"></div>
@@ -30,21 +29,11 @@ const ContentSkeleton = () => {
 interface Props {
   loading: boolean;
   setLoading: Dispatch<SetStateAction<boolean>>;
+  post: PostType;
 }
 
-const BlogPost = ({
-  content,
-  title,
-  thumbnail,
-  slug,
-  loading,
-  setLoading,
-}: PostType & Props) => {
-  const excerpt = (content.content[0].content[0] as Text).value;
-
-  const { file, title: alt } = thumbnail.fields;
-  const { url, details } = file as AssetFile;
-  const { height, width } = details.image!;
+const BlogPost = ({ post, loading, setLoading }: Props) => {
+  const { alt, excerpt, height, width, url, title, slug } = usePost(post);
 
   useEffect(() => {
     setLoading(false);
