@@ -4,10 +4,7 @@ const Footer = () => {
   return (
     <div className="my-6 text-center">
       © 2023 by{" "}
-      <Link
-        href="https://github.com/ecmCode"
-        className="p-0 bg-transparent hover:brightness-110 text-cyan-400 underline underline-offset-2"
-      >
+      <Link href="https://github.com/ecmCode" className="btn btn-secondary">
         @ecmCode
       </Link>
       . All rights reserved.

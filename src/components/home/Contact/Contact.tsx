@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                 <span className={style.warning}>Message must not be empty</span>
               )}
             </div>
-            <button className={style.btn} type="submit">
+            <button className="btn btn-action w-full lg:w-auto" type="submit">
               Submit
             </button>
             {submitted && (

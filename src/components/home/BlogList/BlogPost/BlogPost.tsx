@@ -60,7 +60,10 @@ const BlogPost = ({ post, loading, setLoading }: Props) => {
           <h2 className={style.title}>{title}</h2>
           <p className={style.body}>{excerpt}</p>
           <div className="flex justify-end">
-            <Link href={"/blogs/" + slug} className={style.link}>
+            <Link
+              href={"/blogs/" + slug}
+              className="btn btn-action w-full sm:w-auto"
+            >
               Read More
             </Link>
           </div>

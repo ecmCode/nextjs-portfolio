@@ -61,10 +61,6 @@
   @apply hidden;
 }
 
-.btn {
-  @apply w-full lg:w-auto bg-cyan-400/20 my-4 px-10;
-}
-
 .submitted {
   @apply text-green-500 absolute bottom-2 text-center;
 }

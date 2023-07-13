@@ -18,17 +18,9 @@
 }
 
 .btns {
-  @apply flex justify-center items-center py-6 gap-14 bg-gradient-to-t from-slate-900/100 via-slate-900/50 to-transparent absolute z-10 bottom-0 w-full opacity-0 transition ease-in-out hover:opacity-100;
+  @apply flex justify-center items-center py-6 gap-8 bg-gradient-to-t from-slate-900/100 via-slate-900/80 to-transparent absolute z-10 bottom-0 w-full opacity-0 transition ease-in-out hover:opacity-100;
 }
 
 .img:hover ~ .btns {
   @apply opacity-100;
-}
-
-.demo {
-  @apply text-cyan-600 dark:text-cyan-500 font-semibold text-center bg-slate-700/90;
-}
-
-.code {
-  @apply underline underline-offset-4 p-0 bg-transparent hover:text-cyan-600;
 }

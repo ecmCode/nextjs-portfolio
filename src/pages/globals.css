@@ -16,41 +16,61 @@
   }
 }
 
-html,
-body {
-  overflow: auto;
-  min-height: 100vh;
-  height: max-content;
-  color: var(--foreground-rgb);
-  background: linear-gradient(
-      to bottom,
-      var(--background-start-rgb),
-      var(--background-end-rgb)
-    )
-    var(--background-start-rgb);
+@layer base {
+  html,
+  body {
+    overflow: auto;
+    min-height: 100vh;
+    height: max-content;
+    color: var(--foreground-rgb);
+    background: linear-gradient(
+        to bottom,
+        var(--background-start-rgb),
+        var(--background-end-rgb)
+      )
+      var(--background-start-rgb);
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  h1 {
+    @apply text-4xl;
+  }
+  h2 {
+    @apply text-2xl;
+  }
+
+  h3 {
+    @apply text-xl;
+  }
+
+  h4 {
+    @apply text-lg;
+  }
+
+  p,
+  label {
+    @apply text-base;
+  }
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded dark:hover:brightness-150 hover:brightness-110 focus:ring-0 outline-none text-center;
+  }
+  .btn-primary {
+    @apply bg-slate-400/50 dark:bg-slate-500/20 shadow-md;
+  }
+  .btn-secondary {
+    @apply p-0 text-inherit underline underline-offset-4 hover:text-cyan-400;
+  }
+  .btn-action {
+    @apply bg-cyan-600/30 dark:bg-cyan-400/20 shadow-md;
+  }
 
-h1 {
-  @apply text-4xl;
-}
-h2 {
-  @apply text-2xl;
-}
-
-h3 {
-  @apply text-xl;
-}
-
-h4 {
-  @apply text-lg;
-}
-
-a,
-button {
-  @apply dark:hover:brightness-150 hover:brightness-110 px-6 py-2 
-  bg-slate-400/50 dark:bg-slate-500/20 rounded-sm;
+  .card {
+    @apply ring-1 ring-slate-800/50 dark:ring-slate-200/50 rounded-sm shadow-md;
+  }
 }

@@ -12,7 +12,9 @@ const Aboutme = () => {
           {aboutme &&
             aboutme.slice(0, 3).map((p, index) => <p key={index}>{p}</p>)}
           <div className="text-center my-4 flex flex-col items-stretch sm:items-end">
-            <Link href="/about">Read More</Link>
+            <Link href="/about" className="btn btn-primary">
+              Read More
+            </Link>
           </div>
         </div>
       </Container>
