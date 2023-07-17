@@ -5,25 +5,23 @@ import BlogList from "@/components/home/BlogList/BlogList";
 import Techs from "@/components/home/Techs/Techs";
 import Contact from "@/components/home/Contact/Contact";
 import { client } from "@/client";
-import { GetStaticProps } from "next";
-import { PostType } from "@/types/PostType";
+import type { GetStaticProps } from "next";
+import type { PostType } from "@/types/PostType";
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const res = await client.getEntries({
       content_type: "blogPost",
     });
-
     return {
       props: {
         posts: res.items,
       },
     };
-  } catch (error) {
-    console.log(error);
+  } catch (e) {
     return {
       props: {
-        error: "Error: Failed to fetch",
+        error: JSON.parse((e as Error).message).message as string,
       },
     };
   }

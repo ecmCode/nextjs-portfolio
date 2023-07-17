@@ -1,26 +1,23 @@
 import Head from "next/head";
 import BlogPageContent from "../../components/blogs/BlogPageContent";
+import { client } from "@/client";
 import type { GetStaticProps } from "next";
 import type { PostType } from "@/types/PostType";
-import { client } from "@/client";
 
 export const getStaticProps: GetStaticProps = async () => {
   try {
     const res = await client.getEntries({
       content_type: "blogPost",
     });
-
     return {
       props: {
         posts: res.items,
       },
-      revalidate: 10,
     };
-  } catch (error) {
-    console.log(error);
+  } catch (e) {
     return {
       props: {
-        error: "Error: Failed to fetch",
+        error: JSON.parse((e as Error).message).message as string,
       },
     };
   }
