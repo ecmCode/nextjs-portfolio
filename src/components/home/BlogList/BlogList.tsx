@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Container from "../Container/Container";
 import Title from "../Titles/Title";
-import BlogPost from "./BlogPost/BlogPost";
 import style from "./BlogList.module.css";
 import { PostType } from "@/types/PostType";
-import { useState } from "react";
+import { lazy } from "react";
+const BlogPost = lazy(() => import("./BlogPost/BlogPost"));
 
 const BlogList = ({
   posts,
@@ -13,7 +13,6 @@ const BlogList = ({
   posts: { fields: PostType }[];
   error: string;
 }) => {
-  const [loading, setLoading] = useState(true);
 
   return (
     <>
@@ -23,7 +22,7 @@ const BlogList = ({
           <p>Error: {error}</p>
         ) : (
           <>
-            <div className={style.gridbox}>
+            <ul className={style.gridbox}>
               {posts &&
                 posts
                   .filter((post) => post.fields.author.fields.isAdmin)
@@ -32,17 +31,13 @@ const BlogList = ({
                     <BlogPost
                       key={post.fields.slug}
                       post={post.fields}
-                      loading={loading}
-                      setLoading={setLoading}
                     />
                   ))}
-            </div>
+            </ul>
             <div className={style.bottom}>
-              {!loading && (
-                <Link href="/blogs" className=" btn btn-primary">
-                  All Blogs
-                </Link>
-              )}
+              <Link href="/blogs" className=" btn btn-primary">
+                All Blogs
+              </Link>
             </div>
           </>
         )}
