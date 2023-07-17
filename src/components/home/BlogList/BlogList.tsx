@@ -13,7 +13,6 @@ const BlogList = ({
   posts: { fields: PostType }[];
   error: string;
 }) => {
-
   return (
     <>
       <Title>Posts by Admin</Title>
@@ -28,10 +27,7 @@ const BlogList = ({
                   .filter((post) => post.fields.author.fields.isAdmin)
                   .slice(0, 4)
                   .map((post) => (
-                    <BlogPost
-                      key={post.fields.slug}
-                      post={post.fields}
-                    />
+                    <BlogPost key={post.fields.slug} post={post.fields} />
                   ))}
             </ul>
             <div className={style.bottom}>

@@ -26,35 +26,29 @@ const ContentSkeleton = () => {
   );
 };
 
-
-const BlogPost = ({ post }: {post: PostType}) => {
+const BlogPost = ({ post }: { post: PostType }) => {
   const { alt, excerpt, height, width, url, title, slug } = usePost(post);
 
   return (
     <li className={style.box}>
-      <Suspense fallback={<ImgSkeleton />} delay={2000}>
-        <Image
-            width={width}
-            height={height}
-            src={`https:${url}`}
-            alt={alt as string}
-            className={style.thumbnail}
-          />
-      </Suspense>
-      <Suspense fallback={<ContentSkeleton />}>
-        <>
-            <h2 className={style.title}>{title}</h2>
-            <p className={style.body}>{excerpt}</p>
-            <div className="flex justify-end">
-              <Link
-                href={"/blogs/" + slug}
-                className="btn btn-action w-full sm:w-auto"
-              >
-                Read More
-              </Link>
-            </div>
-          </>
-      </Suspense>
+      <Image
+        width={width}
+        height={height}
+        src={`https:${url}`}
+        alt={alt as string}
+        className={style.thumbnail}
+      />
+
+      <h2 className={style.title}>{title}</h2>
+      <p className={style.body}>{excerpt}</p>
+      <div className="flex justify-end">
+        <Link
+          href={"/blogs/" + slug}
+          className="btn btn-action w-full sm:w-auto"
+        >
+          Read More
+        </Link>
+      </div>
     </li>
   );
 };
