@@ -21,13 +21,12 @@ const BlogList = ({
         ) : (
           <>
             <ul className={style.gridbox}>
-              {posts &&
-                posts
-                  .filter((post) => post.fields.author.fields.isAdmin)
-                  .slice(0, 4)
-                  .map((post) => (
-                    <BlogPost key={post.fields.slug} post={post.fields} />
-                  ))}
+              {posts
+                .filter((post) => post.fields.author.fields.isAdmin)
+                .slice(0, 4)
+                .map((post) => (
+                  <BlogPost key={post.fields.slug} post={post.fields} />
+                ))}
             </ul>
             <div className={style.bottom}>
               <Link href="/blogs" className=" btn btn-primary">
