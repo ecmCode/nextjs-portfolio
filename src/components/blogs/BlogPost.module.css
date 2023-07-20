@@ -1,9 +1,7 @@
 .box {
-  @apply bg-slate-200/20 dark:bg-slate-700/10 
-  ring-1 ring-slate-800/50 dark:ring-slate-200/50 
-  p-6 flex flex-col justify-between gap-4 
-  shadow-md shadow-slate-200 dark:shadow-slate-950 
-  rounded-md backdrop-blur-xl;
+  @apply 
+  p-6 flex flex-col justify-between gap-4 h-full
+  ;
 }
 
 .body {

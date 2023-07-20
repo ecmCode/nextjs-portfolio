@@ -33,41 +33,43 @@ const BlogPost = ({ post }: { post: PostType }) => {
   const { alt, excerpt, height, width, url } = usePost(post);
 
   return (
-    <li className={style.box}>
-      <div className="card">
-        <Suspense fallback={<ImgSkeleton />} delay={2000}>
-          <Image
-            width={width}
-            height={height}
-            src={`https:${url}`}
-            alt={alt as string}
-            className="object-cover aspect-video"
-          />
+    <li className="card card-blog">
+      <div className={style.box}>
+        <div className="card">
+          <Suspense fallback={<ImgSkeleton />} delay={2000}>
+            <Image
+              width={width}
+              height={height}
+              src={`https:${url}`}
+              alt={alt as string}
+              className="object-cover aspect-video"
+            />
+          </Suspense>
+        </div>
+        <Suspense fallback={<ContentSkeleton />}>
+          <>
+            <div className={style.body}>
+              <h2 className={style.title}>{post.title}</h2>
+
+              <p>
+                by: {post.author.fields.name}{" "}
+                {post.author.fields.isAdmin && "(Admin)"}
+              </p>
+
+              <p className={style.excerpt}>{excerpt}</p>
+            </div>
+
+            <div className="flex justify-end">
+              <Link
+                href={"/blogs/" + post.slug}
+                className="btn btn-action w-full lg:w-auto"
+              >
+                Read More
+              </Link>
+            </div>
+          </>
         </Suspense>
       </div>
-      <Suspense fallback={<ContentSkeleton />}>
-        <>
-          <div className={style.body}>
-            <h2 className={style.title}>{post.title}</h2>
-
-            <p>
-              by: {post.author.fields.name}{" "}
-              {post.author.fields.isAdmin && "(Admin)"}
-            </p>
-
-            <p className={style.excerpt}>{excerpt}</p>
-          </div>
-
-          <div className="flex justify-end">
-            <Link
-              href={"/blogs/" + post.slug}
-              className="btn btn-action w-full lg:w-auto"
-            >
-              Read More
-            </Link>
-          </div>
-        </>
-      </Suspense>
     </li>
   );
 };
