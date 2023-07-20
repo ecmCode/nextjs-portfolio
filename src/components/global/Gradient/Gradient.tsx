@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import style from "./Gradient.module.css";
+import { useRouter } from "next/router";
 
 /**
  *  Blurred background gradient balls that transform themselves on scroll event
  */
 const Gradient = () => {
   const [percentage, setPercentage] = useState<number>(0);
-
+  const router = useRouter();
   useEffect(() => {
     const unsub = () => {
       let docObj = document?.body as Element;
@@ -14,10 +15,13 @@ const Gradient = () => {
       let scrollTop = window?.scrollY;
       setPercentage(Math.floor((scrollTop / scrollHeight) * 100));
     };
-
     window?.addEventListener("wheel", unsub);
-    return () => window?.removeEventListener("wheel", unsub);
-  }, [percentage]);
+    return () => {
+      unsub();
+
+      window?.removeEventListener("wheel", unsub);
+    };
+  }, [percentage, router.pathname]);
 
   return (
     <div className="fixed inset-0">

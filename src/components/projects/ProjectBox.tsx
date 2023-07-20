@@ -1,5 +1,5 @@
 import Link from "next/link";
-import style from "./ProjectBox.module.css"
+import style from "./ProjectBox.module.css";
 
 const ProjectBox = ({
   name,
@@ -16,7 +16,11 @@ const ProjectBox = ({
           <p>{desc}</p>
         </div>
         <div className={style.btns}>
-          <Link href={demoURL || "/"} target="_blank" className="btn btn-action">
+          <Link
+            href={demoURL || "/"}
+            target="_blank"
+            className="btn btn-action"
+          >
             Demo
           </Link>
           <Link
