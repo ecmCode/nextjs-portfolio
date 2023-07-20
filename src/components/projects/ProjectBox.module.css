@@ -1,0 +1,7 @@
+.box{
+    @apply flex flex-col gap-6 justify-between items-center w-full h-full p-4
+}
+
+.btns{
+    @apply flex flex-col md:flex-row gap-6 justify-center items-stretch md:items-center w-full
+}

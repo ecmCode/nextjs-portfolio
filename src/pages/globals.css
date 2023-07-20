@@ -67,11 +67,11 @@
     @apply p-0 text-inherit underline underline-offset-4 hover:text-cyan-400;
   }
   .btn-action {
-    @apply bg-cyan-600/30 dark:bg-cyan-400/20 shadow-md;
+    @apply bg-cyan-600/30 dark:bg-cyan-400/30 shadow-md;
   }
 
   .card {
-    @apply ring-1 ring-slate-800/50 dark:ring-slate-200/50 rounded-sm shadow-md w-full;
+    @apply ring-1 ring-slate-800/50 dark:ring-slate-200/50 rounded-sm shadow-md w-full h-full;
   }
 
   .card-blog {
@@ -79,6 +79,6 @@
   }
 
   .card-project {
-    @apply bg-slate-200/40 dark:bg-slate-400/10 backdrop-blur-xl;
+    @apply bg-slate-300/40 dark:bg-slate-500/10 backdrop-blur-lg shadow-none hover:shadow-2xl hover:brightness-125 transition;
   }
 }
