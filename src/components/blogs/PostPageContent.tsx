@@ -6,7 +6,52 @@ import Image from "next/image";
 import { PostType } from "@/types/PostType";
 import usePost from "@/hooks/usePost";
 import { format } from 'date-fns'
+import type { Document } from "@contentful/rich-text-types";
 
+const RichTextComponent = ({content} : {content: Document}) => {
+  // How each rich text element should be rendered as jsx element
+  return(
+    <>
+    {documentToReactComponents(content, {
+      renderNode: {
+        [BLOCKS.EMBEDDED_ASSET]: (node) => {
+          const {
+            title: alt,
+            file: {
+              url,
+              details: {
+                image: { height, width },
+              },
+            },
+          } = node.data.target.fields;
+          if (url && width > 0) {
+            return (
+              <div className="w-full flex items-center justify-center my-10">
+                <Image
+                  src={`https:${url}`}
+                  height={height}
+                  width={width}
+                  alt={alt || "image"}
+                  className="object-cover"
+                />
+              </div>
+            );
+          }
+        },
+        [BLOCKS.PARAGRAPH]: (_, children) => (
+          <p className="my-10">{children}</p>
+        ),
+      },
+
+      renderMark: {
+        [MARKS.CODE]: (children) => (
+          <code className="bg-slate-900/60 rounded p-2">{children}</code>
+        ),
+      },
+    })}
+    </>
+  )
+}
 
 const PostPageContent = ({ post }: { post: PostType }) => {
 
@@ -65,13 +110,13 @@ const PostPageContent = ({ post }: { post: PostType }) => {
 
         <div id="tags">
           {tags && (
-            <div className="gap-2 flex flex-wrap items-center ">
+            <div className="gap-2 flex flex-wrap items-center">
               Tags:
               {tags?.map((tag) => (
                 <Link 
                 key={tag} 
                 className="btn btn-primary py-1" 
-                href={`/tags/${tag}`}>
+                href={`/blogs/tags/${tag}`}>
                   {tag}
                 </Link>
               ))}
@@ -81,42 +126,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
 
       </div>
       <div className={style.body}>
-        {documentToReactComponents(content, {
-          renderNode: {
-            [BLOCKS.EMBEDDED_ASSET]: (node) => {
-              const {
-                title: alt,
-                file: {
-                  url,
-                  details: {
-                    image: { height, width },
-                  },
-                },
-              } = node.data.target.fields;
-              if (url && width > 0) {
-                return (
-                  <div className="w-full flex items-center justify-center my-10">
-                    <Image
-                      src={`https:${url}`}
-                      height={height}
-                      width={width}
-                      alt={alt || "image"}
-                      className="object-cover"
-                    />
-                  </div>
-                );
-              }
-            },
-            [BLOCKS.PARAGRAPH]: (_, children) => (
-              <p className="my-10">{children}</p>
-            ),
-          },
-          renderMark: {
-            [MARKS.CODE]: (children) => (
-              <code className="bg-slate-900/60 rounded p-2">{children}</code>
-            ),
-          },
-        })}
+        <RichTextComponent content={content} />
       </div>
       <div className={style.btns}>
         <Link href="/blogs" className="btn btn-action">
