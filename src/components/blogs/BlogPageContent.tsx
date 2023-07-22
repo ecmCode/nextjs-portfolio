@@ -5,7 +5,7 @@ const BlogPageContent = ({
   posts,
   error,
 }: {
-  posts: { fields: PostType }[];
+  posts: PostType[];
   error: string;
 }) => {
   return (
@@ -15,9 +15,7 @@ const BlogPageContent = ({
         {error ? (
           <p>Error: {error}</p>
         ) : (
-          posts?.map((post, index) => (
-            <BlogPost key={index} post={post.fields} />
-          ))
+          posts?.map((post, index) => <BlogPost key={index} post={post} />)
         )}
       </ul>
     </main>

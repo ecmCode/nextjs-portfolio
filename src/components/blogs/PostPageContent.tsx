@@ -8,15 +8,18 @@ import usePost from "@/hooks/usePost";
 
 const PostPageContent = ({ post }: { post: PostType }) => {
   const {
-    alt,
-    height,
+    content,
+    email,
+    isAdmin,
+    name,
     tags,
     title,
+    alt,
     url,
+    height,
     width,
-    author: {
-      fields: { name, isAdmin, email },
-    },
+    createdAt,
+    updatedAt,
   } = usePost(post);
   return (
     <main className={style.main}>
@@ -37,7 +40,8 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         </div>
 
         {email && <div>Email: {email}</div>}
-
+        <div>Created At: {createdAt}</div>
+        {createdAt !== updatedAt && <div>Updated At: {updatedAt}</div>}
         {tags && (
           <div>
             Tags:
@@ -50,7 +54,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         )}
       </div>
       <div className={style.body}>
-        {documentToReactComponents(post.content, {
+        {documentToReactComponents(content, {
           renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: (node) => {
               const {
