@@ -23,13 +23,7 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 };
 
-const BlogPage = ({
-  posts,
-  error,
-}: {
-  posts: { fields: PostType }[];
-  error: string;
-}) => {
+const BlogPage = ({ posts, error }: { posts: PostType[]; error: string }) => {
   return (
     <>
       <Head>

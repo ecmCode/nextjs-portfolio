@@ -32,7 +32,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
   return {
     props: {
-      post: res.items[0].fields,
+      post: res.items[0],
     },
   };
 };
@@ -51,7 +51,7 @@ const PostPage = ({ post }: { post: PostType }) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        <title>{post.fields.title}</title>
       </Head>
       <PostPageContent post={post} />
     </>

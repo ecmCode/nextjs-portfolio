@@ -30,7 +30,8 @@ const ContentSkeleton = () => {
 };
 
 const BlogPost = ({ post }: { post: PostType }) => {
-  const { alt, excerpt, height, width, url } = usePost(post);
+  const { alt, excerpt, height, width, url, name, isAdmin, title, slug } =
+    usePost(post);
 
   return (
     <li className="card card-blog">
@@ -49,11 +50,10 @@ const BlogPost = ({ post }: { post: PostType }) => {
         <Suspense fallback={<ContentSkeleton />}>
           <>
             <div className={style.body}>
-              <h2 className={style.title}>{post.title}</h2>
+              <h2 className={style.title}>{title}</h2>
 
               <p>
-                by: {post.author.fields.name}{" "}
-                {post.author.fields.isAdmin && "(Admin)"}
+                by: {name} {isAdmin && "(Admin)"}
               </p>
 
               <p className={style.excerpt}>{excerpt}</p>
@@ -61,7 +61,7 @@ const BlogPost = ({ post }: { post: PostType }) => {
 
             <div className="flex justify-end">
               <Link
-                href={"/blogs/" + post.slug}
+                href={"/blogs/" + slug}
                 className="btn btn-action w-full lg:w-auto"
               >
                 Read More

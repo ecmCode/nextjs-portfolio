@@ -7,7 +7,6 @@ import { useRouter } from "next/router";
 import { classes } from "@/utility/classes";
 
 const Gradient = () => {
-
   const [percentage, setPercentage] = useState<number>(0);
   const router = useRouter(); // setPercentage fires as pathname changes
 
