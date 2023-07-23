@@ -12,9 +12,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   const tags = res.items
     .map((item) => item.fields.tags)
-    .filter((tag) => !!tag)
+    .filter((tag) => !!tag) // remove falsey values
     .join()
-    .split(",");
+    .split(",") // split each tag by comma
+    // finally, remove duplicates
+    .filter((tag, index, array) => array.indexOf(tag) === index);
 
   const paths = tags.map((tag) => {
     return {

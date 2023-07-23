@@ -11,9 +11,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const tags = res.items
     .map((item) => item.fields.tags)
-    .filter((tag) => !!tag)
+    .filter((tag) => !!tag) // remove falsey values
     .join()
-    .split(",");
+    .split(",") // split each tag by comma
+    // finally, remove duplicates
+    .filter((tag, index, array) => array.indexOf(tag) === index);
+
   return {
     props: {
       tags,
@@ -29,7 +32,7 @@ const AllTagsPage = ({ tags }: { tags: string[] }) => {
       </Head>
       <main>
         <h1>All {tags.length} Tags:</h1>
-        <ul className="flex items-center justify-center gap-2 w-1/3 flex-wrap ">
+        <ul className="flex items-center justify-center gap-2 w-2/3 md:w-1/3 flex-wrap ">
           {tags.map((tag) => (
             <li key={tag} className="btn btn-secondary">
               <Link href={`/blogs/tags/${tag}`}>{tag}</Link>
