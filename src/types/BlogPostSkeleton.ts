@@ -5,7 +5,7 @@ export type BlogPostSkeleton = {
   fields: {
     title: EntryFieldTypes.Text;
     slug: EntryFieldTypes.Text;
-    tags: EntryFieldTypes.Text[];
+    tags: EntryFieldTypes.Array<EntryFieldTypes.Symbol<string>>;
     content: EntryFieldTypes.RichText;
     author: {
       fields: {

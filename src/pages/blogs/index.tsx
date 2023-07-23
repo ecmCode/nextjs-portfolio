@@ -9,6 +9,7 @@ export const getStaticProps: GetStaticProps = async () => {
     const res = await client.getEntries({
       content_type: "blogPost",
     });
+
     return {
       props: {
         posts: res.items,
