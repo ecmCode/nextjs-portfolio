@@ -1,12 +1,24 @@
 import Link from "next/link";
 import style from "./PostPageContent.module.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { BLOCKS, MARKS, INLINES, type Text } from "@contentful/rich-text-types";
 import Image from "next/image";
 import { PostType } from "@/types/PostType";
 import usePost from "@/hooks/usePost";
 import { format } from "date-fns";
 import type { Document } from "@contentful/rich-text-types";
+import { CopyBlock, codepen } from "react-code-blocks";
+
+function extractContent(str: string) {
+  const regex = /\[(.*?)\]((.|\n)*)*/;
+  const matches = str.match(regex);
+  if (matches) {
+    const [, bracket, string] = matches;
+    return { bracket, string };
+  } else {
+    return null; // Return null if no match is found
+  }
+}
 
 const RichTextComponent = ({ content }: { content: Document }) => {
   // How each rich text element should be rendered as jsx element
@@ -38,15 +50,45 @@ const RichTextComponent = ({ content }: { content: Document }) => {
               );
             }
           },
-          [BLOCKS.PARAGRAPH]: (_, children) => (
-            <p className="my-10">{children}</p>
+          [BLOCKS.PARAGRAPH]: (node, children) => (
+            <div className="my-10">
+              {!!(node.content[0] as Text).marks[0] ? (
+                children
+              ) : (
+                <p>{children}</p>
+              )}
+            </div>
           ),
+          [INLINES.HYPERLINK]: (node, children) => {
+            return (
+              <Link href={node.data.uri} className="btn btn-secondary">
+                {children}
+              </Link>
+            );
+          },
         },
-
         renderMark: {
-          [MARKS.CODE]: (children) => (
-            <code className="bg-slate-900/60 rounded p-2">{children}</code>
-          ),
+          [MARKS.CODE]: (children) => {
+            const result = extractContent(children?.toString()!) as unknown as {
+              bracket: string;
+              string: string;
+            };
+            return result ? (
+              <CopyBlock
+                language={result.bracket}
+                theme={{ ...codepen, mode: "dark" }}
+                showLineNumbers
+                wrapLongLines={false}
+                startingLineNumber={1}
+                codeBlock
+                copied
+                onCopy={() => console.log("copied")}
+                text={result.string}
+              />
+            ) : (
+              <code>{children}</code>
+            );
+          },
         },
       })}
     </>

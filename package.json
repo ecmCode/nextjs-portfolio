@@ -43,6 +43,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "next-router-mock": "^0.9.7",
     "prettier": "2.8.8",
+    "react-code-blocks": "^0.1.0",
     "react-test-renderer": "^18.2.0",
     "testing-library": "^0.0.2",
     "ts-node": "^10.9.1"
