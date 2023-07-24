@@ -10,15 +10,15 @@ import type { Document } from "@contentful/rich-text-types";
 import { CopyBlock, codepen } from "react-code-blocks";
 
 const extractContent = (str: string) => {
-  const regex = /\[(.*?)\](.*)/s
+  const regex = /\[(.*?)\](.*)/s;
   const matches = str.match(regex);
   if (matches) {
-    const [,bracket, string] = matches;
+    const [, bracket, string] = matches;
     return { bracket, string };
   } else {
     return null; // Return null if no match is found
   }
-}
+};
 
 const RichTextComponent = ({ content }: { content: Document }) => {
   // How each rich text element should be rendered as jsx element

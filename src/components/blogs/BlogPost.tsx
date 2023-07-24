@@ -4,6 +4,7 @@ import Image from "next/image";
 import type { PostType } from "@/types/PostType";
 import usePost from "@/hooks/usePost";
 import Suspense from "@/hooks/Suspense";
+import { format } from "date-fns";
 
 const ImgSkeleton = () => {
   return (
@@ -30,8 +31,18 @@ const ContentSkeleton = () => {
 };
 
 const BlogPost = ({ post }: { post: PostType }) => {
-  const { alt, excerpt, height, width, url, name, isAdmin, title, slug } =
-    usePost(post);
+  const {
+    alt,
+    excerpt,
+    height,
+    width,
+    url,
+    name,
+    isAdmin,
+    title,
+    slug,
+    createdAt,
+  } = usePost(post);
 
   return (
     <li className="card card-blog">
@@ -52,9 +63,12 @@ const BlogPost = ({ post }: { post: PostType }) => {
             <div className={style.body}>
               <h2 className={style.title}>{title}</h2>
 
-              <p>
-                by: {name} {isAdmin && "(Admin)"}
-              </p>
+              <div className="flex flex-wrap sm:flex-row gap-2 justify-between ">
+                <p>
+                  by: {name} {isAdmin && "(Admin)"}
+                </p>
+                <p>{format(Date.parse(createdAt), "MMM dd yyyy hh:mm")}</p>
+              </div>
 
               <p className={style.excerpt}>{excerpt}</p>
             </div>
