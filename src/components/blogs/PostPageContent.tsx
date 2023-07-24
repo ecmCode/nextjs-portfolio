@@ -1,7 +1,7 @@
 import Link from "next/link";
 import style from "./PostPageContent.module.css";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS , INLINES , type Text} from "@contentful/rich-text-types";
+import { BLOCKS, MARKS, INLINES, type Text } from "@contentful/rich-text-types";
 import Image from "next/image";
 import { PostType } from "@/types/PostType";
 import usePost from "@/hooks/usePost";
@@ -60,17 +60,20 @@ const RichTextComponent = ({ content }: { content: Document }) => {
             </div>
           ),
           [INLINES.HYPERLINK]: (node, children) => {
-            return <Link href={node.data.uri} className="btn btn-secondary">{children}</Link>
-          },      
+            return (
+              <Link href={node.data.uri} className="btn btn-secondary">
+                {children}
+              </Link>
+            );
+          },
         },
         renderMark: {
           [MARKS.CODE]: (children) => {
-            const result = extractContent(
-              children?.toString()!
-            ) as unknown as { bracket: string; string: string };
-            return result 
-            ?
-
+            const result = extractContent(children?.toString()!) as unknown as {
+              bracket: string;
+              string: string;
+            };
+            return result ? (
               <CopyBlock
                 language={result.bracket}
                 theme={{ ...codepen, mode: "dark" }}
@@ -82,11 +85,9 @@ const RichTextComponent = ({ content }: { content: Document }) => {
                 onCopy={() => console.log("copied")}
                 text={result.string}
               />
-
-            :
-
-            <code>{children}</code>
-            
+            ) : (
+              <code>{children}</code>
+            );
           },
         },
       })}
