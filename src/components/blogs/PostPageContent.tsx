@@ -148,17 +148,19 @@ const PostPageContent = ({ post }: { post: PostType }) => {
 
         <div id="tags">
           {tags && (
-            <div className="gap-2 flex flex-wrap items-center">
-              Tags:
-              {tags?.map((tag) => (
-                <Link
-                  key={tag}
-                  className="btn btn-primary py-1"
-                  href={`/blogs/tags/${tag}`}
-                >
-                  {tag}
-                </Link>
-              ))}
+            <div className="gap-2 flex flex-col sm:flex-row items-center">
+              <span>Tags:</span>
+              <span className="flex gap-2 flex-wrap justify-center">
+                {tags?.map((tag) => (
+                  <Link
+                    key={tag}
+                    className="btn btn-primary py-1"
+                    href={`/blogs/tags/${tag}`}
+                  >
+                    {tag}
+                  </Link>
+                ))}
+              </span>
             </div>
           )}
         </div>
