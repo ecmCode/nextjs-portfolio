@@ -9,11 +9,11 @@ import { format } from "date-fns";
 import type { Document } from "@contentful/rich-text-types";
 import { CopyBlock, codepen } from "react-code-blocks";
 
-function extractContent(str: string) {
-  const regex = /\[(.*?)\]((.|\n)*)*/;
+const extractContent = (str: string) => {
+  const regex = /\[(.*?)\](.*)/s
   const matches = str.match(regex);
   if (matches) {
-    const [, bracket, string] = matches;
+    const [,bracket, string] = matches;
     return { bracket, string };
   } else {
     return null; // Return null if no match is found
