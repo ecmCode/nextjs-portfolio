@@ -30,33 +30,42 @@
       )
       var(--background-start-rgb); */
 
-    @apply overflow-auto min-h-screen h-max bg-black
-    
-    
+    @apply overflow-auto min-h-screen h-max bg-slate-100;
   }
   /* :root{
     @apply bg-gradient-to-b
     from-blue-100 via-slate-100 to-slate-100
     dark:from-slate-900 dark:via-slate-950 dark:to-slate-950
   } */
-  h1,h2,h3,h4,h5,h6,p,a,button,label,span{
-    @apply transition text-slate-950 dark:text-slate-100
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button,
+  label,
+  span {
+    @apply transition text-slate-950 dark:text-slate-100;
   }
-  
-  input,textarea{
-    @apply text-slate-900 dark:text-slate-100
+
+  input,
+  textarea {
+    @apply text-slate-900 dark:text-slate-100;
   }
 
   svg {
-    @apply transition text-slate-950 dark:text-slate-100 
+    @apply transition text-slate-950 dark:text-slate-100;
   }
-  svg.contact-icon{
-    @apply hover:text-cyan-500 dark:hover:text-cyan-500
+  svg.contact-icon {
+    @apply hover:text-cyan-500 dark:hover:text-cyan-500;
   }
-  svg.darkmode-icon{
-    @apply transition text-amber-600 hover:text-amber-500 dark:text-cyan-700 dark:hover:text-cyan-300
+  svg.darkmode-icon {
+    @apply transition text-amber-600 hover:text-amber-500 dark:text-cyan-700 dark:hover:text-cyan-300;
   }
-  
+
   body::-webkit-scrollbar {
     display: none;
   }

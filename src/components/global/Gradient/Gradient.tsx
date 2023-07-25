@@ -52,9 +52,11 @@ const Gradient = () => {
   ];
 
   return (
-    <div className="fixed inset-0 bg-gradient-to-b
+    <div
+      className="fixed inset-0 bg-gradient-to-b
     from-blue-100 via-slate-100 to-slate-100
-    dark:from-slate-900 dark:via-slate-950 dark:to-slate-950">
+    dark:from-slate-900 dark:via-slate-950 dark:to-slate-950"
+    >
       {balls.map((ball, index) => {
         return (
           <span

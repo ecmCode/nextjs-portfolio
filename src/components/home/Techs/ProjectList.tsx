@@ -12,7 +12,10 @@ const ProjectList = () => {
       <Container variant="2/3">
         <ul className={style.list}>
           {(projects as ProjectType[])?.map((project) => (
-            <li key={project.name.replace(" ", "-")} className='card card-project'>
+            <li
+              key={project.name.replace(" ", "-")}
+              className="card card-project"
+            >
               <div className={style.item}>
                 <h4 className={style.title}>{project.name}</h4>
                 <div className={style.imgContainer}>

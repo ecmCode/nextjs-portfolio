@@ -18,20 +18,20 @@ const ContactInfo = () => {
       </div>
       <div className={styles.social}>
         <div>
-          <Link href="https://github.com/" >
-            <BsGithub className="contact-icon"/>
+          <Link href="https://github.com/">
+            <BsGithub className="contact-icon" />
           </Link>
           <p>Github</p>
         </div>
         <div>
           <Link href="https://www.instagram.com/">
-            <BsInstagram className="contact-icon"/>
+            <BsInstagram className="contact-icon" />
           </Link>
           <p>Instagram</p>
         </div>
         <div>
           <Link href="https://discord.com/">
-            <BsDiscord className="contact-icon"/>
+            <BsDiscord className="contact-icon" />
           </Link>
           <p>Discord</p>
         </div>

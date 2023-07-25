@@ -56,7 +56,7 @@ const Contact: React.FC = () => {
       <Container variant="full">
         <div className="flex flex-col md:flex-row gap-10 w-full justify-center items-center">
           <div className="w-full md:w-3/5 card">
-            <form id="contact"  className={style.form}  onSubmit={handleSubmit}>
+            <form id="contact" className={style.form} onSubmit={handleSubmit}>
               <div className={style.slot}>
                 <label htmlFor="name">Name</label>
                 <div className={style.inputBox}>
@@ -89,7 +89,9 @@ const Contact: React.FC = () => {
                     onInvalid={handleInvalid}
                   />
                 </div>
-                {invalid && <span className={style.warning}>Invalid Email</span>}
+                {invalid && (
+                  <span className={style.warning}>Invalid Email</span>
+                )}
               </div>
               <div className={style.slot}>
                 <label htmlFor="message">Message</label>
@@ -102,7 +104,9 @@ const Contact: React.FC = () => {
                   onInvalid={handleInvalid}
                 />
                 {invalid && (
-                  <span className={style.warning}>Message must not be empty</span>
+                  <span className={style.warning}>
+                    Message must not be empty
+                  </span>
                 )}
               </div>
               <button className="btn btn-action w-full lg:w-auto" type="submit">
