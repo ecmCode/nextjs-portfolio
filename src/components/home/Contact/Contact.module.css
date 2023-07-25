@@ -1,5 +1,5 @@
 .form {
-  @apply w-full md:w-2/3 flex flex-col gap-4 items-center justify-center p-10 rounded bg-slate-400/10 backdrop-blur-lg relative;
+  @apply flex flex-col gap-4 items-center justify-center p-10 relative;
 }
 
 .slot {
@@ -25,7 +25,7 @@
 
 .slot .inputBox,
 .slot textarea {
-  @apply w-full bg-slate-100/10 text-slate-100 rounded ring-1 ring-transparent transition duration-200;
+  @apply w-full dark:bg-slate-100/10  bg-slate-500/20 rounded ring-1 ring-transparent transition duration-200;
 }
 
 .slot .inputBox input,
@@ -45,7 +45,7 @@
 }
 
 .warning {
-  @apply text-right text-red-400 absolute top-0 right-0 opacity-0;
+  @apply text-right text-red-600 dark:text-red-400 absolute top-0 right-0 opacity-0;
 }
 
 .slot .inputBox:has(input:not(:focus):invalid) ~ .warning,

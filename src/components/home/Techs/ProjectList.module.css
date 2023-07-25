@@ -3,7 +3,7 @@
 }
 
 .item {
-  @apply bg-slate-600/10 flex flex-col justify-between items-center h-full w-full select-none ring-1 ring-slate-800/50 dark:ring-slate-200/50 rounded backdrop-blur-md;
+  @apply flex flex-col justify-between items-center h-full w-full select-none ;
 }
 
 .title {

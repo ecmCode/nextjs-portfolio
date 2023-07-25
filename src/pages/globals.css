@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: #000;
   --background-start-rgb: #fff;
   --background-end-rgb: #fff;
@@ -14,12 +14,12 @@
     --background-start-rgb: #001;
     --background-end-rgb: #000;
   }
-}
+} */
 
 @layer base {
   html,
   body {
-    overflow: auto;
+    /* overflow: auto;
     min-height: 100vh;
     height: max-content;
     color: var(--foreground-rgb);
@@ -28,9 +28,35 @@
         var(--background-start-rgb),
         var(--background-end-rgb)
       )
-      var(--background-start-rgb);
+      var(--background-start-rgb); */
+
+    @apply overflow-auto min-h-screen h-max bg-black
+    
+    
+  }
+  /* :root{
+    @apply bg-gradient-to-b
+    from-blue-100 via-slate-100 to-slate-100
+    dark:from-slate-900 dark:via-slate-950 dark:to-slate-950
+  } */
+  h1,h2,h3,h4,h5,h6,p,a,button,label,span{
+    @apply transition text-slate-950 dark:text-slate-100
+  }
+  
+  input,textarea{
+    @apply text-slate-900 dark:text-slate-100
   }
 
+  svg {
+    @apply transition text-slate-950 dark:text-slate-100 
+  }
+  svg.contact-icon{
+    @apply hover:text-cyan-500 dark:hover:text-cyan-500
+  }
+  svg.darkmode-icon{
+    @apply transition text-amber-600 hover:text-amber-500 dark:text-cyan-700 dark:hover:text-cyan-300
+  }
+  
   body::-webkit-scrollbar {
     display: none;
   }
@@ -64,10 +90,10 @@
     @apply bg-slate-400/50 dark:bg-slate-500/20 shadow-md;
   }
   .btn-secondary {
-    @apply p-0 text-inherit underline underline-offset-4 hover:text-cyan-400;
+    @apply p-0 underline underline-offset-4 hover:text-cyan-400;
   }
   .btn-action {
-    @apply bg-cyan-600/30 dark:bg-cyan-400/30 shadow-md;
+    @apply bg-cyan-400/60 dark:bg-cyan-400/30 shadow-md;
   }
 
   .card {

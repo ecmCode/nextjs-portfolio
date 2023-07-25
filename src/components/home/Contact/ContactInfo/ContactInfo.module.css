@@ -1,5 +1,5 @@
 .box {
-  @apply w-full md:w-max h-max flex flex-col gap-6 rounded p-6 bg-slate-400/10 dark:bg-slate-200/10 ring-1 ring-slate-800/50 dark:ring-slate-200/50;
+  @apply w-full md:w-max h-max flex flex-col gap-6 rounded p-6 bg-slate-400/10 dark:bg-slate-200/10 ring-1 ring-slate-800/50 dark:ring-slate-200/50 ;
 }
 
 .contacts {
@@ -11,13 +11,9 @@
 }
 
 .social a {
-  @apply transition hover:text-cyan-400 bg-transparent p-0;
+  @apply transition hover:text-cyan-400 dark:hover:text-cyan-400;
 }
 
 .social div {
   @apply flex gap-4 justify-start items-start w-full;
-}
-
-.social div span {
-  @apply text-lg;
 }

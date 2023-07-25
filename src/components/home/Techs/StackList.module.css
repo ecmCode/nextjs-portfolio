@@ -3,7 +3,7 @@
 }
 
 .item {
-  @apply overflow-hidden flex bg-slate-500/20 w-full select-none hover:brightness-125;
+  @apply overflow-hidden flex bg-slate-300/10 dark:bg-slate-500/20 w-full select-none hover:brightness-125;
 }
 
 .border {

@@ -4,17 +4,20 @@ import MainPage from "@/components/global/MainPage/MainPage";
 import "./globals.css";
 import Gradient from "@/components/global/Gradient/Gradient";
 import Footer from "@/components/global/Footer/Footer";
+import { useState } from "react";
+import ThemeProvider from "@/components/global/ThemeProvider/ThemeProvider";
 
 const App = ({ Component, pageProps }: AppProps) => {
+  const [darkmode, setDarkmode] = useState(true);
   return (
-    <>
+    <ThemeProvider darkmode={darkmode}>
       <Gradient />
-      <Navbar />
+      <Navbar darkmode={darkmode} setDarkmode={setDarkmode}/>
       <MainPage>
         <Component {...pageProps} />
         <Footer />
       </MainPage>
-    </>
+    </ThemeProvider>
   );
 };
 

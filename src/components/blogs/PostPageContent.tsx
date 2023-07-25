@@ -125,26 +125,24 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         id="fields"
         className="flex flex-col items-center sm:items-start justify-center gap-1 "
       >
-        <div id="author">
-          Author: {name}{" "}
+        <p id="author">
+          Author: {name} 
           {isAdmin && (
-            <span className="italic text-sm text-amber-400">Admin</span>
+            <span className="italic text-sm text-amber-600 dark:text-amber-400"> Admin</span>
           )}
-        </div>
+        </p>
 
-        <div id="email">{email && <span>Email: {email}</span>}</div>
+        <p id="email">{email && <span>Email: {email}</span>}</p>
 
-        <div id="createdAt">
-          Created At: {format(Date.parse(createdAt), "MMM dd yyyy hh:mm")}
-        </div>
+        <p id="createdAt">Created At: {format(Date.parse(createdAt), "MMM dd yyyy hh:mm")}</p>
 
-        <div id="updatedAt">
+        <p id="updatedAt">
           {createdAt !== updatedAt && (
             <span>
               Updated At: {format(Date.parse(updatedAt), "MMM dd yyyy hh:mm")}
             </span>
           )}
-        </div>
+        </p>
 
         <div id="tags">
           {tags && (
