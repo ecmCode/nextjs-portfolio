@@ -14,8 +14,8 @@ const Navbar = ({
   darkmode,
   setDarkmode,
 }: {
-  darkmode: boolean;
-  setDarkmode: React.Dispatch<SetStateAction<boolean>>;
+  darkmode: boolean | null;
+  setDarkmode: React.Dispatch<SetStateAction<boolean | null>>;
 }) => {
   const router = useRouter();
   return (
