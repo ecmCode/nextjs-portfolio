@@ -4,6 +4,7 @@ import { SetStateAction } from "react";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 const routes = [
   // { name: "Home", link: "/" },
+  // { name: "Home", link: "/" },
   { name: "About", link: "/about" },
   { name: "Projects", link: "/projects" },
   { name: "Blogs", link: "/blogs" },
@@ -18,6 +19,7 @@ const Navbar = ({
 }) => {
   const router = useRouter();
   return (
+    <nav>
     <nav>
       <ul
         className="fixed w-full flex gap-10 justify-center items-center 
@@ -47,6 +49,7 @@ const Navbar = ({
             <Link
               href={route.link}
               className={
+                router.pathname.includes(route.link)
                 router.pathname.includes(route.link)
                   ? "text-cyan-500 dark:text-cyan-500"
                   : "hover:text-cyan-500 dark:hover:text-cyan-500"
