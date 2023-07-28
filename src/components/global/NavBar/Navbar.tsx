@@ -37,18 +37,7 @@ const Navbar = ({
             Home
           </Link>
         </li>
-        <li className="text-lg md:text-xl">
-          <Link
-            href="/"
-            className={
-              router.pathname === "/"
-                ? "text-cyan-500 dark:text-cyan-500"
-                : "hover:text-cyan-500 dark:hover:text-cyan-500"
-            }
-          >
-            Home
-          </Link>
-        </li>
+        
         {routes.map((route) => (
           <li
             key={route.name.toLowerCase()}
@@ -59,7 +48,7 @@ const Navbar = ({
             <Link
               href={route.link}
               className={
-                router.pathname === route.link
+                router.pathname.includes(route.link)
                   ? "text-cyan-500 dark:text-cyan-500"
                   : "hover:text-cyan-500 dark:hover:text-cyan-500"
               }
