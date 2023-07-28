@@ -24,7 +24,22 @@ const Navbar = ({
         py-4 px-8 backdrop-blur-md z-50 
         bg-slate-300/20 dark:bg-slate-700/20 
         ring-1 ring-slate-800/50 dark:ring-slate-200/50"
+        py-4 px-8 backdrop-blur-md z-50 
+        bg-slate-300/20 dark:bg-slate-700/20 
+        ring-1 ring-slate-800/50 dark:ring-slate-200/50"
       >
+        <li className="text-lg md:text-xl">
+          <Link
+            href="/"
+            className={
+              router.pathname === "/"
+                ? "text-cyan-500 dark:text-cyan-500"
+                : "hover:text-cyan-500 dark:hover:text-cyan-500"
+            }
+          >
+            Home
+          </Link>
+        </li>
         <li className="text-lg md:text-xl">
           <Link
             href="/"
