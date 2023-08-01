@@ -7,7 +7,7 @@ import { PostType } from "@/types/PostType";
 import usePost from "@/hooks/usePost";
 import { format } from "date-fns";
 import type { Document } from "@contentful/rich-text-types";
-import { CopyBlock, codepen } from "react-code-blocks";
+import { CopyBlock, atomOneDark } from "react-code-blocks";
 
 const extractContent = (str: string) => {
   const regex = /\[(.*?)\](.*)/s;
@@ -76,7 +76,7 @@ const RichTextComponent = ({ content }: { content: Document }) => {
             return result ? (
               <CopyBlock
                 language={result.bracket}
-                theme={{ ...codepen, mode: "dark" }}
+                theme={{ ...atomOneDark, mode: "dark" }}
                 showLineNumbers
                 wrapLongLines={false}
                 startingLineNumber={1}
