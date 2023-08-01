@@ -15,7 +15,7 @@ const App = ({ Component, pageProps }: AppProps) => {
       <Gradient />
       <Navbar darkmode={darkmode} setDarkmode={setDarkmode} />
       <MainPage>
-        <Component {...pageProps} />
+        <Component {...pageProps} darkmode={darkmode}/>
         <Footer />
       </MainPage>
     </ThemeProvider>

@@ -7,7 +7,7 @@ import { PostType } from "@/types/PostType";
 import usePost from "@/hooks/usePost";
 import { format } from "date-fns";
 import type { Document } from "@contentful/rich-text-types";
-import { CopyBlock, codepen } from "react-code-blocks";
+import { CopyBlock, atomOneDark,atomOneLight } from "react-code-blocks";
 
 const extractContent = (str: string) => {
   const regex = /\[(.*?)\](.*)/s;
@@ -20,7 +20,7 @@ const extractContent = (str: string) => {
   }
 };
 
-const RichTextComponent = ({ content }: { content: Document }) => {
+const RichTextComponent = ({ content, darkmode }: { content: Document, darkmode: boolean }) => {
   // How each rich text element should be rendered as jsx element
   return (
     <>
@@ -73,18 +73,22 @@ const RichTextComponent = ({ content }: { content: Document }) => {
               bracket: string;
               string: string;
             };
+            const theme = darkmode ? atomOneDark : atomOneLight
             return result ? (
-              <CopyBlock
-                language={result.bracket}
-                theme={{ ...codepen, mode: "dark" }}
-                showLineNumbers
-                wrapLongLines={false}
-                startingLineNumber={1}
-                codeBlock
-                copied
-                onCopy={() => console.log("copied")}
-                text={result.string}
-              />
+              <div className="card shadow-lg">
+                  <CopyBlock
+                    language={result.bracket}
+                    theme={{ ...theme, mode: "dark", }}
+                    showLineNumbers
+                    wrapLongLines={false}
+                    startingLineNumber={1}
+                    codeBlock
+                    copied
+                    customStyle={{backgrondColor:'#111'}}
+                    onCopy={() => console.log("copied")}
+                    text={result.string}
+                  />
+              </div>
             ) : (
               <code>{children}</code>
             );
@@ -95,7 +99,7 @@ const RichTextComponent = ({ content }: { content: Document }) => {
   );
 };
 
-const PostPageContent = ({ post }: { post: PostType }) => {
+const PostPageContent = ({ post, darkmode}: { post: PostType , darkmode: boolean}) => {
   const {
     content,
     email,
@@ -169,7 +173,7 @@ const PostPageContent = ({ post }: { post: PostType }) => {
         </div>
       </div>
       <div className={style.body}>
-        <RichTextComponent content={content} />
+        <RichTextComponent content={content} darkmode={darkmode}/>
       </div>
       <div className={style.btns}>
         <Link href="/blogs" className="btn btn-action">

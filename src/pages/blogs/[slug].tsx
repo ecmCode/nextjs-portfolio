@@ -37,7 +37,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const PostPage = ({ post }: { post: PostType }) => {
+const PostPage = ({ post,darkmode}: { post: PostType, darkmode: boolean }) => {
   if (!post)
     return (
       <>
@@ -53,7 +53,7 @@ const PostPage = ({ post }: { post: PostType }) => {
       <Head>
         <title>{post.fields.title}</title>
       </Head>
-      <PostPageContent post={post} />
+      <PostPageContent post={post} darkmode={darkmode}/>
     </>
   );
 };
